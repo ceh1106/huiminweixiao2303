@@ -1,0 +1,1476 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23级3班 - 学生合照纪念册</title>
+   <link href="images/test.png" rel="icon">
+  <link href="images/test.png" rel="apple-touch-icon"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 基础样式和变量 */
+        :root {
+            --primary-color: #3a86ff;
+            --secondary-color: #8338ec;
+            --accent-color: #ff006e;
+            --dark-color: #121212;
+            --light-color: #ffffff;
+            --gray-color: #f8f9fa;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background-color: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: rgba(18, 18, 18, 0.95);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* 英雄区域 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.6);
+        }
+        
+        .unmute-btn {
+            background: rgba(101, 67, 33, 0.9);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .unmute-btn:hover {
+            background: rgba(101, 67, 33, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--light-color), rgba(255, 255, 255, 0.7));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--light-color);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: var(--transition);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(58, 134, 255, 0.4);
+        }
+
+        /* 关于我们 */
+        .about {
+            padding: 120px 0;
+            background-color: #1a1a1a;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 80px;
+            position: relative;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--light-color);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        /* 照片墙 */
+        .gallery {
+            padding: 120px 0;
+            background-color: var(--dark-color);
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            margin: 0 10px 10px 0;
+            background-color: transparent;
+            color: var(--light-color);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border-color: var(--primary-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-title {
+            transform: translateY(0);
+        }
+
+        .gallery-date {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            transform: translateY(20px);
+            transition: var(--transition);
+            transition-delay: 0.1s;
+        }
+
+        .gallery-item:hover .gallery-date {
+            transform: translateY(0);
+        }
+
+        .gallery-view {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--light-color);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .gallery-item:hover .gallery-view {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* 时光轴 */
+        .timeline {
+            padding: 120px 0;
+            background-color: #1a1a1a;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--dark-color);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover::after {
+            border-color: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        .timeline-left {
+            left: 0;
+        }
+
+        .timeline-right {
+            left: 50%;
+        }
+
+        .timeline-left::after {
+            right: -10px;
+        }
+
+        .timeline-right::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* 视频集锦 */
+        .videos {
+            padding: 120px 0;
+            background-color: var(--dark-color);
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        /* 留言板 */
+        .messages {
+            padding: 120px 0;
+            background-color: #1a1a1a;
+        }
+
+        .messages-form {
+            max-width: 600px;
+            margin: 0 auto 60px;
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--light-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: var(--light-color);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.1);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .messages-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .message-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .message-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .message-name {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .message-date {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .message-content {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* 页脚 */
+        .footer {
+            background-color: var(--dark-color);
+            padding: 60px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .footer-col p {
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--light-color);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            transform: translateY(-3px);
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* 模态框 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            transition: var(--transition);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+
+        .modal-caption {
+            text-align: center;
+            color: var(--light-color);
+            padding: 10px 0;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: var(--light-color);
+            font-size: 40px;
+            font-weight: bold;
+            transition: var(--transition);
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+        }
+
+        /* 动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: var(--dark-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: var(--transition);
+                box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+                z-index: 1001;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .timeline-container::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .timeline-right {
+                left: 0;
+            }
+
+            .video-container iframe {
+                height: 300px;
+            }
+
+            .footer-col {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                max-width: 100%;
+                max-height: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">23级3班</a>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="active">首页</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#gallery">照片墙</a></li>
+                <li><a href="#timeline">成长历程</a></li>
+                <li><a href="#videos">视频集锦</a></li>
+                <li><a href="#messages">留言板</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="hero">
+        <video class="hero-bg" autoplay loop playsinline>
+            <source src="img/campus-5.mp4" type="video/mp4">
+            您的浏览器不支持视频标签
+        </video>
+        <div class="hero-content">
+            <h1 class="hero-title">23级3班</h1>
+            <p class="hero-subtitle">青春纪念册 · 我们的美好时光</p>
+            <a href="#gallery" class="btn">查看照片</a>
+            <button id="unmute-btn" class="btn unmute-btn">开启声音</button>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>惠民县卫生学校 23级3班</h3>
+                    <p>我们是一个充满活力、团结友爱的集体，在这里我们共同学习、共同成长。从初次相识到彼此熟悉，从军训到各种校园活动，每一次经历都成为我们珍贵的回忆。</p>
+                    <p>这个网站记录了我们在校园里的点点滴滴，包括班级活动、学习瞬间、运动会、文艺表演等精彩时刻。让我们一起回顾这段美好的青春时光！</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/campus-4.jpg" alt="班级合影">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 照片墙 -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">照片墙</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="class">班级活动</button>
+                <button class="filter-btn" data-filter="sports">运动会</button>
+                <button class="filter-btn" data-filter="performance">文艺表演</button>
+                <button class="filter-btn" data-filter="trip">外出活动</button>
+            </div>
+            <div class="gallery-grid">
+                <!-- 照片项目 -->
+                <div class="gallery-item" data-category="class">
+                    <img src="images/20251016180734_22_24.jpg" alt="班级活动">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">放学合影</h3>
+                        <p class="gallery-date">2024年3月15日</p>
+                    </div>
+                    <div class="gallery-view" data-img="images/20251016180734_22_24.jpg">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <img src="images/campus-4.jpg" alt="运动会">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">运动会比赛</h3>
+                        <p class="gallery-date">2024年4月20日</p>
+                    </div>
+                    <div class="gallery-view" data-img="images/campus-4.jpg">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="performance">
+                    <img src="images/students-33.jpg" alt="文艺表演">
+                    <div class="gallery-overlay">   
+                        <h3 class="gallery-title">文艺表演</h3>
+                        <p class="gallery-date">2024年5月1日</p>
+                    </div>
+                    <div class="gallery-view" data-img="images/students-33.jpg">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="trip">
+                    <img src="images/jucan.jpg" alt="外出聚餐">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">外出聚餐</h3>
+                        <p class="gallery-date">2024年4月5日</p>
+                    </div>
+                    <div class="gallery-view" data-img="images/jucan.jpg">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="class">
+                    <img src="images/students-2.jpg" alt="班级活动">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">一起台球</h3>
+                        <p class="gallery-date">2024年3月10日</p>
+                    </div>
+                    <div class="gallery-view" data-img="images/students-2.jpg">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <img src="images/students-11.jpg" alt="运动会">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">早操跑步</h3>
+                        <p class="gallery-date">2024年4月21日</p>
+                    </div>
+                    <div class="gallery-view" data-img="images/students-11.jpg">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            <div class="gallery-item" data-category="trip">
+                    <img src="images/luyou01.jpg" alt="外出聚餐">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">外出旅游</h3>
+                        <p class="gallery-date">2024年4月5日</p>
+                    </div>
+                    <div class="gallery-view" data-img="images/jucan.jpg">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            <div class="gallery-item" data-category="trip">
+                    <img src="images/luyou02.jpg" alt="外出聚餐">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">外出旅游</h3>
+                        <p class="gallery-date">2024年4月5日</p>
+                    </div>
+                    <div class="gallery-view" data-img="images/luyou02.jpg">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            <div class="gallery-item" data-category="trip">
+                    <img src="images/luyou03.jpg" alt="外出聚餐">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">外出旅游</h3>
+                        <p class="gallery-date">2024年4月5日</p>
+                    </div>
+                    <div class="gallery-view" data-img="images/luyou03.jpg">    
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成长历程 -->
+    <section class="timeline" id="timeline">
+        <div class="container">
+            <h2 class="section-title">成长历程</h2>
+            <div class="timeline-container">
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023年9月</div>
+                        <h3>新生入学</h3>
+                        <p>我们第一次相遇，开始了新的学习生活。军训、入学教育，一切都是那么新鲜。</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023年10月</div>
+                        <h3>第一次班级活动</h3>
+                        <p>我们组织了第一次班级聚会，大家互相熟悉，建立了深厚的友谊。</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024年1月</div>
+                        <h3>期末考试</h3>
+                        <p>我们一起复习，互相帮助，顺利完成了第一学期的学习任务。</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024年3月</div>
+                        <h3>新学期开始</h3>
+                        <p>我们迎来了新的学期，制定了新的学习计划和目标。</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024年4月</div>
+                        <h3>春季运动会</h3>
+                        <p>我们在运动会上奋勇拼搏，展现了班级的团结和活力。</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024年5月</div>
+                        <h3>文艺汇演</h3>
+                        <p>我们精心准备了节目，在学校文艺汇演中取得了优异的成绩。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 留言板 -->
+    <section class="messages" id="messages">
+        <div class="container">
+            <h2 class="section-title">留言板</h2>
+            <form class="messages-form" id="message-form">
+                <div class="form-group">
+                    <label for="name">您的名字</label>
+                    <input type="text" id="name" placeholder="请输入您的名字" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">留言内容</label>
+                    <textarea id="message" placeholder="留下您的祝福和回忆..." required></textarea>
+                </div>
+                <button type="submit" class="btn">提交留言</button>
+            </form>
+            <div class="messages-list" id="messages-list">
+               <div class="message-item">
+                    <div class="message-header">
+                        <span class="message-name">朱延枫</span>
+                        <span class="message-date">2025-05-11</span>
+                    </div>
+                    <p class="message-content">我下面这个傻锅，就他还想考大学？！！</p>
+                </div>
+                <div class="message-item">
+                    <div class="message-header">
+                        <span class="message-name">闫申奥</span>
+                        <span class="message-date">2025-05-10</span>
+                    </div>
+                    <p class="message-content">我想考大学，考专科，妈妈再也不用担心我了！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <p>惠民县卫生学校23级3班官方纪念网站，记录我们共同的青春时光。</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#hero"><i class="fas fa-chevron-right"></i> 首页</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> 关于我们</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> 照片墙</a></li>
+                        <li><a href="#timeline"><i class="fas fa-chevron-right"></i> 成长历程</a></li>
+                        <li><a href="#messages"><i class="fas fa-chevron-right"></i> 留言板</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 惠民县卫生学校</li>
+                        <li><i class="fas fa-phone"></i> 18763063869</li>
+                        <li><i class="fas fa-envelope"></i> 3409367842@qq.com</li>
+                        <li><i class="fas fa-clock"></i> 周一至周五 9:00-17:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 惠民县卫生学校23级3班. 版权所有.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 模态框 -->
+    <div class="modal" id="image-modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div class="modal-caption" id="modal-caption"></div>
+    </div>
+
+    <script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-links');
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalCaption = document.getElementById('modal-caption');
+        const closeModal = document.getElementsByClassName('close')[0];
+        const galleryView = document.querySelectorAll('.gallery-view');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const messageForm = document.getElementById('message-form');
+        const messagesList = document.getElementById('messages-list');
+        const heroVideo = document.querySelector('.hero-bg');
+        const unmuteBtn = document.getElementById('unmute-btn');
+        
+        // 启用视频声音的函数
+        function enableVideoSound() {
+            if (heroVideo) {
+                console.log('尝试启用视频声音...');
+                console.log('当前视频状态:', { 
+                    paused: heroVideo.paused, 
+                    muted: heroVideo.muted, 
+                    volume: heroVideo.volume, 
+                    readyState: heroVideo.readyState 
+                });
+                
+                // 强制设置声音
+                heroVideo.muted = false;
+                heroVideo.volume = 1; // 设置音量为最大
+                console.log('设置后视频状态:', { 
+                    muted: heroVideo.muted, 
+                    volume: heroVideo.volume 
+                });
+                
+                // 如果视频被暂停，尝试播放
+                if (heroVideo.paused) {
+                    heroVideo.play().then(() => {
+                        console.log('视频已开始播放');
+                    }).catch(error => {
+                        console.log('播放错误:', error);
+                    });
+                }
+                
+                // 隐藏声音按钮
+                if (unmuteBtn) {
+                    unmuteBtn.style.display = 'none';
+                }
+            }
+        }
+        
+        // 尝试在视频加载后启用声音
+        if (heroVideo) {
+            // 额外检查视频文件是否加载成功
+            heroVideo.addEventListener('error', (e) => {
+                console.error('视频加载错误:', e);
+                console.log('错误代码:', heroVideo.error.code);
+            });
+            
+            // 当视频元数据加载完成时尝试启用声音
+            heroVideo.addEventListener('loadedmetadata', () => {
+                console.log('视频元数据已加载');
+                enableVideoSound();
+            });
+            
+            // 当视频可以播放时尝试启用声音
+            heroVideo.addEventListener('canplay', () => {
+                console.log('视频可以播放');
+                enableVideoSound();
+            });
+            
+            // 在用户交互时启用声音（解决浏览器自动播放策略限制）
+            document.addEventListener('click', enableVideoSound, { once: true });
+            document.addEventListener('touchstart', enableVideoSound, { once: true });
+            document.addEventListener('keydown', enableVideoSound, { once: true });
+            
+            // 为声音按钮添加点击事件
+            if (unmuteBtn) {
+                unmuteBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    console.log('用户点击了开启声音按钮');
+                    enableVideoSound();
+                });
+            }
+            
+            // 初始检查视频文件
+            console.log('视频元素初始化:', heroVideo);
+        }
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 移动端菜单
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.querySelector('i').classList.toggle('fa-bars');
+            menuToggle.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // 平滑滚动
+        navLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                navMenu.classList.remove('active');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+                
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 导航链接激活状态
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = '#' + section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // 照片查看模态框
+        galleryView.forEach(view => {
+            view.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = view.getAttribute('data-img');
+                const parent = view.closest('.gallery-item');
+                modalCaption.textContent = parent.querySelector('.gallery-title').textContent + ' - ' + parent.querySelector('.gallery-date').textContent;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // 关闭模态框
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // 点击模态框外部关闭
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // 照片过滤
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        // 添加淡入动画
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // 留言表单提交
+        messageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            const date = new Date().toLocaleDateString('zh-CN');
+            
+            const messageItem = document.createElement('div');
+            messageItem.className = 'message-item';
+            messageItem.innerHTML = `
+                <div class="message-header">
+                    <span class="message-name">${name}</span>
+                    <span class="message-date">${date}</span>
+                </div>
+                <p class="message-content">${message}</p>
+            `;
+            
+            // 添加动画效果
+            messageItem.style.opacity = '0';
+            messageItem.style.transform = 'translateY(20px)';
+            
+            messagesList.insertBefore(messageItem, messagesList.firstChild);
+            
+            // 触发重排后添加动画
+            setTimeout(() => {
+                messageItem.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                messageItem.style.opacity = '1';
+                messageItem.style.transform = 'translateY(0)';
+            }, 10);
+            
+            // 重置表单
+            messageForm.reset();
+            
+            // 显示成功提示（简单实现）
+            const btn = messageForm.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = '留言成功！';
+            btn.style.backgroundColor = '#4CAF50';
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.backgroundColor = '';
+            }, 2000);
+        });
+
+        // 图片懒加载
+        document.addEventListener('DOMContentLoaded', () => {
+            // 为元素添加淡入动画
+            const fadeInElements = document.querySelectorAll('.gallery-item, .timeline-item, .message-item');
+            
+            const fadeInObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        fadeInObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeInElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                fadeInObserver.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

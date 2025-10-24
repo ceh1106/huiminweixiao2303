@@ -1,0 +1,1300 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班级钓鱼社 - 学生风采展示</title>
+     <link href="images/test.png" rel="icon">
+  <link href="images/test.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        :root {
+            --primary-color: #00bcd4;
+            --secondary-color: #2196f3;
+            --accent-color: #ff4081;
+            --dark-color: #0a2463;
+            --light-color: #ffffff;
+            --text-color: #333333;
+            --text-light: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            padding: 1rem 2rem;
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 2rem;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: var(--primary-color);
+            animation: pulse 2s infinite;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            cursor: pointer;
+        }
+
+        /* 英雄区域 */
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(10, 36, 99, 0.6), rgba(0, 188, 212, 0.4));
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--light-color);
+            max-width: 800px;
+            padding: 0 2rem;
+            animation: fadeUp 1s ease-out;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: var(--light-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--secondary-color);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 0;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 188, 212, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: var(--light-color);
+            margin-left: 1rem;
+        }
+
+        .btn-outline::before {
+            background: var(--light-color);
+        }
+
+        .btn-outline:hover {
+            color: var(--primary-color);
+        }
+
+        /* 特性部分 */
+        .features {
+            padding: 5rem 2rem;
+            background: var(--light-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .feature-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 学生风采展示 */
+        .students-showcase {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #0a2463 0%, #2196f3 100%);
+            color: var(--light-color);
+        }
+
+        .students-showcase .section-title {
+            color: var(--light-color);
+        }
+
+        .students-showcase .section-title::after {
+            background: var(--light-color);
+        }
+
+        .students-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .student-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+            height: 400px;
+            cursor: pointer;
+        }
+
+        .student-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .student-card:hover .student-overlay {
+            opacity: 1;
+        }
+
+        .student-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .student-card:hover .student-image {
+            transform: scale(1.1);
+        }
+
+        .student-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .student-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .student-achievement {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .student-stats {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .student-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .student-stat i {
+            color: var(--primary-color);
+        }
+
+        /* 精彩瞬间 */
+        .moments {
+            padding: 5rem 2rem;
+            background: var(--light-color);
+        }
+
+        .moments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .moment-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .moment-card:hover {
+            transform: scale(1.05);
+        }
+
+        .moment-card:hover .moment-overlay {
+            opacity: 1;
+        }
+
+        .moment-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .moment-card:hover .moment-image {
+            transform: scale(1.1);
+        }
+
+        .moment-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .moment-content {
+            text-align: center;
+            color: var(--light-color);
+            padding: 1rem;
+        }
+
+        .moment-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .moment-date {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* 视频展示 */
+        .videos-showcase {
+            padding: 5rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background: var(--light-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .video-player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .video-card:hover .video-player {
+            transform: scale(1.05);
+        }
+
+        .video-content {
+            padding: 1.5rem;
+        }
+
+        .video-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .video-description {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .video-stats {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .video-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* 钓鱼技巧 */
+        .tips {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        }
+
+        .tips-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tip-card {
+            background: var(--light-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .tip-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .tip-header {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .tip-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .tip-content {
+            padding: 2rem;
+        }
+
+        .tip-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .tip-points {
+            list-style: none;
+        }
+
+        .tip-point {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .tip-point::before {
+            content: '🎣';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* 社团成就 */
+        .achievements {
+            padding: 5rem 2rem;
+            background: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        .achievements-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .achievement-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            animation: countUp 2s ease-out;
+        }
+
+        .achievement-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* 活动日历 */
+        .events {
+            padding: 5rem 2rem;
+            background: var(--light-color);
+        }
+
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .event-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .event-date {
+            background: var(--primary-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 1rem;
+            font-weight: 600;
+        }
+
+        .event-content {
+            padding: 1.5rem;
+        }
+
+        .event-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .event-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .event-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 页脚 */
+        .footer {
+            background: var(--dark-color);
+            color: var(--light-color);
+            padding: 3rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-logo i {
+            color: var(--primary-color);
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            color: var(--light-color);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-heading {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* 动画 */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--light-color);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+                gap: 1rem;
+                transform: translateY(-150%);
+                transition: var(--transition);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .students-grid,
+            .moments-grid,
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .features-grid,
+            .tips-grid,
+            .achievements-grid,
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <i class="fas fa-fish"></i>
+                <span>班级钓鱼社</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#features" class="nav-link">特色</a></li>
+                <li><a href="#students" class="nav-link">学生风采</a></li>
+         
+                <li><a href="#videos" class="nav-link">视频展示</a></li>
+                <li><a href="#tips" class="nav-link">钓鱼技巧</a></li>
+       
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <video id="autoPlayVideo" class="hero-video" autoplay loop playsinline>
+            <source src="img/diaoyu.mp4" type="video/mp4">
+            您的浏览器不支持视频标签
+        </video>
+        <script>
+            // 尝试启用视频自动播放并保持音频
+            document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById('autoPlayVideo');
+                
+                // 移除静音属性
+                video.muted = false;
+                
+                // 尝试在用户交互后确保音频播放
+                function handleUserInteraction() {
+                    video.play().then(() => {
+                        console.log('视频播放成功');
+                    }).catch(error => {
+                        console.log('视频播放失败:', error);
+                    });
+                    // 只监听一次用户交互
+                    document.removeEventListener('click', handleUserInteraction);
+                    document.removeEventListener('touchstart', handleUserInteraction);
+                }
+                
+                // 添加用户交互监听器作为备选方案
+                document.addEventListener('click', handleUserInteraction);
+                document.addEventListener('touchstart', handleUserInteraction);
+            });
+        </script>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">钓鱼之美</h1>
+            <p class="hero-subtitle">探索水域，挑战自我，展现学生风采</p>
+            <div>
+                <a href="#students" class="btn">查看学生风采</a>
+                <a href="#videos" class="btn btn-outline">观看精彩视频</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特性部分 -->
+    <section class="features" id="features">
+        <h2 class="section-title">钓鱼社特色</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="feature-title">专业指导</h3>
+                <p class="feature-description">由经验丰富的指导老师带领，传授专业钓鱼技巧，帮助学生快速提升技能水平。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="feature-title">团队协作</h3>
+                <p class="feature-description">强调团队合作精神，通过钓鱼活动培养学生的沟通能力和协作意识。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <h3 class="feature-title">亲近自然</h3>
+                <p class="feature-description">走进大自然，感受水域之美，培养学生的环保意识和对自然的热爱。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学生风采展示 -->
+    <section class="students-showcase" id="students">
+        <h2 class="section-title">学生风采</h2>
+        <div class="students-grid">
+            <div class="student-card">
+                <img src="images/showcase-2.png" alt="学生钓鱼风采" class="student-image">
+                <div class="student-overlay">
+                    <h3 class="student-name">王世杰</h3>
+                    <p class="student-achievement">连续三年校级钓鱼比赛冠军</p>
+                    <div class="student-stats">
+                        <div class="student-stat">
+                            <i class="fas fa-trophy"></i>
+                            <span></span>
+                        </div>
+                        <div class="student-stat">
+                            <i class="fas fa-fish"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="student-card">
+                <img src="images/students-666.jpg" alt="学生钓鱼风采" class="student-image">
+                <div class="student-overlay">
+                    <h3 class="student-name">田家豪</h3>
+                    <p class="student-achievement">省级青少年钓鱼大赛亚军</p>
+                    <div class="student-stats">
+                        <div class="student-stat">
+                            <i class="fas fa-trophy"></i>
+                            <span></span>
+                        </div>
+                        <div class="student-stat">
+                            <i class="fas fa-fish"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="student-card">
+                <img src="images/gaoruihua.jpg" alt="学生钓鱼风采" class="student-image">
+                <div class="student-overlay">
+                    <h3 class="student-name">高瑞华</h3>
+                    <p class="student-achievement"></p>
+                    <div class="student-stats">
+                        <div class="student-stat">
+                            <i class="fas fa-trophy"></i>
+                            <span></span>
+                        </div>
+                        <div class="student-stat">
+                            <i class="fas fa-fish"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </section>
+
+    <!-- 精彩瞬间 -->
+    
+
+    <!-- 视频展示 -->
+    <section class="videos-showcase" id="videos">
+        <h2 class="section-title">精彩视频</h2>
+        <div class="videos-grid">
+            <div class="video-card">
+                <div class="video-container">
+                    <video class="video-player" controls playsinline poster="">
+                        <source src="img/tianjiahao.mp4" type="video/mp4">
+                        您的浏览器不支持视频标签
+                    </video>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">田家豪的钓鱼瞬间</h3>
+                    <p class="video-description">记录了田家豪的钓鱼瞬间。</p>
+                    <div class="video-meta">
+                        <div class="video-stats">
+                            <div class="video-stat">
+                                <i class="fas fa-eye"></i>
+                                <span>1.2k</span>
+                            </div>
+                            <div class="video-stat">
+                                <i class="fas fa-heart"></i>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <span>57秒</span>
+                    </div>
+                </div>
+            
+
+    <!-- 钓鱼技巧 -->
+    <section class="tips" id="tips">
+        <h2 class="section-title">钓鱼技巧分享</h2>
+        <div class="tips-container">
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <span class="tip-number">01</span>
+                        <h3 class="tip-title">选择合适的钓点</h3>
+                    </div>
+                    <div class="tip-content">
+                        <p class="tip-description">选择合适的钓点是钓鱼成功的关键，以下是一些选择钓点的小技巧：</p>
+                        <ul class="tip-points">
+                            <li class="tip-point">寻找水草丰茂的区域，这些地方通常有更多的鱼类</li>
+                            <li class="tip-point">注意观察水面动静，有鱼跃或波纹的地方往往有鱼群</li>
+                            <li class="tip-point">选择水流相对平缓的洄水湾，鱼类喜欢在此休息觅食</li>
+                            <li class="tip-point">早晚时分，靠近岸边的浅水区是不错的选择</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <span class="tip-number">02</span>
+                        <h3 class="tip-title">鱼饵的选择与使用</h3>
+                    </div>
+                    <div class="tip-content">
+                        <p class="tip-description">不同的鱼类对鱼饵有不同的偏好，掌握鱼饵的选择和使用技巧很重要：</p>
+                        <ul class="tip-points">
+                            <li class="tip-point">根据目标鱼种选择合适的鱼饵，如鲤鱼喜欢甜香味，草鱼喜欢青草味</li>
+                            <li class="tip-point">活饵如蚯蚓、红虫等对大多数淡水鱼都有很好的吸引力</li>
+                            <li class="tip-point">注意鱼饵的大小要与鱼钩匹配，过大或过小都不利于鱼上钩</li>
+                            <li class="tip-point">根据季节变化调整鱼饵，夏季宜使用清淡饵料，冬季宜使用腥香饵料</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-header">
+                        <span class="tip-number">03</span>
+                        <h3 class="tip-title">提竿时机与技巧</h3>
+                    </div>
+                    <div class="tip-content">
+                        <p class="tip-description">掌握正确的提竿时机和技巧可以大大提高中鱼率：</p>
+                        <ul class="tip-points">
+                            <li class="tip-point">观察浮漂信号，根据不同鱼类的吃饵习惯判断提竿时机</li>
+                            <li class="tip-point">提竿时要迅速但不要过猛，避免拉豁鱼唇</li>
+                            <li class="tip-point">中鱼后要保持竿梢一定的弯曲度，利用竿子的弹性消耗鱼的体力</li>
+                            <li class="tip-point">遇到大鱼时不要急于拉近，要耐心遛鱼，等鱼力竭后再抄鱼</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+  
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <i class="fas fa-fish"></i>
+                    <span>班级钓鱼社</span>
+                </div>
+                <p class="footer-description">探索水域，挑战自我，展现学生风采。我们致力于为学生提供专业的钓鱼指导和交流平台。</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-qq"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="#students"><i class="fas fa-users"></i> 学生风采</a></li>
+                    <li><a href="#moments"><i class="fas fa-camera"></i> 精彩瞬间</a></li>
+                    <li><a href="#videos"><i class="fas fa-video"></i> 视频展示</a></li>
+                    <li><a href="#tips"><i class="fas fa-book"></i> 钓鱼技巧</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">联系我们</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> 学校地址</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> 联系电话</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> 电子邮箱</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> 活动时间</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 班级钓鱼社. 版权所有.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 移动端菜单
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 视频加载优化
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.addEventListener('loadedmetadata', function() {
+                this.controlsList = 'nodownload';
+            });
+        });
+
+        // 图片懒加载
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = [].slice.call(document.querySelectorAll('img'));
+
+            if ('IntersectionObserver' in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src || lazyImage.src;
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+
+        // 动画效果
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.feature-card, .student-card, .moment-card, .video-card, .tip-card, .achievement-item, .event-card');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementPosition < windowHeight - 100) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // 设置初始样式
+        document.querySelectorAll('.feature-card, .student-card, .moment-card, .video-card, .tip-card, .achievement-item, .event-card').forEach(element => {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+
+        // 初始调用和滚动监听
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
