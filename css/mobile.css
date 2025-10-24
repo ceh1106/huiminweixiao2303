@@ -1,0 +1,2057 @@
+﻿.floatlft,.floatrgt{
+	float: none;
+}
+.campusWid,.bdy_wid,.articleWid,.searchWrap,.footLogoWrap{
+	width: auto;
+}
+.footNavs,.dlMenu{
+	display: none;
+}
+.footerWrap{
+	padding: 1rem 0 0;
+}
+.footerWrap .bdy_wid{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.pcPlace{
+	display: none;
+}
+.footLogoWrap a{
+	display: block;
+	text-align: center;
+}
+.footLogoWrap a img{
+	width: auto;
+	height: 1.6rem;
+}
+.footLogoIns{
+	margin-top: 0.64rem;
+	padding: 0 1.68rem;
+	font-size: 0.32rem;
+	line-height: 0.373333rem;
+	text-align: center;
+}
+.headerBxSecBgPlace,.logo,.searchBtn,.langBx{
+	display: none;
+}
+.headerBx{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #9b0d14;
+	z-index: 231;
+	opacity: 0;
+	transition: .2s all ease-in-out;
+	visibility: hidden;
+}
+.headerBxShow{
+	opacity: 1;
+	visibility: visible;
+}
+.lockHei{
+	overflow: hidden;
+}
+.headerTop{
+	display: none;
+}
+.navWrap{
+	position: static;
+}
+.navWrap ul{
+	display: flex;
+	flex-direction: column;
+}
+.navList{
+	position: fixed;
+	top: 1.6rem;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 300;
+	overflow-y: auto;
+	box-sizing: border-box;
+	padding: 0 0.466667rem;
+	text-align: left;
+}
+.navList li a.top{
+	display: block;
+	padding: 0;
+}
+.breadCum{
+	padding: 0.32rem;
+	margin-bottom: 0.16rem;
+	font-size: 0.24rem;
+}
+.mediaList{
+	padding: 0 0.266667rem;
+}
+.bdy_narrow{
+	width: 100%;
+}
+.mediaList li{
+	padding: 0.64rem 0;
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: row;
+	border-bottom-width: 0.04rem;
+}
+.navList li:nth-child(5){
+	margin-left: 0;
+}
+.navList li a.top{
+	font-size: 0.533333rem;
+	line-height: 0.96rem;
+	padding: 0 0.32rem;
+	position: relative;
+	font-weight: normal;
+}
+.navList li .liMenu{
+	position: absolute;
+	top: 0;
+	height: 0.96rem;
+	right: 0;
+	width: 1.333333rem;
+	z-index: 300;
+	text-align: center;
+	color: #fff;
+	line-height: 0.96rem;
+}
+.mediaList li {
+	display: flex;
+	flex-direction: row;
+}
+.mediaList li a.floatlft{
+	width: 3.28rem;
+	margin-right: 0.56rem;
+}
+.navList li dl{
+	position: static;
+	visibility: visible;
+	opacity: 1;
+	padding: 0 0.64rem;
+	background: none;
+	display: none;
+}
+.navList li.menuLang{
+	padding: 0.32rem 0;
+	border-top: 1px solid #880f0f;
+	margin-top: 0.666667rem;
+	
+}
+.navList li.menuLang ul{
+	display: flex;
+	flex-direction: row;
+}
+.navList li.menuLang ul li{
+	margin-right: 0.693333rem;
+}
+.navList li.menuLang a{
+	color: #fff;
+	font-size: 0.4rem;
+}
+.navList li dl.show{
+	display: block;
+}
+.navList li dl dd a{
+	font-size: 0.346667rem;
+	line-height: 0.613333rem;
+	color: #ffaeb2;
+}
+.navList li dl::before{
+	display: none;
+}
+.mediaList li a.floatlft img{
+	width: 100%;
+	height: auto;
+}
+.mediaList li div.overhid{
+	flex:1;
+}
+.mediaList li div em{
+	padding: 0 0.08rem;
+	font-size: 0.213333rem;
+	line-height: 0.346667rem;
+}
+.mediaList li div h3 a{
+	font-size: 0.4rem;
+	line-height: 0.48rem;
+	margin-top: 0.12rem;
+	font-weight: normal;
+}
+.mediaList li div p{
+	display: none;
+}
+.navList li a.top{
+	color: #fff;
+	font-size: 0.533333rem;
+	line-height: 0.96rem;
+}
+.navList li a.top::before{
+	display: none;
+}
+.place{
+	height: 1.6rem;
+}
+.page span, .page a{
+	font-size: 0.186667rem;
+	padding: 0.133333rem 0.2rem;
+	margin: 0 0.04rem;
+}
+.page{
+	margin-top: 0.8rem;
+}
+.searchBanner,.secBanner{
+	height: 3.626667rem;
+}
+.secBanner{
+	background-size: cover;
+}
+.secBannerIns h3{
+	font-size: 0.96rem;
+}
+.secBannerIns div{
+	padding-left: 1.066667rem;
+}
+.searchBanner .secBannerIns div,.secBanner .secBannerIns div{
+	bottom: 1.333333rem;
+}
+.searchCont{
+	padding: 0.4rem 0.266667rem;
+	
+}
+.searchContIns{
+	display: flex;
+	flex-direction: row;
+}
+.searchContIns input,.searchContIns a{
+	height: 0.973333rem;
+	line-height: 0.973333rem;
+}
+.searchContIns a{
+	width: 2.173333rem;
+	font-size: 0.4rem;
+	background-size: auto 0.333333rem;
+}
+.searchContIns input{
+	width: auto;
+	flex:1
+}
+.serchTxt{
+	font-size: 0.266667rem;
+	margin-top: 0.16rem;
+	line-height: 1;
+}
+.campusList li{
+	margin: 0 0.24rem;
+	margin-bottom: 0.8rem;
+}
+.campusList li img{
+	width: 100%;
+	height: auto;
+}
+.widper{
+	width: 100%;
+}
+.campusList li a h3{
+	font-size: 0.48rem;
+	padding: 0.64rem 0.48rem 0.48rem;
+}
+.moreMediaList{
+	padding: 0 0.24rem;
+	box-sizing: border-box;
+}
+.moreMediaList li{
+	width: 100%;
+	margin: 0;
+	margin-bottom: 1.333333rem;
+}
+.moreMediaList li img{
+	width: 100%;
+	height: auto;
+}
+.moreMediaList li h3 a{
+	font-size: 0.4rem;
+	line-height: 0.453333rem;
+	padding: 0.4rem;
+}
+.admissionTop{
+	height: 5.92rem;
+	background-size: cover;
+}
+.aboutListWrap{
+	margin-top: 0;
+}
+.admissionTopIns{
+	padding: 0.48rem 0.533333rem;
+}
+.admissionTopIns h3{
+	font-size: 0.586667rem;
+}
+.admissionTopCont{
+	display: flex;
+	flex-direction: column-reverse;
+}
+.admissionTopCont div{
+	padding: 0;
+	font-size: 0.32rem;
+	line-height: 0.426667rem;
+}
+.moreBtn{
+	height: 0.746667rem;
+	line-height: 0.746667rem;
+	width: 2.933333rem;
+	text-align: center;
+	padding: 0;
+}
+.moreBtn{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0.48rem;
+}
+.moreBtn span{
+	font-size: 0.32rem;
+}
+.moreBtn::after{
+	width: 0.28rem;
+	height: 0.24rem;
+	background-size: contain;
+	margin: 0;
+	margin-left: 0.266667rem;
+}
+.admissionBgMart img{
+	width: 100%;
+	height: auto;
+}
+.admissionContent{
+	padding: 0.533333rem 0.32rem;
+}
+.admissionContent h3{
+	font-size: 0.586667rem;
+}
+.admissionContent h3::before{
+	width: 1.013333rem;
+	height: 0.093333rem;
+	margin-bottom: 0.28rem;
+}
+.admissionContent p{
+	font-size: 0.32rem;
+	line-height: 0.426667rem;
+	margin-top: 0.266667rem;
+}
+.moreBx a{
+	line-height: 0.746667rem;
+	padding: 0 0.4rem;
+	font-size: 0.32rem;
+	text-align: center;
+}
+.moreBx a::after{
+	width: 0.226667rem;
+	height: 0.2rem;
+	margin: 0;
+	margin-left: 0.14rem;
+	background-size: contain;
+	margin-top: 0.28rem;
+}
+.admissionBgMart{
+	margin-top: 1.333333rem;
+}
+.admissionBg02{
+	display: flex;
+	flex-direction: column-reverse;
+}
+.breadCumPcHide{
+	display: block;
+}
+.bannerP{
+	display: none;
+}
+.aboutList{
+	padding: 0 0.24rem;
+	box-sizing: border-box;
+}
+.aboutList li{
+	width: 100%;
+	margin: 0;
+	margin-top: 1.4rem;
+}
+.aboutList li img{
+	width: 100%;
+	height: auto;
+}
+.aboutList li div{
+	width: 8.893333rem;
+	box-sizing: border-box;
+	padding: 0.32rem 0.64rem 0 0;
+}
+.aboutList li div h3 a{
+	font-size: 0.533333rem;
+}
+.aboutList li div p{
+	font-size: 0.32rem;
+	line-height: 0.426667rem;
+}
+.sectionForMobile{
+	display: block;
+	padding: 0.4rem 0.466667rem;
+	font-size: 0.32rem;
+	line-height: 0.426667rem;
+	color: #fff;
+	background: #972121;
+	margin: 0;
+}
+.mobileP div.authorBx{
+	margin-top: 0;
+}
+.title{
+	font-size: 0.56rem;
+	line-height: 0.693333rem;
+	padding: 0 0.266667rem;
+}
+.fonts .overhid{
+	display: none;
+}
+.share{
+	margin: 0;
+	
+}
+.share{
+	padding: 0 0.4rem;
+	margin-top: 1.066667rem;
+}
+.share a{
+	width: 0.8rem;
+	height: 0.8rem;
+	background-size: contain;
+	margin: 0 0.16rem 0 0;
+}
+.share a img{
+	width: 100%;
+	height: auto;
+}
+.mobileP{
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: flex-start;
+	padding: 0 0.266667rem;
+}
+.mobileP div{
+	margin: 0;
+}
+.mobileP div.fonts{
+	margin-top: 0.586667rem;
+	display: none;
+}
+.share span{
+	width: 2.373333rem;
+	height: 0.733333rem;
+	margin-right: 0.32rem;
+	background-size: contain;
+}
+.authorBx span, .authorBx em{
+	line-height: 1;
+	font-size: 0.293333rem;
+}
+.authorBx em{
+	padding: 0 0.16rem;
+}
+.articleIns{
+	width: 100%;
+	text-align: left;
+}
+.title{
+	margin-bottom: 0.213333rem;
+}
+.articleImg{
+	width: 100%;
+}
+.articleImg img{
+	width: 100%;
+	height: auto;
+}
+.content{
+	margin-top: .4rem;
+	box-sizing: border-box;
+	padding: 0 0.266667rem;
+}
+.articleIns{
+	font-size: 0.293333rem;
+	line-height: 0.4rem;
+}
+.swiperShadow{
+	display: none;
+}
+.eventBx{
+	margin-top: 0;
+}
+.bdy_admissions{
+	width: 100%;
+	position: static;
+	height: auto;
+	margin: 0.373333rem 0 0;
+}
+.bdy_admissions .readMore{
+	margin-top: 1rem;
+}
+.bdy_admissions .floatlft img{
+	width: 100%;
+	height: auto;
+}
+.bdy_admissions div.overhid{
+	padding: 0.466667rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+.bdy_admissions div.overhid p{
+	padding: 0;
+	font-size: 0.48rem;
+	line-height: 0.666667rem;
+}
+.content{
+	font-size: 0.4rem;
+}
+.itemTit{
+	box-sizing: border-box;
+	padding: 0;
+}
+.itemTit a{
+	font-size: 0.56rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	margin-left: 0;
+	background-size: auto 0.44rem;
+	padding-left: 0;
+	font-weight: bold;
+	padding-right: 0.54rem;
+}
+.swiper-container-his{
+	margin: 0 0.6rem;
+}
+.hisList li div{
+	font-size: 0.4rem;
+	line-height: 0.56rem;
+	padding: 0.4rem;
+	width: auto;
+}
+.hisLne{
+	display: none;
+}
+.hisList li{
+	width: 100%;
+	margin: 0;
+	height: auto;
+	padding-top: 2.3rem;
+	position: relative;
+}
+.hisList li img{
+	width: 100%;
+	height: auto;
+}
+.hisList li:nth-child(2n) img{
+	padding-top: 0;
+}
+.hisList li:nth-child(2n) span,.hisList li:nth-child(2n+1) span{
+	bottom: auto;
+}
+.hisList li:nth-child(2n) span::after{
+	display: block;
+}
+.hisList li span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 30;
+	font-size: 0.72rem;
+	display: flex;
+	flex-direction: column-reverse;
+}
+.hisList li:nth-child(2n) span::before, .hisList li:nth-child(2n+1) span::before{
+	display: none;
+}
+.hisList li span::after{
+	height: 1rem;
+	margin: 0;
+	background: url(https://fr.sdu.edu.cn/imgs/topArr.png) no-repeat 50% 50%;
+	background-size: contain;
+	border: none;
+	width: 100%;
+}
+.hisWrap .bdy_wid{
+	position: relative;
+}
+.ctrlBx{
+	position: static;
+}
+.ctrlBx span{
+	float: none;
+	width: 1.013333rem;
+	height: 1.013333rem;
+	background-size: contain;
+	display: block;
+	top: 6.1rem;
+	position: absolute;
+	z-index: 30;
+}
+.containerBx{
+	height: 6.493333rem;
+	background-size: cover;
+}
+.containerBx .itemTit{
+	margin-top: 2.866667rem;
+}
+.ctrlBx span.prev{
+	left: -0.2rem;
+}
+.ctrlBx span.nxt{
+	right: .2rem;
+}
+.hisWrap{
+	padding: 0;
+}
+.hisWrap .itemTit{
+	padding: 0 0.4rem;
+}
+.hisWrap .itemTit a{
+	font-size: 0.56rem;
+	
+}
+.newsLittleLst{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	padding: 0 0.266667rem;
+}
+.campusMenu{
+	display: none;
+}
+.bgShape{
+	background: none;
+}
+.threeList li h2 a{
+	font-size: 0.48rem;
+	line-height: 0.72rem;
+	font-family: 'Montserrat-Light';
+}
+.threeList li h2{
+	padding: 0.4rem 0.4rem 2rem;
+}
+.campusControl{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0.4rem 0 1.813333rem;
+}
+.campusControl span{
+	display: inline-block;
+	width: 0.653333rem;
+	height: 0.653333rem;
+	/* background: url(../images/control.png) no-repeat; */
+	background-size: contain;
+	margin: 0 0.133333rem;
+}
+.campusControl span.campus-prev{
+	transform: rotate(180deg);
+}
+.swiper-container-campus{
+	margin-top: 0.4rem;
+}
+.swiper-container-campus dd{
+	display: block;
+}
+.swiper-container-campus dd h3{
+	display: block;
+}
+.swiper-container-campus dd h3 a{
+	display: block;
+	font-size: 0.48rem;
+	line-height: 0.666667rem;
+	padding: 0.28rem;
+	font-family: 'Montserrat-Light';
+}
+.swiper-container-campus dd img{
+	width: 100%;
+	height: auto;
+}
+.newsLittleLst li,.mulList li{
+	width: 4.546667rem;
+	margin: 0;
+	margin-bottom: 0.533333rem;
+}
+.newsLittleLst li img,.mulList li img{
+	width: 100%;
+	height: auto;
+}
+.newsLittleLst li div h3 a,.mulList li div h3 a{
+	font-size: 0.32rem;
+	line-height: 0.4rem;
+	margin-top: 0.213333rem;
+}
+.newsLittleLst li div em, .eventList li div em{
+	font-size: 0.293333rem;
+	line-height: 0.32rem;
+	margin-top: 0.186667rem;
+}
+.newsLittleLst li div em::after{
+	margin-top: 0.32rem;
+	width: 0.92rem;
+}
+.eventBg{
+	padding-bottom: 0.933333rem;
+}
+.itemTitBlue a.readMore{
+	margin: 0;
+	font-size: 0.32rem;
+	margin-bottom: 0.1rem;
+}
+.itemTitBlue{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	line-height: 1;
+}
+.itemTitBlue em{
+	height: 0.373333rem;
+	margin: 0 0.266667rem;
+	margin-bottom: 0.12rem;
+}
+.itemTitMart45{
+	margin-top: 0.933333rem;
+}
+.eventList li{
+	border: none;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 0.266667rem;
+	
+	margin-bottom: 0.72rem;
+}
+.eventList li div{
+	padding-left: 0.32rem;
+	border-left: 0.04rem solid #ccc;
+}
+.eventList li:last-child{
+	margin-bottom: 0;
+}
+.eventList li div h3 a{
+	font-size: 0.453333rem;
+	line-height: 0.533333rem;
+}
+.mediaList li div p, .eventList li div p{
+	font-size: 0.293333rem;
+	line-height: 0.4rem;
+	margin-top: 0.266667rem;
+}
+.mulList,.newsList{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding: 0 0.266667rem;
+}
+.mulList li:hover div{
+	width: 100%;
+	position: static;
+}
+.mulList li:hover a img{
+	width: 100%;
+	height: auto;
+}
+.mulList li h3{
+	padding: 0.2rem;
+}
+.mulList li div h3 a{
+	margin-top: 0;
+}
+.bdyLft{
+	width: 100%;
+	margin: 0;
+}
+.swiper-container-home img{
+	width: 100%;
+	height: auto;
+}
+.swiper-container-home ul li a div, .newsList li a div{
+	padding: 1.333333rem 0.4rem 0.8rem;
+}
+.swiper-container-home ul li a div em, .newsList li a div em{
+	font-size: 0.293333rem;
+	line-height: 1;
+}
+.swiper-container-home ul li a div h3, .newsList li a div h3{
+	font-size: 0.4rem;
+	line-height: 0.453333rem;
+	margin-top: 0.16rem;
+}
+.pagination-home span,.pagination-index span{
+	width: 0.8rem;
+	height: 0.053333rem;
+	margin: 0 0.06rem;
+}
+.pagination-home,.pagination-index{
+	bottom: 0;
+}
+.newsList{
+	margin-top: 0.533333rem;
+}
+.newsList li{
+	width: 4.626667rem;
+	margin: 0;
+}
+.newsList li img{
+	width: 100%;
+	height: auto;
+}
+.homeCtrl{
+	top: 1.413333rem;
+	width: 0.813333rem;
+	height: 0.813333rem;
+	background-size: contain;
+}
+.home-prev{
+	left: 0.16rem;
+}
+.home-nxt{
+	right: 0.16rem;
+}
+.newsList li a div{
+	position: static;
+	padding: 0.266667rem 0;
+	background: transparent;
+}
+.newsList li a div em,.newsList li a div h3{
+	color: #000;
+}
+.itemTit{
+	margin-top: 1.333333rem;
+}
+.bdyRgt{
+	margin: 0 0.24rem;
+	width: calc(100% - .48rem);
+	padding: 0 0.4rem 0.4rem;
+	box-sizing: border-box;
+	min-height: auto;
+	margin-top: 0.32rem;
+}
+.resList dd h3 a{
+	font-size: 0.373333rem;
+	line-height: 0.426667rem;
+	padding: 0.32rem;
+}
+.resList dd div b{
+	font-size: 1.12rem;
+	margin-top: 0;
+}
+.resList dd div span{
+	font-size: 0.373333rem;
+}
+.resList dd {
+	margin-top: 0.4rem;
+}
+.resList dd div{
+	width: 2.12rem;
+	height: 2.2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.bdyBg{
+	height: auto;
+	background-size: cover;
+	margin-top: 2rem;
+}
+.admissionList li{
+	width: 100%;
+	padding: 0 0.24rem;
+	box-sizing: border-box;
+	margin-bottom: 0.88rem;
+}
+.admissionList li img{
+	width: 100%;
+	height: auto;
+}
+.admissionList li a h3{
+	line-height: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.64rem;
+}
+.admissionList{
+	margin-top: 0.4rem;
+}
+.itemMobileCenter{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.mulList{
+	margin-top: 0.4rem;
+}
+.campusBx{
+	display: flex;
+	flex-direction: column;
+}
+.campTit{
+	padding: 0;
+	font-size: 0.586667rem;
+	text-align: center;
+	margin-top: 0;
+}
+.numList{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0 0.866667rem;
+	box-sizing: border-box;
+	margin-top: 0;
+}
+.numList li{
+	margin: 0.733333rem 0 0;
+}
+
+.eventLft{
+	padding: 0 0.266667rem;
+	box-sizing: border-box;
+	width: 100%;
+}
+.eventLft dd::before, .eventLft dd::after{
+	width: 0.426667rem;
+	height: 0.426667rem;
+	left: 1.533333rem;
+}
+.eventLft{
+	margin-top: 0.533333rem;
+}
+.eventLft dd{
+	margin: 0 0 0.8rem 0;
+}
+.eventLft dd::before{
+	top: -0.213333rem;
+}
+.eventLft dd::after{
+	bottom: -0.213333rem;
+}
+.eventLft dd h3 a{
+	font-size: 0.48rem;
+	line-height: 0.64rem;
+}
+.eventLft dd div.overhid{
+	padding-right: 0.4rem;
+}
+.eventLft dd div.floatlft span{
+	font-size: 0.533333rem;
+}
+.eventLft dd{
+	height: 3.586667rem;
+	padding: 0.266667rem 0;
+	box-sizing: border-box;
+}
+.eventLft dd div.floatlft{
+	width: 1.8rem;
+	margin-right: 0.533333rem;
+}
+.eventLft dd div.floatlft h4{
+	font-size: 0.76rem;
+	display: block;
+	line-height: 1;
+}
+.bdy_admissionsBx{
+	height: auto;
+}
+.bgNumbers{
+	height: auto;
+	background: none;
+}
+.numList li span{
+	line-height: 1.346667rem;
+	border-width: 0.066667rem;
+	padding: 0 0.466667rem;
+	font-size: 0.8rem;
+}
+.numList li:nth-child(1),.numList li:nth-child(4){
+	width: 2.88rem;
+}
+.numList li:nth-child(2),.numList li:nth-child(3){
+	width: 4.56rem
+}
+
+.numList li h3{
+	font-size: 0.373333rem;
+	line-height: 0.426667rem;
+	margin-top: 0.24rem;
+}
+.numList li span::after{
+	width: 0.066667rem;
+	height: 0.666667rem;
+	right: -0.066667rem;
+	top: 0.333333rem;
+}
+.campList{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.threeList li.longPic{
+	width: 100%;
+}
+.campList li{
+	padding: 0;
+	width: 33.33%;
+	box-sizing: border-box;
+	margin-top: 0.88rem;
+}
+.campList li i{
+	width: 1rem;
+	height: 0.666667rem;
+	background-size: contain;
+}
+.campList li h3 a{
+	font-size: 0.373333rem;
+	margin-top: 0.16rem;
+}
+.campusBx{
+	padding: 0;
+}
+.swiper-container-index{
+	/* height: 7.573333rem; */
+	height: 3.733333rem;
+}
+.swiper-container-index li{
+	/* height: 7.573333rem; */
+	height: 3.733333rem;
+	background-size: auto 3.733333rem;
+	background-color: #972121;
+}
+.swiper-container-index li::after{
+	display: none;
+}
+.swiper-container-index li div{
+	margin: 0;
+	position: static;
+	margin-top: 3.733333rem;
+}
+.swiper-container-index li div h3 a{
+	width: 100%;
+	font-size: 0.586667rem;
+	line-height: 0.613333rem;
+	padding: 0.32rem 0.453333rem;
+	box-sizing: border-box;
+	font-family: Times, serif;
+}
+.introWrap{
+	width: 100%;
+	height: auto;
+	background: #bf2931;
+}
+.introTit{
+	background: #bf2931;
+	padding: 0.72rem 0 0 0.32rem;
+}
+.introTit a{
+	font-size: 0.56rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.introTit a::after{
+	width: 0.373333rem;
+	height: 0.453333rem;
+	background-size: contain;
+	margin: 0 0 0 .24rem;
+}
+.introCont p{
+	margin: 0;
+	font-size: 0.32rem;
+	line-height: 0.48rem;
+}
+.more{
+	height: 0.8rem;
+	line-height: 0.8rem;
+	font-size: 0.32rem;
+	padding: 0 0.64rem;
+}
+.introCont{
+	margin: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding: 0.32rem;
+	width: 100%;
+	background: url(https://fr.sdu.edu.cn/imgs/sdu.png) no-repeat calc(100% - .3rem) 100% #bf2931;
+	background-size: auto 1.906667rem;
+}
+.introImg{
+	margin-top: 0;
+}
+.introImg img{
+	width: 100%;
+	height: auto;
+}
+.introCont .more{
+	margin-top: 0.4rem;
+}
+.hisWrap{
+	margin-top: 1.6rem;
+}
+.mobileHeaderBx{
+	height: 2.133333rem;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	align-items: center;
+	padding: 0 0.64rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 230;
+	background: #fff;
+	border-bottom: 1px solid #e0e0e0;
+}
+.mobileHeaderBxPlace{
+	height: 2.133333rem;
+	display: block;
+}
+.mobileHeaderBx span{
+	width: 4.28rem;
+	height: 1.333333rem;
+	background: url(https://fr.sdu.edu.cn/imgs/mobileLogo.png) no-repeat;
+	background-size: contain;
+}
+.mobileHeaderBx em,.mobileHeaderBx b{
+	display: inline-block;
+	vertical-align: top;
+	width: 0.346667rem;
+	height: 0.373333rem;
+	background: url(https://fr.sdu.edu.cn/imgs/menu.png) no-repeat;
+	background-size: contain;
+}
+.mobileHeaderBx em{
+	position: fixed;
+	right: 0.64rem;
+	top: 0.853333rem;
+}
+.mobileHeaderBx b{
+	width: 0.466667rem;
+	height: 0.493333rem;
+	position: fixed;
+	right: 1.653333rem;
+	top: 0.853333rem;
+	background-image: url(https://fr.sdu.edu.cn/imgs/searchBtn.png);
+}
+.navBack{
+	width: 100%;
+	height: 1.6rem;
+	background: #9b0d14;
+	margin: 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 300;
+	padding: 0 0.586667rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.navList li.menuShare{
+	padding: 0.32rem 0;
+	border-top: 1px solid #880f0f;
+}
+.navList li.menuShare ul{
+	display: flex;
+	flex-direction: row;
+}
+.navList li.menuShare ul li{
+	margin: 0 0.32rem 0 0;
+}
+.navList li.menuShare ul li a{
+	width: 0.8rem;
+	height: 0.8rem;
+	
+	display: block;
+	background: url(https://fr.sdu.edu.cn/imgs/topShare.png) no-repeat;
+	background-size: auto .8rem;
+}
+.navList li.menuShare ul li.weibo a{
+	background-position: -0.99rem 0;
+}
+.navList li.menuShare ul li.twitter a{
+	background-position: -1.98rem 0;
+}
+.navList li.menuShare ul li.facebook a{
+	background-position: -2.94rem 0;
+}
+.navList li.menuShare ul li.ins a{
+	background-position: -3.92rem 0;
+}
+.back{
+	display: inline-block;
+	vertical-align: top;
+	width: .6rem;
+	height: 0.546667rem;
+	background: url(https://fr.sdu.edu.cn/imgs/back.png) no-repeat;
+	background-size: contain;
+}
+.searchC{
+	display: none;
+	position: static;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+	margin-top: 1.6rem;
+	padding: 0 0.4rem;
+	box-sizing: border-box;
+	width: auto;
+	visibility: visible;
+	opacity: 1;
+	background: none;
+}
+.searchC input,.searchC a{
+	height: 1.173333rem;
+}
+.searchC a{
+	margin-left: 0;
+}
+.swiper-container-aca{
+	margin-left: 0;
+}
+.searchC input{
+	font-size: 0.426667rem;
+	background: #b9252c;
+	color: #fff;
+	padding: 0 0.4rem;
+	width: auto;
+	flex:1;
+}
+.acaBx{
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 0.533333rem;
+}
+.swiper-container-aca{
+	width: 12rem;
+	margin-left: -1rem;
+}
+.swiper-container-aca li{
+	padding: 0 0.266667rem;
+	box-sizing: border-box;
+	opacity: .5;
+}
+.swiper-container-aca li{
+	margin-top: 0.333333rem;
+}
+.btns dd{
+	width: 4.906667rem;
+	margin: 0.626667rem 0 0;
+}
+.btns{
+	margin-top: 0.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.btns dd a i,.btns dd:hover a i{
+	width: 0.253333rem;
+	height: 0.266667rem;
+	background-size: contain;
+	right: 0.533333rem;
+	top: 0.533333rem;
+}
+
+.btns dd a{
+	height: 1.333333rem;
+	line-height: 1.333333rem;
+	font-size: 0.48rem;
+	padding: 0 0.533333rem 0 0.666667rem;
+	background-size: auto 0.546667rem;
+	background-position: 0.653333rem 50%;
+}
+.btns dd a span{
+	padding-left: 0.82rem;
+}
+.bdy_acaBx{
+	height: auto;
+	margin-top: 0.466667rem;
+}
+.acaCont{
+	text-align: center;
+	margin: 0.813333rem 0 0;
+}
+.acaCont span{
+	width: 0.64rem;
+	height: 0.64rem;
+	background-size: auto 0.2rem;
+	margin: 0 0.133333rem;
+}
+.swiper-container-aca li.swiper-slide-active{
+	opacity: 1;
+}
+.aca_tit a{
+	margin: 0;
+	font-size: 0.48rem;
+	display: block;
+	text-align: center;
+	margin-top: 0.72rem;
+}
+.swiper-container-aca li div{
+	width: 100%;
+}
+.swiper-container-aca li div a{
+	font-size: 0.373333rem;
+	line-height: 0.453333rem;
+	margin-top: 0.16rem;
+	font-family: 'Montserrat-Light';
+}
+.swiper-container-aca li div span{
+	font-size: 0.32rem;
+	margin-top: 0.32rem;
+	line-height: 1.2;
+}
+.swiper-container-aca li img{
+	width: 100%;
+	height: auto;
+}
+.bdy_aca{
+	height: auto;
+	width: 100%;
+	margin-left: 0;
+	position: static;
+}
+.langList{
+	display: none;
+}
+.searchC a{
+	width: 1.173333rem;
+	background: url(https://fr.sdu.edu.cn/imgs/mobileSearch.png) no-repeat 50% 50%;
+	background-size: 0.52rem auto;
+}
+.searchCShow{
+	display: flex;
+}
+.mulList li a .vid{
+	width: 0.506667rem;
+	height: 0.36rem;
+	right: 0.4rem;
+	bottom: 0.4rem;
+}
+.dlNewsList dl{
+	padding: 0 0.266667rem;
+	margin: 0;
+}
+.dlNewsList dl dd{
+	margin-bottom: 0.16rem;
+}
+.dlNewsList dl dd a{
+	padding: 0.213333rem 0.2rem;
+	font-size: 0.346667rem;
+	line-height: 0.4rem;
+	min-height: 0.306667rem;
+}
+.dlNewsList dl dt{
+	padding-bottom: 0.32rem;
+}
+.dlNewsList dl dd a span{
+	padding-right: 0;
+}
+.dlNewsList dl dt a{
+	font-size: 0.48rem;
+	line-height: 1.1;
+	margin-top: 0.88rem;
+}
+.dlNewsList dl dd a i{
+	right: 0.32rem;
+	top: 0.24rem;
+	width: 0.293333rem;
+	height: 0.306667rem;
+	background-size: contain;
+}
+.threeList{
+	padding: 0 0.266667rem;
+	margin: 0;
+	box-sizing: border-box;
+	margin-top: 0.266667rem;
+}
+.threeList li{
+	width: 100%;
+	margin: 0 0 0.64rem 0;
+}
+.photosBg{
+	height: auto;
+	margin-top: 1.413333rem;
+	padding-bottom: 1rem;
+}
+.photosBg .itemTit{
+	margin-top: 1rem;
+}
+.threeList li img{
+	width: 100%;
+	height: auto;
+}
+.threeList li div h3{
+	margin-top: 0.16rem;
+}
+.threeList li div h3 a,.threeList li.longPic div h3 a{
+	font-size: 0.4rem;
+	line-height: 0.453333rem;
+	font-weight: normal;
+}
+.threeList li div em{
+	font-size: 0.293333rem;
+	margin: 0.133333rem 0 0;
+}
+.threeList02{
+	margin-top: 0.933333rem;
+}
+.readMore a{
+	height: 0.666667rem;
+	line-height: 0.666667rem;
+	align-items: center;
+	border-radius: 0.426667rem;
+	padding: 0 0.4rem;
+}
+.readMore a span{
+	line-height: 0.666667rem;
+	font-size: 0.266667rem;
+}
+.readMore a i{
+	width: 0.253333rem;
+	height: 0.213333rem;
+	background-size: contain;
+	margin: 0;
+	margin-left: 0.266667rem;
+	margin-top: 0.24rem;
+}
+.bgGray{
+	margin-top: 1.706667rem;
+	padding-bottom: 1.6rem;
+	box-sizing: border-box;
+}
+.resList dd div::after{
+	width: 0.24rem;
+	height: 0.48rem;
+	background-size: contain;
+	left: 2.12rem;
+	top: 0.36rem;
+	z-index: 30;
+}
+.resList{
+	padding: 0 0.266667rem;
+	box-sizing: border-box;
+}
+.speIns{
+	padding: 0 0.266667rem;
+	box-sizing: border-box;
+	margin-top: 0.32rem;
+}
+.speIns img{
+	width: 100%;
+	height: auto;
+}
+.speIns div{
+	margin: 0 0.64rem;
+	margin-top: -1rem;
+	padding: 0.266667rem;
+}
+.speIns div a{
+	font-size: 0.4rem;
+	line-height: 0.48rem;
+}
+.speIns div em{
+	font-size: 0.293333rem;
+	line-height: 1;
+	margin-top: 0.186667rem;
+}
+.speIns div.bgRed h3 a{
+	font-size: 0.4rem;
+	line-height: 0.48rem;
+}
+.speIns div p{
+	font-size: 0.266667rem;
+	line-height: 0.346667rem;
+	margin: 0.16rem 0 0;
+}
+.highList{
+	padding: 0 0.266667rem;
+	box-sizing: border-box;
+}
+.highList dd{
+	margin-top: 0.32rem;
+}
+.highList dd div h3{
+	font-size: 0.373333rem;
+	line-height: 0.453333rem;
+	padding-left: 0.32rem;
+	border-width: 0.066667rem;
+}
+.highList dd div em{
+	font-size: 0.293333rem;
+	margin-top: 0.16rem;
+	padding-left: 0.386667rem;
+}
+.highList dd div p{
+	padding-left: 0.386667rem;
+	font-size: 0.266667rem;
+	line-height: 0.346667rem;
+	margin-top: 0.16rem;
+}
+.admLft,.admUl{
+	width: 100%;
+	padding: 0 0.266667rem;
+	box-sizing: border-box;
+}
+.admLft a, .admUl a{
+	width: 100%;
+	height: auto;
+}
+.bgDarkGreen{
+	padding: 0.266667rem 0;
+}
+.admLft a img, .admUl a img{
+	width: 100%;
+	height: auto;
+}
+.admLft a span,.admUl a span{
+	font-size: 0.426667rem;
+	height: 0.813333rem;
+	line-height: 0.813333rem;
+	padding: 0 0.4rem;
+}
+.admUl li:last-child,.admUl li{
+	margin-top: 0.266667rem;
+}
+.bgDarkRed{
+	padding: 0.6rem 0.266667rem;
+	box-sizing: border-box;
+}
+.campusTit a{
+	line-height: 1;
+	font-size: 0.4rem;
+	padding: 0;
+}
+.bgAdmission{
+	height: 8.72rem;
+	background-image: url(https://fr.sdu.edu.cn/imgs/admissionMobile.jpg);
+	background-size: contain;
+}
+.campusList{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 0.24rem;
+	padding: 0 0.266667rem;
+	box-sizing: border-box;
+}
+.campusList li a::after{
+	width: 1.213333rem;
+	height: 0.12rem;
+	margin-left: -0.6rem;
+}
+.campusList li{
+	width: 4.573333rem;
+	height: 4.56rem;
+	margin: 0 0 0.4rem 0;
+}
+.campusList li img{
+	width: 100%;
+	height: auto;
+}
+.campusList li a span{
+	line-height: 1;
+	font-size: 0.32rem;
+	line-height: 0.346667rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.secLne{
+	
+}
+.footerBxIns{
+	padding-bottom: 0.32rem;
+	display: flex;
+	flex-direction: column-reverse;
+}
+.topBx li{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.dropList{
+	margin-right: 0;
+}
+.dropList dt span{
+	font-size: 0.24rem;
+	line-height: 0.8rem;
+}
+.dropList dt i{
+	width: 0.4rem;
+	height: .8rem;
+	right: .4rem;
+	background-size: 0.24rem auto;
+}
+.footerBx{
+	background-size: cover;
+	padding-bottom: 0;
+}
+.dropList dd{
+	top: .8rem;
+}
+.dropList dd ul li a{
+	height: .8rem;
+	line-height: .8rem;
+	font-size: 0.24rem;
+}
+.dropList dd ul{
+	padding: 0 0.4rem;
+	border-radius: 0.266667rem;
+}
+.shareHover{
+	width: 2.08rem;
+	left: -0.466667rem;
+	bottom: 0.866667rem;
+}
+.shareHover div{
+	font-size: 0.213333rem;
+	line-height: 1.1;
+}
+.shareHover dd img{
+	width: 100%;
+	height: auto;
+}
+.shareWrapper{
+	text-align: center;
+	margin-top: 0.8rem;
+}
+.shareWrapper a{
+	width: 0.8rem;
+	height: 0.8rem;
+	background-size: auto .8rem;
+	margin: 0 0.2rem;
+}
+.shareWrapper li:nth-child(2) a{
+	background-position: -0.933333rem 0;
+}
+.shareWrapper li:nth-child(3) a{
+	background-position: -1.88rem 0;
+}
+.shareWrapper li:nth-child(4) a{
+	background-position: -2.8rem 0;
+}
+.shareWrapper li:nth-child(5) a{
+	background-position: -3.746667rem 0;
+}
+.shareHover::after{
+	width: 0.266667rem;
+	height: 0.266667rem;
+	margin-top: -0.133333rem;
+	margin-left: 0.9rem;
+}
+.dropList,.shareOutter{
+	width: 8.333333rem;
+}
+.shareOutter{
+	margin-top: 0;
+}
+.dropList dt{
+	height: 0.8rem;
+	padding: 0 0.4rem;
+}
+.bgFoot div.bdy_wid{
+	display: flex;
+	flex-direction: column-reverse;
+	padding: 0.72rem 0;
+	font-size: 0.32rem;
+	line-height: 0.4rem;
+}
+.bgFoot div.bdy_wid div.floatlft{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.bgFoot div.bdy_wid div.floatlft a.floatlft{
+	margin: 1.6rem 0 0.533333rem;
+}
+.bgFoot div.bdy_wid{
+	border: none;
+}
+.shares li{
+	margin: 0 0.2rem;
+}
+.shares li img{
+	width: 1.066667rem;
+	height: 1.066667rem;
+}
+.mobileLogo{
+	display: block;
+}
+.mobileLogo img{
+	width: 3.16rem;
+	height: auto;
+}
+.pcLogo{
+	display: none;
+}
+.bgFoot div{
+	font-size: 0.32rem;
+	line-height: 0.4rem;
+}
+.bgFoot{
+	padding: 0;
+}
+.bgFoot .footTxt{
+	padding: 0;
+	font-size: 0.32rem;
+	line-height: 0.48rem;
+	text-align: center;
+}
+.topBx li a{
+	font-size: 0.24rem;
+	line-height: 1;
+}
+.secLne{
+	padding: 0;
+	margin-top: 0.72rem;f.secLne
+}
+.topBx li i{
+	width: 0.28rem;
+	height: 0.16rem;
+	background-size: contain;
+	margin: 0 0 .2rem;
+}
+.secBanner span{
+	font-size: 0.48rem;
+	height: 0.866667rem;
+	line-height: 0.866667rem;
+	padding: 0 0.533333rem;
+	border-radius: 0.453333rem;
+	margin-top: 1.2rem;
+}
+.bannerBx{
+	padding: 0.533333rem 0.4rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+.bannerBx h3{
+	font-size: 0.4rem;
+}
+.bannerBx p{
+	font-size: 0.293333rem;
+	line-height: 0.4rem;
+}
+.mre span{
+	font-size: 0.32rem;
+}
+.mre::after{
+	width: 0.333333rem;
+	height: 0.28rem;
+	background-size: contain;
+	margin: 0.06rem 0 0 0.16rem;
+}
+.admissionBg{
+	padding: 0.6rem 0;
+}
+.adMart{
+	padding: 0 0.266667rem;
+	box-sizing: border-box;
+	margin-top: 0.4rem;
+}
+.adMart img{
+	width: 100%;height: auto;
+}
+.threeList li i{
+	font-size: 0.4rem;
+	height: 0.786667rem;
+	line-height: 0.786667rem;
+	padding: 0 0.32rem;
+}
+.itemTitBlue a.itemMore{
+	font-size: 0.32rem;
+	margin: 0 0 .1rem 0.12rem;
+}
+.swiper-container-media li.swiper-slide-active div{
+	width: 100%;
+	margin: 0;
+}
+.swiper-container-media{
+	height: auto;
+	margin: 0 0.266667rem;
+	box-sizing: border-box;
+	margin-top: 0.32rem;
+}
+.swiper-container-media li div{
+	margin-top: 0;
+}
+.swiper-container-media li.swiper-slide-active h3 a{
+	font-size: 0.373333rem;
+	line-height: 0.48rem;
+}
+.swiper-container-media li h3{
+	padding: 0.8rem 0.32rem 0.32rem;
+}
+.pagination-media{
+	margin-top: 0.4rem;
+}
+.pagination-media span{
+	width: 0.88rem;
+	height: 0.053333rem;
+	margin: 0 0.066667rem;
+}
+.multiBx{
+	height: 2.293333rem;
+	background-size: contain;
+	margin-top: 0.4rem;
+}
+.swiper-container-media li div h3 em{
+	width: 0.786667rem;
+	height: 0.56rem;
+	right: 0.433333rem;
+	bottom: 0.433333rem;
+}
+.swiper-container-media li div h3 a{
+	padding-right: 1.053333rem;
+}
+.isMobile{
+	display: block;
+}
+.isPc{
+	display: none;
+}
+
+.exBtnsM dd{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0.8rem;
+}
+.exBtnsM dd:last-child{
+	flex-direction: row-reverse;
+}
+.exBtnsM dd img{
+	width: 5rem;
+	height: auto;
+}
+.exBtnsM dd a{
+	height: auto;
+}
+.exBtnsM dd div{
+	height: 2.373333rem;
+	background: #972121;
+	flex:1;
+	font-size: 0.32rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.exBtnsM dd div a{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.exBtnsM dd div a i{
+	display: inline-block;
+	vertical-align: top;
+	width: 0.56rem;
+	height: 0.56rem;
+	margin-right: 0.266667rem;
+	background: url(https://fr.sdu.edu.cn/img/icons/icon_01.png) no-repeat 50% 50%;
+	background-size: contain;
+}
+.exBtnsM dd:last-child div a i{
+	background-image: url(https://fr.sdu.edu.cn/img/icons/icon_02.png);
+}
+.exBtnsM dd div a span{
+	font-size: 0.32rem;
+	font-weight: bold;
+	color: #fff;
+}
+.exBtnsM dd b{
+	display: block;
+	width: 0.266667rem;
+	height: 2.373333rem;
+	background: #f5f5f5;
+}
+.swiper-container-exchangeM{
+	margin: 0 0.266667rem;
+	overflow: hidden;
+	margin-top: 0.266667rem;
+}
+.swiper-container-exchangeM img{
+	width: 100%;
+	height: auto;
+}
+.swiper-container-exchangeM li h2 a{
+	font-size: 0.346667rem;
+	line-height: 0.426667rem;
+	display: block;
+	margin-top: 0.2rem;
+}
+.swiper-container-exchangeM li p{
+	font-size: 0.293333rem;
+	line-height: 0.373333rem;color: #666;
+}
+.exPrev,.exNxt{
+	width: 0.733333rem;
+	height: 0.733333rem;
+	background-size: contain;
+}
+.pagination-exchange span{
+	width: 0.106667rem;
+	height: 0.106667rem;
+	margin: 0 0.08rem;
+}
+.pagination-exchange{
+	margin: 0.28rem 0.266667rem 0;
+}
+.threeList li .transPic,.swiper-container-aca li .transPic{
+	width: auto;
+	height: auto;
+}
+.mobilePad{
+	padding: 0 0.266667rem;
+}
+.genList{
+	margin-top: 0;
+}
+.genList li img{
+	width: 100%;
+	height: auto;
+}
+.genList li{
+	width: 100%;
+	margin: 0 0 0.64rem;
+}
+.genList li div{
+	padding: 0.32rem;
+	height: auto;
+}
+.genList li div em{
+	font-size: 0.32rem;
+}
+.genList li div h3{
+	margin-top: 0.16rem;
+}
+.genList li div h3 a{
+	font-size: 0.4rem;
+	line-height: 0.533333rem;
+}
+.photoCover{
+	display: none;
+}
+.swiper-container-photos{
+	width: 100%;
+	margin: 0;
+	
+}
+.swiper-container-photos li{
+	width: 100%;
+	margin-bottom: 0.666667rem;
+}
+.swiper-container-photos li img{
+	width: 100%;
+	height: auto;
+}
+.swiper-container-photos li a span{
+	opacity: 1;
+	visibility: visible;
+	padding: 0.32rem;
+	font-size: 0.4rem;
+	line-height: 0.533333rem;
+}
+.bgVideo{
+	margin-top: -.56rem;
+	padding-bottom: 0;
+	background: none;
+}
+.vidWrap{
+	width: 100%;
+	height: auto;
+	margin-top: 0;
+	background: #000;
+}
+.vid{
+	width: 100%;
+	height: 6.666667rem;
+	margin: 0;
+}
+.swiper-container-info{
+	height: 10.533333rem;
+	background: #9b0d14;
+	
+}
+.pagination-info{
+	margin-top: -0.62rem;
+}
+.pagination-info span{
+	width: 0.8rem;
+	height: 0.053333rem;
+	margin: 0 0.053333rem;
+}
+.swiper-container-info .videoCont{
+	background: #9b0d14;
+}
+.swiper-container-info .vidWrap{
+	margin-top: 0;
+}
+.swiper-container-info .swiper-slide div.bdy_wid{
+	position: static;
+	margin-left: 0;
+}
+#info .swiper-slide img.imgBg{
+	display: none;
+}
+.videoCont{
+	padding: 0.4rem;
+	background: #999;
+	margin-bottom: 1.653333rem;
+}
+.videoCont em{
+	font-size: 0.32rem;
+}
+.videoCont h3 a{
+	font-size: 0.4rem;
+	line-height: 0.533333rem;
+	margin-top: 0.16rem;
+}
+.videoCont p,.videoCont .more{
+	display: none;
+}
+
+.navList li.menuShare .liMenu{
+	display: none;
+}
+.navList li.menuShare dl.shareHover{
+	display: block;
+	width: 2.08rem;
+	min-width: auto;
+	position: absolute;
+	top: auto;
+	bottom: 1rem;
+	visibility: hidden;
+	opacity: 0;
+	left: -1rem;
+}
+.navList li.menuShare li:hover dl.shareHover{
+	visibility: visible;
+	opacity: 1;
+}
+.shareHover img{
+	width: 100%;
+}
+.navList li.menuShare dl.shareHover::after{
+	margin-left: .54rem;
+}

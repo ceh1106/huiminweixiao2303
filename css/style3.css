@@ -1,0 +1,1183 @@
+﻿@charset "utf-8"
+@font-face
+{font-family: DIN;
+src: url('DIN-Medium.otf')}
+
+/* @font-face
+{font-family: SourceHanSerifCN;
+src: url('SourceHanSerifCN-Medium-6.otf')} */
+
+
+*{box-sizing:border-box;color:#333;font-size: .16rem;}
+body,input,h1,h2,h3,h4,h5,h6,p,textarea,table,div,ul,li,select,td,th,em,span,i,button,code{margin:0;padding:0;color:inherit;line-height: inherit; font-family:"microsoft yahei",'PingFang SC','PingFangMedium';/* font-size: inherit; */}
+img{border:0;display: inline-block;max-width:100%;vertical-align: middle;height: auto;}
+.fl{float:left;}
+.fr{float:right;}
+ul,li{ list-style:none; }
+a,p,span,i,em{ text-decoration:none; color:inherit;font-size: inherit;}
+pre{word-break: break-word;}
+:focus{outline:none!important;border-color:inherit;}
+.clearfix{*zoom: 1;}
+.clearfix:before,.clearfix:after
+{display: table;line-height: 0;content: "";}
+.clearfix:after{clear: both;}
+table{border-collapse:collapse;border-spacing:0;width:100%}
+h3,h4,h5,h6{font-weight: normal;}
+em,i{font-style:normal;}
+input[type="button"], input[type="submit"], input[type="reset"],input[type="text"] {-webkit-appearance: none;}
+input[type="button"]{border:none;}
+textarea {  -webkit-appearance: none;}  
+.auto{margin:0 auto;max-width: 14rem;width: 96%;}
+:hover{transition: all .2s;}
+.img_hover_wrap{overflow: hidden;}
+.img_hover{transition: all .3s;}
+.img_hover:hover{transform: scale(1.05,1.05);}
+.img_traslate{transition: all .3s;}
+.img_traslate:hover{transform: translateY(-10px);}
+.img_rotate{transition: all .3s;}
+.img_rotate:hover{transform:rotate(-360deg);}
+.bold{font-weight: bold;}
+.normal{font-weight: normal!important;}
+.center{text-align: center!important;}
+.img{/* width: 100%; */display: block;    height: auto;}
+.ellipsis{overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.ele{position:relative;}
+.ele:before,.ele:after{content:'';display: inline-block;vertical-align: middle;}
+.ipt{display: block;border:none;}
+.ipt_button{cursor: pointer;}
+.item_scale .icon{transition: all .3s;}
+.item_scale:hover .icon{transform: scale(1.08,1.08);}
+.text-left{text-align: left!important;}
+.text-right{text-align: right!important;}
+.clamp{overflow: hidden;text-overflow: ellipsis;display: -webkit-box!important;/* display: -ms-flexbox; */-webkit-box-orient: vertical;/*-webkit-line-clamp: 3;*/}	
+.clamp1{overflow: hidden;text-overflow: ellipsis;display: -webkit-box!important; -webkit-box-orient: vertical;-webkit-line-clamp: 1;}
+.clamp2{overflow: hidden;text-overflow: ellipsis;display: -webkit-box!important; -webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+.clamp3{overflow: hidden;text-overflow: ellipsis;display: -webkit-box!important; -webkit-box-orient: vertical;-webkit-line-clamp: 3;}
+body{background: #fff;overflow-x: hidden;}
+.item{}
+.item .imgbox{display: block;overflow: hidden;}
+.item .img{transition: all 1s;width: 100%;display: block;}
+.item:hover .imgbox .img{transform: scale(1.1,1.1);}
+
+.zoomimg{position:relative;overflow: hidden;height: 0;display: block;}
+.zoomimg .img{display: block;position:absolute;width: 100%;height: 100%;left: 0;top: 0;}
+
+.flipx .icon{transition: all .3s;}
+.flipx:hover .icon{transform:scaleX(-1);}
+.scale .icon{transition: all .3s;}
+.scale:hover .icon{transform: scale(1.1,1.1);}
+
+.underline:hover{text-decoration: underline;}
+label{-webkit-tap-highlight-color: rgba(255,0,0,0);} 
+.img_full{width: 100%;height: 100%;display: block;object-fit: cover;}
+
+.flex{display: -webkit-box; display: -moz-box;display: -ms-flexbox; display: -webkit-flex; display: flex;}
+.flex-align-start{align-items: flex-start;}
+.flex-align-center {-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flex-align-end{align-items: flex-end;}
+.flex-pack-center {-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;}
+.flex-pack-justify {-webkit-box-pack: justify;-webkit-justify-content: pace-between;-ms-flex-pack: justify;justify-content: space-between;}
+.flex-pack-start{justify-content: flex-start;}
+.flex-pack-end{justify-content: flex-end;}
+.flex-v {-webkit-box-orient: vertical; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+.flex-w{flex-wrap:wrap;}
+.flex-1{flex:1;overflow: hidden;}
+.flex-11{flex:1;}
+html{font-size: 5.2083vw;}
+
+::-webkit-input-placeholder{color:#999;}
+:-moz-placeholder{color:#999;}
+::-moz-placeholder{color:#999;}
+:-ms-input-placeholder{color:#999;}
+
+/* Ã¥â€¦Â¬Ã¥â€¦Â± */
+.head{height: 1rem;position: fixed;width: 100%;left: 0;top: 0;z-index:100;}
+.head.scroll{background-color: rgba(0,0,0,.7);}
+.head .wrap{max-width: 16.8rem;width: 100%;height: 100%;display: flex;align-items: center;justify-content: space-between;}
+.head .r{display: flex;align-items: center;}
+.hd-logo{}
+.hd-logo .img{height: 0.75rem;width: auto;}
+
+
+.hd-nav{text-align: right;height: 100%;white-space: nowrap;}
+.hd-nav li{display: inline-block;vertical-align: middle;margin-left: 0.4rem;position: relative;}
+.hd-nav li>a{display: block;font-size: 0.18rem;color:#fff;position: relative;line-height: .6rem;}
+.hd-nav li.cur>a,.hd-nav li:hover>a{font-weight: bold;}
+
+.hd-nav .drop{width: 1.4rem;position: absolute;left: 50%;transform: translate(-50%,0) scaleY(0);visibility: hidden;opacity: 0;transition: all .3s ease 0s;transform-origin: center top;z-index:100;}
+.hd-nav .drop::before{content:'';position: absolute;width: 0;height: 0;border-style: solid;border-width: 0 .08rem .08rem .08rem;border-color: transparent transparent #00429b transparent;left: 50%;top: -.06rem;transform: translate(-50%,0);display: none;transition: all 0s;}
+
+.hd-nav .dropbox{background-color: #00429b;box-shadow: .02rem .03rem .06rem 0 rgba(43, 0, 0, 0.3);position: relative;}
+.hd-nav .lk{display: block;font-size: 0.15rem;color:#fff;text-align: center;line-height: 0.45rem;border-bottom:1px dashed rgba(255,255,255,.4);}
+.hd-nav .lk:last-child{border:none;}
+.hd-nav .lk:hover{font-weight: bold;}
+.hd-nav li:hover .drop{opacity: 1;visibility: visible;transform: translateX(-50%) scaleY(1);}
+.hd-nav li:hover .drop::before{display: block;}
+
+
+
+.hd-sear{margin-left: 0.25rem;}
+.hd-sear .icon{background:url(https://cfms.sdu.edu.cn/images/icon_01.png) no-repeat center;background-size:.2rem;display: inline-block;vertical-align: middle;cursor: pointer;width: 0.4rem;height: 0.4rem;}
+
+
+.sear-pop{position:fixed;width: 100%;height:100%;left: 0;top: 0;z-index:110;background-color:rgba(0,0,0,.7);display: none;}
+.sear-pop .formbox{width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;}
+.sear-pop .form{max-width: 10rem;border-radius:.06rem;display: flex;overflow: hidden;width: 80%;}
+.sear-pop .form .ipt-txt{flex:1;overflow: hidden;font-size: 0.16rem;color:#333;padding:0 .2rem;background-color: #fff;}
+.sear-pop .form .submit{width: 0.6rem;height: 0.6rem;background:url(https://cfms.sdu.edu.cn/images/icon_01.png) no-repeat center #00429b;background-size:.22rem;border:none;cursor: pointer;border-radius:0 .06rem .06rem 0;}
+
+
+
+
+.foot{background:url(https://cfms.sdu.edu.cn/images/ft_07.jpg) no-repeat center;background-size:cover;}
+.ft-t{padding:.3rem 0;}
+.ft-t .wrap{display: flex;align-items: flex-start;justify-content: space-between;}
+.ft-t .l{flex:1;overflow: hidden;max-width: 70%;}
+.ft-t .r{line-height: 193px;}
+.ft-logo .img{height: 0.75rem;width: auto;}
+.ft-txt{font-size: 0.16rem;color:#fff;line-height: 0.36rem;margin-top: 0.16rem;}
+.ft-txt .ic::before{content:'';display: inline-block;vertical-align: middle;margin-right: 0.1rem;width: 0.24rem;height: 0.24rem;}
+.ft-txt .address::before{background:url(https://cfms.sdu.edu.cn/images/ft_01.png) no-repeat center;background-size:contain;}
+.ft-txt .email::before{background:url(https://cfms.sdu.edu.cn/images/ft_02.png) no-repeat center;background-size:contain;}
+.ft-txt .tel::before{background:url(https://cfms.sdu.edu.cn/images/ft_03.png) no-repeat center;background-size:contain;}
+
+.ft-wx{}
+.ft-wx .grp{margin-left: 0.15rem;display: inline-block;vertical-align: middle;position: relative;}
+.ft-wx .icon{width: 0.5rem;height: 0.5rem;border:1px solid rgba(255,255,255,.4);display: block;border-radius:50%;cursor: pointer;}
+.ft-wx .wx{background:url(https://cfms.sdu.edu.cn/images/ft_04.png) no-repeat center;background-size:cover;}
+.ft-wx .wb{background:url(https://cfms.sdu.edu.cn/images/ft_05.png) no-repeat center;background-size:cover;}
+.ft-wx .drop{width: 1.06rem;/* background-color: #fff; */position: absolute;left: 50%;transform: translate(-50%,0) scaleY(0);visibility: hidden;opacity: 0;transition: all .3s ease 0s;transform-origin: center top;margin-top: 0.2rem;}
+.ft-wx .drop::before{content:'';position: absolute;left: 50%;width: 0;
+height: 0;border-style: solid;border-width: 0 .1rem .12rem .1rem;border-color: transparent transparent #fff transparent;transform: translate(-50%,0);top: -0.11rem;}
+.ft-wx .drop .pic{width: 100%;display: block;}
+
+.ft-b{border-top:1px solid rgba(255,255,255,.15);}
+.ft-b .txt{text-align: center;font-size: 0.16rem;color:#fff;line-height: 0.25rem;padding:.22rem 0;}
+
+
+
+/* Ã¥â€ºÂ¾Ã§â€°â€¡Ã¥Ë†â€”Ã¨Â¡Â¨ */
+.inner-ban{height: 3.3rem;}
+
+
+.main{padding:.75rem 0 .8rem;}
+.main .wrap{display: flex;align-items: flex-start;}
+.main-l{width: 2.6rem;}
+.main-r{width:calc(100% - 2.6rem);padding-left: 0.55rem;}
+
+.side-bar .mod{background-color: #f5f5f5;margin-bottom: 0.6rem;}
+.side-bar .mod:last-child{margin-bottom: 0;}
+.side-bar .bt{font-size: 0.26rem;color:#fff;font-weight: bold;height: 1.05rem;background:url(https://cfms.sdu.edu.cn/images/icon_03.png) no-repeat center #fff;background-size:100% 100%;display: flex;align-items: center;justify-content: center;}
+.side-bar .list{padding:.2rem 0;}
+.side-bar .list li{}
+.side-bar .list li>a{display: block;font-size: 0.18rem;color:#333;line-height: 0.3rem;padding:.05rem .15rem;text-align: center;}
+.side-bar .list li:hover>a{color:#00419b;}
+.side-bar .list li.cur>a{padding-top: 0.15rem;padding-bottom: 0.15rem;color:#fff;font-weight: bold;background:url(https://cfms.sdu.edu.cn/images/icon_04.png) no-repeat center;background-size:100% 100%;}
+
+
+.top-bar{line-height: 0.45rem;padding-bottom: 0.15rem;display: flex;align-items: center;justify-content: space-between;border-bottom:1px solid #D8D8D8;}
+.top-bar .bt{font-size: 0.28rem;color:#2C2C2C;font-weight: bold;display: flex;align-items: center;}
+.top-bar .bt::before{content:'';display: inline-block;margin-right: 0.15rem;width: 0.05rem;height: 0.3rem;background-color: #00419B;}
+.crumb{font-size: 0.16rem;color:#626262;background:url(https://cfms.sdu.edu.cn/images/icon_02.png) no-repeat left center;background-size:.17rem;padding-left: 0.25rem;}
+.crumb a:hover{color: #00419B;}
+
+
+.pic-list{margin-top: 0.2rem;}
+.pic-list .item{padding:.3rem 0;border:1px solid transparent;}
+.pic-list .box{display: flex;align-items: center;}
+.pic-list .imgbox{width: 2.45rem;height: 1.65rem;margin-right: 0.3rem;}
+.pic-list .info{flex:1;overflow: hidden;display: flex;align-items: center;}
+.pic-list .smb{flex:1;overflow: hidden;}
+.pic-list .title{font-size: 0.22rem;font-weight: bold;line-height: 0.3rem;-webkit-line-clamp: 2;}
+.pic-list .txt{font-size: 0.16rem;color:#898989;line-height: 0.28rem;-webkit-line-clamp: 3;margin-top: 0.1rem;}
+.pic-list .x{margin:0 .3rem;width: 1px;height: 1.02rem;background:rgba(23, 83, 168, 0.2);}
+.pic-list .date{text-align: center;}
+.pic-list .fz1{font-size: 0.3rem;color:#00419B;font-weight: bold;}
+.pic-list .fz2{font-size: 0.18rem;color:#9B9B9B;}
+
+
+
+.pagelist{text-align: center;font-size: .14rem;color: #333;line-height: .3rem;margin-top: 0.5rem;display: flex;align-items: center;justify-content: center;}
+.pagelist *{font-size: inherit;}
+.pagelist a{min-width:.3rem;height: .3rem;line-height: .3rem;display: inline-block;vertical-align: middle;background-color: transparent;margin:0 .05rem;border:1px solid #c9c9c9;padding:0 .1rem;}
+.pagelist a.active,.pagelist a:hover{background-color:#0051b4;color:#fff!important;border-color:#0051b4;}
+
+
+/* Ã¦Â â€¡Ã©Â¢ËœÃ¥Ë†â€”Ã¨Â¡Â¨ */
+.arc-list{padding-top: 0.45rem;}
+.arc-list .item{margin-bottom: 0.35rem;border:1px solid #EAEAEA;background-color: #fbfcfe;position: relative;}
+.arc-list .box{display: flex;align-items: center;height: 1rem;padding:0 .35rem;}
+.arc-list .info{flex:1;overflow: hidden;}
+.arc-list .date{font-size: 0.22rem;color:#00419B;display: flex;align-items: center;}
+.arc-list .date::after{content:'';display: block;width: 1.13rem;height: 0.17rem;background:url(https://cfms.sdu.edu.cn/images/icon_05.png) no-repeat center;background-size:contain;margin-left: 0.1rem;}
+.arc-list .title{font-size: 0.2rem;color:#272727;line-height: 1.4;margin-top: 0.06rem;-webkit-line-clamp: 1;}
+.arc-list .arrow{width: 0.87rem;height: 0.42rem;background:url(https://cfms.sdu.edu.cn/images/icon_06.png) no-repeat center;background-size:contain;margin-left: 0.3rem;}
+.arc-list .item::before{content:'';width: 2px;height: 0.4rem;background-color: #00419B;position: absolute;left: 0;top: 50%;transform: translate(0,-50%);}
+.arc-list .item:hover{background:url(https://cfms.sdu.edu.cn/images/icon_07.png) no-repeat center #fff;background-size:100% 100%;border-color:transparent;}
+.arc-list .item:hover .box{padding-right: 0.7rem;}
+.arc-list .item:hover *{color:#fff;}
+.arc-list .item:hover::before{background-color: #F6B22A;}
+.arc-list .item:hover .date::after{background-image:url(https://cfms.sdu.edu.cn/images/icon_05-1.png)}
+.arc-list .item:hover .arrow{background-image:url(https://cfms.sdu.edu.cn/images/icon_06-1.png)}
+
+
+/* Ã¥Â®Å¾Ã©ÂªÅ’Ã¦Å â‚¬Ã¦Å“Â¯Ã©ËœÅ¸Ã¤Â¼Â */
+.dw-list{padding-top: 0.75rem;display: flex;flex-wrap: wrap;justify-content: space-between;margin-top: -4%;}
+.dw-list .item{background:url(https://cfms.sdu.edu.cn/images/img_05.png) no-repeat left center;background-size:cover;padding: 0.15rem;border: 1px solid rgba(0, 0, 0, 0.08);width: 48%;margin-top: 4%;display: flex;align-items: flex-start;position: relative;}
+.dw-list .imgbox{width: 1.8rem;height: 2.38rem;margin-right: 0.3rem;}
+.dw-list .info{flex:1;overflow: hidden;}
+.dw-list .name{font-size: 0.2rem;color:#00419B;font-weight: bold;margin-top: 0.25rem;margin-bottom: 0.15rem;}
+.dw-list .txt{font-size: 0.16rem;color:#333333;line-height: 0.36rem;}
+.dw-list .txt em{font-weight: bold;}
+.dw-list .more{font-size: 0.14rem;color:#fff;width:1.6rem;height: 0.46rem;background:url(https://cfms.sdu.edu.cn/images/icon_08.png) no-repeat center;background-size:100% 100%;display: flex;align-items: center;justify-content: center;padding-left: 0.3rem;position: absolute;right: 0;bottom: 0;}
+.dw-list .more::after{content:'';display: block;width: 0.31rem;height: 0.23rem;background:url(https://cfms.sdu.edu.cn/images/icon_09.png) no-repeat center;background-size:contain;margin-left: 0.1rem;}
+.dw-list .more:hover{opacity: .95;}
+
+
+/* Ã¥â€ â€¦Ã¥Â®Â¹ */
+.det-sec{padding:.5rem 0 0;}
+.det-sec .title{font-size: 0.26rem;color:#2F2F2F;line-height: 0.36rem;margin-bottom: 0.2rem;text-align: center;font-weight: bold;}
+.det-sec .sm{text-align: center;background-color: #f5f5f5;}
+.det-sec .sm span{font-size: 0.16rem;color:#999999;line-height: 0.5rem;display: inline-block;vertical-align: middle;margin:0 .1rem;}
+.det-sec .edit{padding:.3rem 0 .4rem;font-size: 0.16rem;color:#666666;line-height: 2;}
+
+
+.pagenav{border-top: 1px solid rgba(0, 65, 155, 0.2);padding:.2rem 0;}
+.pagenav .lk{display: block;font-size: 0.16rem;color:#666666;line-height: 0.4rem;}
+.pagenav .lk em{font-weight: bold;color:#00419B;}
+.pagenav .lk:hover{font-weight: bold;color:#00419B;}
+
+
+/* Ã§Â®â‚¬Ã¤Â»â€¹ */
+.gk-sec{padding:.5rem 0 0;}
+.gk-sec .topbox{margin-bottom: 0.35rem;padding:.15rem 0 .15rem .15rem;background:url(https://cfms.sdu.edu.cn/images/img_07.png) no-repeat left center;background-size:auto 100%;}
+.gk-sec .topbox .img{width: 100%;display: block;}
+.gk-sec .detail{padding:.4rem 0;background-color: #f3f6fb;}
+.gk-sec .tp{width: 100%;display: block;}
+.gk-sec .txt{font-size: 0.16rem;color:#333333;line-height: 2.2;padding:.2rem .4rem;}
+
+
+/* Ã¨Â§â€ Ã©Â¢â€˜Ã¨Âµâ€žÃ¦â€“â„¢ */
+.sp-list{display:flex;flex-wrap: wrap;justify-content: space-between;}
+.sp-list .item{width: 49%;margin-top: 0.4rem;}
+.sp-list .imgbox{height: 3.88rem;display: block;position: relative;}
+.sp-list .playicon{width: 0.82rem;height: 0.82rem;background:url(https://cfms.sdu.edu.cn/images/icon_10.png) no-repeat center;background-size:contain;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+.sp-list .title{display: block;line-height: 0.75rem;text-align: center;border-bottom:2px solid #00419B;font-size: 0.2rem;font-weight: bold;}
+.sp-list .item:hover .title{color:#00419B;}
+
+
+/* Ã¦Â Â¡Ã§ÂºÂ§Ã¥Â¹Â³Ã¥ÂÂ° */
+.idx-tt{margin-bottom: 0.3rem;display: flex;align-items: center;justify-content: space-between;}
+.idx-tt .smb{flex:1;overflow: hidden;}
+.idx-tt .bt{font-size: 0.3rem;color:#333333;font-weight: bold;line-height: 1;}
+.idx-tt .en{font-size: 0.3rem;color:#999999;font-weight: bold;font-family: 'Arial';line-height: 1;margin-top: -0.13rem;opacity: .2;text-transform: uppercase;}
+.idx-tt .more{font-size: 0.14rem;color:#333;display: flex;align-items: center;}
+.idx-tt .more::before{content:'';display: block;width: 0.53rem;height: 0.26rem;background:url(https://cfms.sdu.edu.cn/images/idx_03.png) no-repeat center;background-size:contain;margin-right: 0.1rem;}
+.idx-tt .more:hover{color:#00419B;}
+
+
+.pt-sec{padding:.7rem 0;}
+.pt-sec .mod{margin-bottom: 0.75rem;}
+.pt-sec .mod:last-child{margin-bottom: 0;}
+.pt-sec .detail{padding:.55rem .3rem .25rem;background:url(https://cfms.sdu.edu.cn/images/pt_01.jpg) no-repeat center;background-size:cover;}
+.pt-sec div.list{display: flex;flex-wrap: wrap;}
+.pt-sec .list .lk{margin-bottom: 0.3rem;width: 16.666%;padding:0 .1rem;}
+.pt-sec .list .icon{width: 0.86rem;height: 0.86rem;border:.06rem solid transparent;display: block;margin:0 auto;border-radius:50%;}
+.pt-sec .list .title{font-size: 0.16rem;margin-top: 0.1rem;text-align: center;}
+.pt-sec .list .lk:hover .icon{border-color:rgba(0,66,155,.2);}
+.pt-sec .list .lk:hover .title{font-weight: bold;color:#00429b;}
+
+
+/* Ã¦â€¢Â°Ã¦ÂÂ®Ã¦ËœÂ¾Ã§Â¤Âº */
+.data-main{padding:.6rem 0 .9rem;}
+
+.data-top{margin:.3rem 0 .2rem;}
+.data-menu{background: rgba(0, 65, 155, 0.1);display: flex;}
+.data-menu .lk{font-size: 0.18rem;color:#333333;font-weight: bold;line-height: 0.6rem;flex:1;overflow: hidden;text-align: center;cursor: pointer;}
+.data-menu .lk.cur{background: #00419B;font-size: 0.24rem;color:#fff;}
+.data-top .detail{box-shadow: 0 .04rem .1rem 0 rgba(0, 0, 0, 0.1);}
+
+.data-yq{padding:.3rem .5rem .3rem 1rem;}
+.data-yq .item{display: flex;align-items: flex-start;}
+.data-yq .item .num{width: 0.6rem;height: 0.6rem;background-color: #00419B;border-radius:50%;display: flex;align-items: center;justify-content: center;font-size: 0.18rem;color:#fff;margin-right: 0.2rem;}
+.data-yq .item .info{flex:1;overflow: hidden;max-width: 2.6rem;}
+.data-yq .item .title{font-size: 0.18rem;}
+.data-yq .item .line{height: 0.05rem;background: rgba(0, 0, 0, 0.06);border-radius:.1rem;position: relative;margin:.06rem 0;}
+.data-yq .item .line::before{content:'';position: absolute;left: 0;bottom: 0;top: 0;border-radius:.1rem;background-color: #00419B;width: 50%;transition: all .3s;}
+.data-yq .item .txt{font-size: 0.14rem;color:#9E9E9E;line-height: 0.24rem;}
+.data-yq .item:hover .title{color: #00419B;}
+.data-yq .item:hover .line::before{width: 100%;}
+
+
+.data-yq .swiper-pagination{position: static;margin-top: 0.15rem;font-size: 0;display: flex;align-items: center;justify-content: center;}
+.data-yq .swiper-pagination-bullet{width: 0.08rem;height: 0.08rem;background-color: #cad9ec;opacity: 1;margin:0 .09rem!important;}
+.data-yq .swiper-pagination-bullet-active{width: 0.25rem;height: 0.25rem;background:url(https://cfms.sdu.edu.cn/images/data_07.png) no-repeat center;background-size:contain;}
+
+.data-top .chart{height: 3.1rem;}
+
+.data-top .chartbox1{display: flex;align-items: center;justify-content: center;}
+.data-top .chartbox1 .font{font-size: 0.16rem;color:#333;}
+.data-top .chartbox1 .font em{font-size: 0.24rem;font-weight: bold;padding:0 .1rem;}
+.data-top .chartbox1 .chart{width: 3.5rem;margin:0 .5rem;}
+.data-top .chartbox1 .box{}
+.data-top .chartbox1 .total{font-size: 0.18rem;}
+.data-top .chartbox1 .total i{font-size: 0.24rem;font-weight: bold;}
+.data-top .chartbox1 .txt{font-size: 0.16rem;}
+.data-top .chartbox1 .txt p{margin-top: 0.22rem;display: flex;align-items: center;}
+.data-top .chartbox1 .txt .ic{width: 0.25rem;margin-right: 0.1rem;}
+.data-top .chartbox1 .txt em{font-size: 0.18rem;font-weight: bold;min-width: .45rem;text-align: center;display: inline-block;}
+
+
+
+.data-bot{display: flex;flex-wrap: wrap;justify-content: space-between;}
+.data-bot .top-tt{display: flex;align-items: center;margin-bottom: 0.15rem;position: relative;background:url(https://cfms.sdu.edu.cn/images/data_01.png) no-repeat right center;background-size:.3rem;}
+.data-bot .top-tt::after{content:'';position: absolute;height: 0.05rem;width: 100%;background:url(https://cfms.sdu.edu.cn/images/data_06.png) no-repeat center;background-size:100% 100%;left: 0;bottom: 0;}
+.data-bot .top-tt .lk{font-size: 0.2rem;color: rgba(17, 17, 17, 0.4);margin-right: 0.2rem;display: inline-block;vertical-align: middle;font-weight: bold;line-height: 0.65rem;}
+.data-bot .top-tt .lk.cur{font-size: 0.24rem;color:#111111;}
+
+
+.data-record{width: 48.2%;}
+.data-record .list{}
+.data-record .list .item{height: 0.6rem;display: flex;align-items: center;border-bottom:1px dashed #D8D8D8;}
+.data-record .list .title{flex:1;overflow: hidden;font-size: 0.16rem;color:#333333;background:url(https://cfms.sdu.edu.cn/images/data_02.png) no-repeat left center;background-size:.2rem;padding-left: 0.3rem;-webkit-line-clamp: 1;}
+.data-record .list .date{margin-left: 0.3rem;color:#999999;font-size: 0.16rem;}
+.data-record .list .item:last-child{border-bottom:0;}
+
+.data-rank{width: 48.2%;}
+.data-rank .list{}
+.data-rank .list .item{height: 0.6rem;display: flex;align-items: center;border-bottom:1px dashed #D8D8D8;}
+.data-rank .list .num{font-size: 0.18rem;color:#FED268;width: 0.25rem;height: 0.22rem;display: flex;align-items: center;justify-content: center;margin-right: 0.18rem;}
+.data-rank .list .title{font-size: 0.16rem;color:#333;flex:1;overflow: hidden;}
+.data-rank .list .date{font-size: 0.16rem;color:#9E9E9E;margin-left: 0.3rem;}
+.data-rank .list .item:nth-child(1) .num{background:url(https://cfms.sdu.edu.cn/images/data_03.png) no-repeat center;background-size:100% 100%;color:transparent;}
+.data-rank .list .item:nth-child(2) .num{background:url(https://cfms.sdu.edu.cn/images/data_04.png) no-repeat center;background-size:100% 100%;color:transparent;}
+.data-rank .list .item:nth-child(3) .num{background:url(https://cfms.sdu.edu.cn/images/data_05.png) no-repeat center;background-size:100% 100%;color:transparent;}
+
+
+/* Ã¤Â»ÂªÃ¥â„¢Â¨Ã¥â€ â€¦Ã¥Â®Â¹ */
+.yq-top{padding: 0.4rem;background-color: #f5f5f5;margin-bottom: 0.45rem;display: flex;align-items: flex-start;margin-top: 0.6rem;}
+.yq-top .imgbox{width: 2.2rem;height: 2.2rem;margin-right: 0.4rem;}
+.yq-top .info{flex:1;overflow: hidden;}
+.yq-top .tt{display: flex;align-items: center;}
+.yq-top .title{font-size: 0.24rem;color:#333333;font-weight: bold;line-height: 0.4rem;-webkit-line-clamp: 1;flex:1;overflow: hidden;}
+.yq-top .txt{font-size: 0.16rem;color:#666666;display: flex;flex-wrap: wrap;}
+.yq-top .txt span{min-width: 50%;margin-top: 0.2rem;}
+.yq-top .txt i{font-weight: bold;}
+.yq-top .btns{display: flex;}
+.yq-top .ann{font-size: 0.14rem;color:#fff;width: 1rem;text-align: center;line-height: 0.3rem;margin-left: 0.2rem;border:none;cursor: pointer;border-radius:.2rem;}
+.yq-top .ann1{background-color: #00419B;}
+.yq-top .ann2{background-color: #F6B22A;}
+.yq-top .ann:hover{opacity: .9;}
+
+
+.data-intro{font-size: 0.16rem;color:#666;line-height: 0.36rem;margin-top: .3rem;}
+.data-intro .title{font-size: 0.22rem;color:#00419B;font-weight: bold;line-height: .36rem;margin-bottom: .1rem;margin-top: 0.15rem;}
+
+.side-bar.yq .list li>a{font-size: 0.14rem;padding-left: 0.25rem;text-align: left;}
+.side-bar.yq .bt{padding:0 .2rem;justify-content: space-between;}
+.side-bar.yq .bt::after{content:'';width: 0.25rem;height: 0.25rem;background:url(https://cfms.sdu.edu.cn/images/yq_02.png) no-repeat center;background-size:contain;}
+
+
+.yq-yy{margin-top: 0.3rem;}
+.yq-yy .item{height: 0.6rem;display: flex;align-items: center;border-bottom:1px dashed #D8D8D8;}
+.yq-yy .title{font-size: 0.16rem;color:#333;flex:1;overflow: hidden;background:url(https://cfms.sdu.edu.cn/images/yq_03.png) no-repeat left center;background-size:.24rem;padding-left: 0.3rem;}
+.yq-yy .date{font-size: 0.16rem;color:#999;margin-left: 0.3rem;}
+.yq-yy .item:last-child{border:0;}
+.yq-yy .item:hover .title{background-image:url(https://cfms.sdu.edu.cn/images/yq_03-1.png)}
+
+.yq-table{margin-top: 0.45rem;}
+.yq-table th{font-size: 0.18rem;color:#393939;line-height: 0.5rem;border:1px solid #D8D8D8;}
+.yq-table td{font-size: 0.14rem;color:#666;line-height: 0.24rem;padding:.22rem .15rem;text-align: center;border:1px solid #D8D8D8;}
+.yq-table td:nth-child(1){width: 18%;}
+.yq-table td:nth-child(2){padding-left: 0.3rem;padding-right: 0.3rem;text-align: left;}
+.yq-table td:nth-child(3){width: 20%;}
+.yq-table tbody tr:nth-child(odd){background-color: #fafafa;}
+
+
+/* Ã¤Â»ÂªÃ¥â„¢Â¨Ã¥Ë†â€”Ã¨Â¡Â¨ */
+.yq-ss{display: flex;align-items: center;padding:.45rem .4rem;}
+.yq-ss .box{flex:1;overflow: hidden;display: flex;flex-wrap: wrap;margin-top: -0.25rem;}
+/* .yq-ss .row{margin-bottom: 0.25rem;display: flex;}
+.yq-ss .row:last-child{margin-bottom: 0;} */
+.yq-ss .item{width: 30.3%;margin-right: 3%;margin-top: 0.25rem;}
+.yq-ss .ipt{width: 100%;border: 1px solid rgba(0, 0, 0, 0.08);border-radius:.1rem;font-size: 0.14rem;color:#333;height: 0.45rem;line-height: 0.45rem;padding:0 .2rem;}
+.yq-ss .select{appearance: none;-webkit-appearance: none;background:url(https://cfms.sdu.edu.cn/images/yq_04.png) no-repeat 95% center;background-size:.1rem .05rem;}
+.yq-ss .submit{width: 1rem;height: 0.4rem;background-color: #00419B;border-radius:.26rem;font-size: 0.14rem;color:#fff;display: flex;align-items: center;justify-content: center;border:none;cursor: pointer;}
+.yq-ss .submit::before{content:'';display: block;width: 0.2rem;height: 0.2rem;background:url(https://cfms.sdu.edu.cn/images/icon_01.png) no-repeat center;background-size:contain;margin-right: 0.06rem;}
+.yq-ss .submit:hover{background-color: #F6B22A;}
+
+
+.yq-list{display: flex;flex-wrap: wrap;justify-content: space-between;margin-top: -4%;}
+.yq-list .item{padding: 0.2rem;border:1px solid rgba(0,0,0,.16);width: 48%;margin-top: 4%;display: flex;align-items: flex-start;}
+.yq-list .imgbox{width: 1.98rem;height: 1.98rem;margin-right: 0.3rem;}
+.yq-list .info{flex:1;overflow: hidden;}
+.yq-list .title{font-size: 0.18rem;font-weight: bold;line-height: 2;-webkit-line-clamp: 1;}
+.yq-list .txt{font-size: 0.14rem;line-height: .24rem;color:#9E9E9E;margin-top: 0.05rem;}
+
+.yq-list .btns{display: flex;margin-top: 0.2rem;}
+.yq-list .ann{font-size: 0.14rem;color:#fff;width: 1rem;text-align: center;line-height: 0.3rem;border:none;cursor: pointer;border-radius:.2rem;}
+.yq-list .ann1{background-color: #00419B;margin-right: 0.2rem;}
+.yq-list .ann2{background-color: #F6B22A;}
+.yq-list .ann:hover{opacity: .9;}
+.yq-list .title:hover{color: #00419B;}
+
+
+/* Ã§Â»â€œÃ¦Å¾â€žÃ¦Ë†ÂÃ¥Ë†â€ Ã¤Â¸Å½Ã§â€°Â©Ã¦â‚¬Â§Ã¦Âµâ€¹Ã©â€¡ÂÃ¥Â¹Â³Ã¥ÂÂ° */
+
+.cf-top{background-color: #f5f5f5;display: flex;margin-top: 0.7rem;}
+.cf-top .slide{width: 48%;max-width: 6.7rem;}
+.cf-top .slide .item{height: 4.46rem;}
+.cf-top .info{padding:.4rem .5rem 0;flex:1;overflow: hidden;}
+.cf-top .title{font-size: 0.24rem;color:#00419B;line-height: 0.36rem;font-weight: bold;-webkit-line-clamp: 1;}
+.cf-top .x{width: 0.52rem;height: .03rem;background-color: #00419B;margin:.18rem 0;display: block;}
+.cf-top .txt{font-size: 0.16rem;color:#666;line-height: 0.36rem;-webkit-line-clamp: 8;}
+
+.cf-top .swiper-pagination{bottom: 0.3rem!important;font-size: 0;width: auto;display: flex;align-items: center;justify-content: center;left:50%;transform: translate(-50%,0);}
+.cf-top .swiper-pagination-bullet{margin:0 .08rem!important;width: 0.16rem;height: 0.16rem;background:url(https://cfms.sdu.edu.cn/images/cf_02.png) no-repeat center;background-size:contain;opacity: 1;position: relative;z-index:20;}
+.cf-top .swiper-pagination-bullet-active{width: 0.22rem;height: 0.22rem;background-image:url(https://cfms.sdu.edu.cn/images/cf_02-1.png);}
+.cf-top .swiper-pagination::before{content:'';position: absolute;left: 0;right: 0;height: 1px;background-color: #fff;top: 50%;}
+.cf-top .swiper-pagination-bullet:first-child{margin-left: 0!important;}
+.cf-top .swiper-pagination-bullet:last-child{margin-right: 0!important;}
+
+
+.cf-menu{display: flex;margin-top: 0.6rem;}
+.cf-menu .item{width: 25%;padding:.15rem 0;}
+.cf-menu .lk{height: 1.4rem;font-size: 0.24rem;color:#fff;font-weight: bold;display: flex;align-items: center;justify-content: center;transition: all .3s;position: relative;}
+.cf-menu .icon{width: 0.6rem;margin-right: 0.13rem;}
+.cf-menu .item:nth-child(1) .lk{background-color: #2475c6;}
+.cf-menu .item:nth-child(2) .lk{background-color: #11a1e7;}
+.cf-menu .item:nth-child(3) .lk{background-color: #01b1be;}
+.cf-menu .item:nth-child(4) .lk{background-color: #22afdc;}
+
+
+
+
+.cf-dt{margin-top: 0.6rem;}
+.cf-dt .top{display: flex;height: 0.49rem;background:url(https://cfms.sdu.edu.cn/images/cf_07.png) no-repeat left center;background-size:cover;margin-bottom: 0.2rem;justify-content: space-between;}
+.cf-dt .top .bt{font-size: 0.24rem;color:#111;font-weight: bold;line-height: 0.3rem;}
+.cf-dt .top .more{font-size: 0.18rem;color:#fff;width: 0.88rem;height: 0.48rem;background:url(https://cfms.sdu.edu.cn/images/cf_08.png) no-repeat center;background-size:100% 100%;display: flex;align-items: center;justify-content: center;padding-left: 0.15rem;}
+.cf-dt .top .more:hover{background-image:url(https://cfms.sdu.edu.cn/images/cf_08-1.png);}
+
+.cf-dt .detail{display: flex;justify-content: space-between;}
+.cf-dt .list{width: 48%;}
+.cf-dt .list .box{display: flex;align-items: center;justify-content: space-between;height: 0.6rem;}
+.cf-dt .list .title{color:#333;font-size: 0.16rem;max-width: 80%;background:url(https://cfms.sdu.edu.cn/images/yq_03.png) no-repeat left center;background-size:.24rem;padding-left: 0.3rem;-webkit-line-clamp: 1;}
+.cf-dt .list .date{font-size: 0.16rem;color:#999;}
+
+.cf-dt .list li{border-bottom:1px dashed #D8D8D8;}
+.cf-dt .list li:last-child{border:0;}
+.cf-dt .list li:hover .title{background-image:url(https://cfms.sdu.edu.cn/images/yq_03-1.png)}
+
+
+
+
+
+/* index */
+.idx-ban .item{height: 6rem;overflow: hidden;}
+.idx-ban .swiper-slide-active .item .img{animation:changeBiger 5s linear forwards;animation-delay:0s; -webkit-animation-delay:0s; transform: scale(1.1);}
+@keyframes changeBiger {
+	0% {transform: scale(1);}
+	100% {transform: scale(1.1);}
+}
+
+
+.idx-ban .swiper-button{width: 0.56rem;height: 0.56rem;background:url(https://cfms.sdu.edu.cn/images/idx_02.png) no-repeat center;background-size:contain;border-radius: 50%;}
+.idx-ban .swiper-button-prev{left: .4rem;}
+.idx-ban .swiper-button-next{transform: rotate(180deg);right: .4rem;}
+.idx-ban .swiper-button:hover{background-color: #00429b;}
+
+
+.idx-ban .swiper-pagination{bottom: 0.3rem!important;font-size: 0;}
+.idx-ban .swiper-pagination-bullet{width: 0.12rem;height: 0.12rem;background-color: #fff;opacity: .4;margin:0 .08rem!important;}
+.idx-ban .swiper-pagination-bullet-active{opacity: 1;}
+
+
+.idx-s1{padding:.4rem 0 .55rem;}
+.idx-s1 .wrap{display: flex;justify-content: space-between;}
+
+.idx-cg{width: 48%;}
+.idx-cg .list{display: flex;flex-wrap: wrap;justify-content: space-between;}
+.idx-cg .list .item{width: 48.5%;background-color: #f2f5fa;}
+.idx-cg .list .imgbox{height: 2.3rem;border:1px solid #eee;border-bottom:0;}
+.idx-cg .list .info{padding:0 .2rem;height: 0.7rem;display: flex;align-items: center;}
+.idx-cg .list .title{font-size: 0.14rem;color:#333333;line-height: 0.18rem;width: 100%;-webkit-line-clamp: 3;}
+.idx-cg .list .item:hover .info{background-color: #00429b;}
+.idx-cg .list .item:hover .title{color:#fff;}
+
+.idx-xw{width: 48%;}
+.idx-xw .hotbox{display: flex;align-items: center;margin-top: -0.05rem;}
+.idx-xw .hotbox .imgbox{width: 2.3rem;height: 1.7rem;padding:.1rem 0 0 .1rem;margin-right: 0.3rem;position: relative;}
+.idx-xw .hotbox .imgbox::before{content:'';position: absolute;background-color: #00429b;left: 0;top: 0;right: 0.1rem;bottom: 0.1rem;z-index:1;}
+.idx-xw .hotbox .imgbox .img{position: relative;z-index:2;}
+.idx-xw .hotbox .info{flex:1;overflow: hidden;}
+.idx-xw .hotbox .title{font-size: 0.18rem;line-height: 1.4;}
+.idx-xw .hotbox .x{width: 0.5rem;height: 0.03rem;background-color: #00429b;display: block;margin:.1rem 0;}
+.idx-xw .hotbox .txt{font-size: 0.14rem;color:#999999;line-height: 0.24rem;-webkit-line-clamp: 3;}
+.idx-xw .hotbox .date{font-size: 0.14rem;color:#a1a1a1;background:url(https://cfms.sdu.edu.cn/images/idx_07.png) no-repeat left center;background-size:.14rem;padding-left: 0.24rem;margin-top: 0.1rem;}
+.idx-xw .hotbox:hover .title{color: #00429b;font-weight: bold;}
+
+.idx-xw .list{margin-top: 0.15rem;}
+.idx-xw .list li{border-bottom:1px solid #e5e5e5;}
+.idx-xw .list .title{font-size: 0.16rem;display: block;line-height: 0.42rem;background:url(https://cfms.sdu.edu.cn/images/idx_08.png) no-repeat left center;background-size:.07rem;padding-left: 0.2rem;}
+.idx-xw .list li:hover .title{color:#00429b;font-weight: bold;text-decoration: underline;}
+.idx-xw .list li:last-child{border:0;}
+
+.idx-lm{margin-bottom: 0.6rem;}
+.idx-lm .list{display: flex;flex-wrap: wrap;}
+.idx-lm .list .item{background-color: #f5f5f5;width: 20%;display: flex;align-items: center;height: 1.6rem;justify-content: center;position: relative;}
+.idx-lm .list .ico{width: 0.64rem;margin-right: 0.13rem;}
+.idx-lm .list .ico-h{display: none;}
+.idx-lm .list .info{}
+.idx-lm .list .title{font-size: 0.2rem;}
+.idx-lm .list .en{font-size: 0.14rem;color:#999999;margin-top: 0.05rem;}
+.idx-lm .list .item::after{content:'';position: absolute;width: 1px;background-color: #e5e5e5;top: 0.2rem;bottom: 0.2rem;right: 0;}
+.idx-lm .list .item:hover{background-color: #00429b;}
+.idx-lm .list .item:hover .ico-s{display: none;}
+.idx-lm .list .item:hover .ico-h{display: block;}
+.idx-lm .list .item:hover *{color:#fff;}
+.idx-lm .list .item:hover::after{background-color: #00429b;}
+
+.idx-pt{padding:.7rem 0 .2rem;background:url(https://cfms.sdu.edu.cn/images/idx_14.jpg) no-repeat center;background-size:cover;}
+.idx-pt .mod{margin-bottom: 0.5rem;}
+.idx-pt .list{display: flex;flex-wrap: wrap;}
+.idx-pt .list .lk{width: 16.666%;padding:0 .1rem;}
+.idx-pt .list .icon{width: 0.86rem;height: 0.86rem;border:.06rem solid transparent;display: block;margin:0 auto;border-radius:50%;}
+.idx-pt .list .title{font-size: 0.16rem;margin-top: 0.1rem;text-align: center;}
+.idx-pt .list .lk:hover .icon{border-color:rgba(0,66,155,.2);}
+.idx-pt .list .lk:hover .title{font-weight: bold;color:#00429b;}
+
+
+
+.idx-dt{padding:.5rem 0 .1rem;background:url(https://cfms.sdu.edu.cn/images/idx_15.jpg) no-repeat center;background-size:cover;}
+.idx-dt .idx-tt{margin-bottom: 0.15rem;}
+.idx-dt .wrap{display: flex;flex-wrap: wrap;justify-content: space-between;}
+.idx-dt .col{margin-bottom: 0.4rem;width: 48%;}
+.idx-dt .list{}
+.idx-dt .list li{border-bottom:1px solid #e5e5e5;}
+.idx-dt .list .box{display: flex;align-items: center;font-size: 0.16rem;line-height: 0.5rem;}
+.idx-dt .list .title{flex:1;overflow: hidden;-webkit-line-clamp: 1;background:url(https://cfms.sdu.edu.cn/images/idx_08.png) no-repeat left center;background-size:.07rem;padding-left: 0.2rem;}
+.idx-dt .list .date{margin-left: 0.3rem;}
+.idx-dt .list li *{font-size: inherit;}
+.idx-dt .list li:hover .title{color:#00429b;font-weight: bold;text-decoration: underline;}
+.idx-dt .list li:last-child{border:0;}
+
+.ft-link{padding:.2rem 0;line-height: 0.34rem;}
+.ft-link .wrap{display: flex;}
+.ft-link em{font-size: 0.18rem;color:#00429b;font-weight: bold;}
+.ft-link .r{flex:1;overflow: hidden;display: flex;align-items: flex-start;}
+.ft-link .lks{font-size: 0.14rem;flex:1;overflow: hidden;height: 0.34rem;}
+.ft-link a{display: inline-block;vertical-align: middle;padding:0 .17rem;font-size: 0.16rem;color: #00429b;}
+.ft-link a:hover{color:#00429b;}
+.ft-link .showmore{font-size: 0.14rem;color:#00429b;cursor: pointer;margin-left: 0.6rem;display: flex;align-items: center;}
+.ft-link .showmore::after{content:'';display: inline-block;width: 0.12rem;height: 0.12rem;background:url(https://cfms.sdu.edu.cn/images/idx_16.png) no-repeat center;background-size:contain;transform: rotate(180deg);margin-left: 0.06rem;}
+.ft-link .showmore.this::after{transform: rotate(0);}
+.ft-link .lks.height{height: auto;}
+
+
+
+.yy-btn{width: 1.02rem;height: 1.77rem;background:url(https://cfms.sdu.edu.cn/images/idx_17.png) no-repeat center;background-size:cover;position: fixed;right: 0;bottom: 25%;z-index:99;font-size: 0.14rem;color:#fff;writing-mode: vertical-lr;text-align: center;letter-spacing: .07rem;padding:.1rem 0 0 .4rem;display: none;}
+.yy-btn:hover{background-image:url(https://cfms.sdu.edu.cn/images/idx_17-1.png)}
+
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+	.pic-list .item:hover{border: 1px solid rgba(0, 65, 155, 0.2);box-shadow: 0 .13rem .38rem 0 rgba(0, 65, 155, 0.2);padding:.3rem;width: calc(100% + 0.3rem);}
+	.pic-list .item:hover .title{color:#00419B;}
+	
+	.cf-menu .item:hover .lk{transform: scale(1.15,1.15);box-shadow:0 0 .1rem #666;z-index:30;}
+}
+
+
+
+
+@media screen and (min-width:992px) and (max-width:1199px){
+	.auto{width: 10.5rem;}
+	html{font-size: 5.5rem!important;}
+	
+	.sj-menu{position:absolute;right: 2%;top: 50%;width: .6rem;height: .6rem;background: url(https://cfms.sdu.edu.cn/images/menu.png) no-repeat center;background-size:.44rem;display: block;margin-top: -0.3rem;z-index:100;}
+	.sj-menu.close{background: url(https://cfms.sdu.edu.cn/images/close.png) no-repeat center;background-size:.32rem;}
+	
+	.head.bg{background-color: rgba(0,0,0,.7);}
+	.head .wrap{width: 96%;}
+	.hd-nav{position: fixed;width: 100%;left: 0;top: 1rem;bottom: 0;z-index:100;background-color: #fff;display: block;text-align: left;overflow-y: scroll!important;display: block;}
+	.hd-nav li{display: block;margin: 0;position: relative;border-bottom:1px solid rgba(0,0,0,.05);}
+	.hd-nav li>a{padding:0 .4rem;line-height: 0.8rem;font-size: 0.2rem;color:#333;}
+	.hd-nav li.cur>a, .hd-nav li:hover>a{color:#333;}
+	.hd-nav li:hover .drop::before{display: none;}
+	
+	.hd-nav .arrow{width: 0.8rem;height: 0.8rem;background:url(https://cfms.sdu.edu.cn/images/arrow.png) no-repeat center;background-size:.26rem;position: absolute;right: 0;top: 0;}
+	.hd-nav .drop{position: static;transform: translate(0,0);opacity: 1;visibility: inherit;width: 100%;padding: 0 0 0 .4rem;margin: 0;display: none;border-top:1px solid rgba(0,0,0,.05);}
+	.hd-nav .dropbox{background:none;box-shadow:none;}
+	.hd-nav .dropbox::before{display: none;}
+	.hd-nav .lk{color:#333;border:none;line-height: 0.6rem;text-align: left;font-size: 0.17rem;border-bottom:1px solid rgba(0,0,0,.05);padding-left: 0.15rem;}
+	.hd-nav li:hover .drop{transform: translateX(0) scaleY(1);}
+	.hd-nav li.this .arrow{transform: rotate(180deg);}
+	
+	.hd-sear{margin-right: 0.7rem;}
+	.hd-sear .icon{background-size:.24rem;}
+		
+		
+	.ft-xx .logo{font-size: 0.32rem;}
+	.ft-xx .logo .tp{height: 0.7rem;}
+	.ft-xx .logo .x{height: 0.4rem;}
+	.ft-wx .grp{width: 1rem;}
+	
+	
+	/* Ã¦Â Â¡Ã§ÂºÂ§Ã¥Â¹Â³Ã¥ÂÂ° */
+	.top-bar .bt{font-size: 0.26rem;}
+	
+	.pt-sec .list .title br{display: none;}
+	
+	/* Ã¦â€¢Â°Ã¦ÂÂ®Ã¦ËœÂ¾Ã§Â¤Âº */
+	.data-yq{padding:.5rem .2rem .3rem;}
+	
+	
+	
+	
+	/* Ã¤Â»ÂªÃ¥â„¢Â¨Ã¥Ë†â€”Ã¨Â¡Â¨ */
+	.yq-ss{padding:.45rem 0;display: block;}
+	.yq-ss .box{justify-content: space-between;}
+	.yq-ss .item{width: 48%;margin:.25rem 0 0;}
+	.yq-ss .ipt{font-size: 0.15rem;height: 0.5rem;line-height: 0.5rem;}
+	.yq-ss .submit{margin:.3rem auto 0;width: 1.4rem;height: 0.5rem;font-size: 0.16rem;}
+	
+	.yq-list .item{width: 100%;}
+	
+	/* index */
+	.idx-ban .item{height: 5.4rem;}
+	
+	
+	
+}
+
+
+
+@media screen and (min-width:768px) and (max-width:991px){
+	.auto{width: 100%;padding:0 4%;max-width: 100%;}
+	html{font-size: 5.8rem!important;}
+
+	.sj-menu{position:absolute;right: 2%;top: 50%;width: .4rem;height: .4rem;background: url(https://cfms.sdu.edu.cn/images/menu.png) no-repeat center;background-size:.36rem;display: block;margin-top: -0.2rem;z-index:100;}
+	.sj-menu.close{background: url(https://cfms.sdu.edu.cn/images/close.png) no-repeat center;background-size:.32rem;}
+	
+	
+	.head.bg{background-color: rgba(0,0,0,.7);}
+	.head .wrap{width: 100%;}
+	.hd-logo .img{height: 0.6rem;}
+	
+	.hd-nav{position: fixed;width: 100%;left: 0;top: 1rem;bottom: 0;z-index:100;background-color: #fff;display: block;text-align: left;overflow-y: scroll!important;display: block;}
+	.hd-nav li{display: block;margin: 0;position: relative;border-bottom:1px solid rgba(0,0,0,.05);}
+	.hd-nav li>a{padding:0 .4rem;line-height: 0.8rem;font-size: 0.2rem;color:#333;}
+	.hd-nav li.cur>a, .hd-nav li:hover>a{color:#333;}
+	.hd-nav li:hover .drop::before{display: none;}
+	
+	.hd-nav .arrow{width: 0.8rem;height: 0.8rem;background:url(https://cfms.sdu.edu.cn/images/arrow.png) no-repeat center;background-size:.26rem;position: absolute;right: 0;top: 0;}
+	.hd-nav .drop{position: static;transform: translate(0,0);opacity: 1;visibility: inherit;width: 100%;padding: 0 0 0 .4rem;margin: 0;display: none;border-top:1px solid rgba(0,0,0,.05);}
+	.hd-nav .dropbox{background:none;box-shadow:none;}
+	.hd-nav .dropbox::before{display: none;}
+	.hd-nav .lk{color:#333;border:none;line-height: 0.6rem;text-align: left;font-size: 0.17rem;border-bottom:1px solid rgba(0,0,0,.05);padding-left: 0.15rem;}
+	.hd-nav li:hover .drop{transform: translateX(0) scaleY(1);}
+	.hd-nav li.this .arrow{transform: rotate(180deg);}
+	
+	.hd-sear{margin-right: 0.5rem;}
+	.hd-sear .icon{background-size:.24rem;}
+	
+	
+	
+	.ft-logo .img{height: 0.65rem;}
+	.ft-wx .icon{width: 0.44rem;height: 0.44rem;}
+	
+	
+	
+	
+	/* Ã¥â€ºÂ¾Ã§â€°â€¡Ã¥Ë†â€”Ã¨Â¡Â¨ */
+	.main{padding:0 0 .7rem;}
+	.main .wrap{display: block;}
+	.main-l{width: 108%;margin-left: -4%;}
+	.main-r{width: 100%;padding: 0;}
+	
+	.side-bar{}
+	.side-bar .mod{margin-bottom: 0;border-bottom:1px solid #e5e5e5;}
+	.side-bar .mod:last-child{border:0;}
+	.side-bar .bt{display: none;}
+	.side-bar .list{padding: 0;text-align: center;white-space: nowrap;overflow-x: scroll;}
+	.side-bar .list::-webkit-scrollbar{ display: none;} 
+	.side-bar .list li{display: inline-block;vertical-align: middle;}
+	.side-bar .list li>a{padding:0 .25rem!important;line-height: 0.6rem;}
+	.side-bar .list li.cur>a{background: #00429b;}
+	
+	.top-bar{line-height: 0.35rem;padding-bottom: 0.1rem;margin-top: 0.4rem;}
+	.top-bar .bt{font-size: 0.26rem;}
+	.top-bar .bt::before{width: 0.04rem;height: 0.22rem;}
+	
+	.pic-list .imgbox{width: 2.3rem;margin-right: 0.2rem;}
+	.pic-list .title{font-size: 0.2rem;line-height: 0.26rem;}
+	
+	/* Ã¦Â â€¡Ã©Â¢ËœÃ¥Ë†â€”Ã¨Â¡Â¨ */
+	.arc-list .date{font-size: 0.2rem;}
+	.arc-list .arrow{width: 0.6rem;}
+	
+	
+	/* Ã¥Â®Å¾Ã©ÂªÅ’Ã¦Å â‚¬Ã¦Å“Â¯Ã©ËœÅ¸Ã¤Â¼Â */
+	.dw-list{padding-top: 0.5rem;}
+	.dw-list .item{width: 100%;}
+	
+	/* Ã¥â€ â€¦Ã¥Â®Â¹ */
+	.det-sec .title{font-size: 0.24rem;}
+	.det-sec .sm span{font-size: 0.15rem;}
+	
+	
+	/* Ã¨Â§â€ Ã©Â¢â€˜Ã¨Âµâ€žÃ¦â€“â„¢ */
+	.sp-list .imgbox{height: 3.2rem;}
+	.sp-list .playicon{width: 0.66rem;height: 0.66rem;}
+	
+	
+	/* Ã¦Â Â¡Ã§ÂºÂ§Ã¥Â¹Â³Ã¥ÂÂ° */
+	.pt-sec .detail{padding:.55rem .15rem .25rem;}
+	.pt-sec .list .lk{width: 33.3%;}
+	.pt-sec .list .title br{display: none;}
+	
+	
+	/* Ã¦â€¢Â°Ã¦ÂÂ®Ã¦ËœÂ¾Ã§Â¤Âº */
+	.data-main{padding:.1rem 0 .6rem;}
+	
+	.data-menu .lk.cur{font-size: 0.2rem;}
+	
+	.data-yq{padding:.5rem .2rem .3rem;}
+	
+	.data-bot{display: block;}
+	.data-bot .top-tt::after{height: 0.04rem;}
+	.data-record{width: 100%;margin-bottom: 0.3rem;}
+	
+	.data-rank{width: 100%;}
+	
+	
+	.data-top .chartbox1{flex-wrap: wrap;}
+	.data-top .chartbox1 .font{width: 100%;text-align: center;margin-top: 0.4rem;}
+	.data-top .chartbox1 .chart{width: 3rem;margin:0 .5rem 0 0;}
+	
+	
+	
+	
+	/* Ã¤Â»ÂªÃ¥â„¢Â¨Ã¥â€ â€¦Ã¥Â®Â¹ */
+	.side-bar.yq .list li>a{font-size: 0.16rem;}
+	
+	.yq-top{padding: 0.25rem;margin:.35rem 0;}
+	.yq-top .title{font-size: 0.22rem;}
+	.yq-top .txt span{margin-top: 0.12rem;}
+	
+	
+	.data-intro{line-height: 0.32rem;}
+	.data-intro .title{font-size: 0.2rem;}
+	
+	
+	/* Ã¤Â»ÂªÃ¥â„¢Â¨Ã¥Ë†â€”Ã¨Â¡Â¨ */
+	.yq-ss{padding:.45rem 0;display: block;}
+	.yq-ss .box{justify-content: space-between;}
+	.yq-ss .item{width: 49%;margin:.15rem 0 0;}
+	.yq-ss .ipt{font-size: 0.15rem;height: 0.5rem;line-height: 0.5rem;}
+	.yq-ss .submit{margin:.3rem auto 0;width: 1.4rem;height: 0.5rem;font-size: 0.16rem;}
+	
+	.yq-list{margin-top: -0.2rem;}
+	.yq-list .item{width: 100%;padding: 0.15rem;margin-top: 0.2rem;}
+	.yq-list .title{font-size: 0.2rem;}
+	.yq-list .txt{font-size: 0.15rem;}
+	.yq-list .btns{margin-top: 0.15rem;}
+	.yq-list .ann{line-height: 0.34rem;}
+	
+	
+	/* Ã§Â»â€œÃ¦Å¾â€žÃ¦Ë†ÂÃ¥Ë†â€ Ã¤Â¸Å½Ã§â€°Â©Ã¦â‚¬Â§Ã¦Âµâ€¹Ã©â€¡ÂÃ¥Â¹Â³Ã¥ÂÂ° */
+	.cf-top{margin-top: 0.4rem;}
+	.cf-top .slide .item{height: 4rem;}
+	.cf-top .info{padding:.3rem .35rem;}
+	.cf-top .title{font-size: 0.22rem;}
+	.cf-top .txt{line-height: 0.32rem;}
+	
+	
+	
+	.cf-menu .lk{font-size: 0.22rem;height: 1.1rem;}
+	.cf-menu .icon{width: 0.36rem;margin-right: 0.06rem;}
+	
+	.cf-dt .detail{display: block;}
+	.cf-dt .list{width: 100%;}
+	.cf-dt .list li{border-bottom:1px dashed #D8D8D8!important;}
+	.cf-dt .list:last-child li:last-child{border-bottom:0!important;}
+	
+	
+	.idx-tt .bt{font-size: 0.28rem;}
+	.idx-tt .en{font-size: 0.26rem;}
+	.idx-tt .more::before{width: 0.4rem;height: 0.2rem;}
+	
+	
+	/* index */
+	.idx-ban .swiper-button{display: none;}
+	.idx-ban .item{height: 4.4rem;}
+	
+	.idx-s1 .wrap{display: block;}
+	
+	.idx-cg{width: 100%;margin-bottom: 0.5rem;}
+	.idx-cg .list .info{height: 0.9rem;}
+	.idx-cg .list .title{font-size: 0.16rem;-webkit-line-clamp: 2;line-height: 0.26rem;}
+	
+	.idx-xw{width: 100%;}
+	.idx-xw .hotbox .title{font-size: 0.2rem;}
+	.idx-xw .hotbox .txt{font-size: 0.15rem;}
+	.idx-xw .hotbox .date{font-size: 0.15rem;}
+	.idx-xw .list .title{line-height: 0.5rem;}
+	
+	
+	.idx-lm .list{background-color: #f5f5f5;padding:.2rem 0;}
+	.idx-lm .list .item{width: 33.3%;height: auto;display: block;text-align: center;padding:.2rem 0;}
+	.idx-lm .list .item::after{display: none;}
+	.idx-lm .list .ico{width: 0.5rem;margin:0 auto .15rem;}
+	
+	.idx-pt{padding:.6rem 0 1px;}
+	.idx-pt .list .lk{width: 33.3%;margin-bottom: 0.3rem;}
+	.idx-pt .list .title br{display: none;}
+	
+	.idx-dt .wrap{display: block;}
+	.idx-dt .col{width: 100%;}
+	
+}
+
+
+@media screen and (min-width:320px) and (max-width:767px){
+	.auto{width: 100%;padding:0 4%}
+	html{font-size: 5.8rem!important;}
+
+	.sj-menu{position:absolute;right: 2%;top: 50%;width: .34rem;height: .34rem;background: url(https://cfms.sdu.edu.cn/images/menu.png) no-repeat center;background-size:.32rem;display: block;margin-top: -0.17rem;z-index:100;}
+	.sj-menu.close{background: url(https://cfms.sdu.edu.cn/images/close.png) no-repeat center;background-size:.3rem;}
+	
+	.head{height: 0.7rem;}
+	.head.bg{background-color: rgba(0,0,0,.7);}
+	.head .wrap{width: 100%;}
+	.hd-logo .img{height: 0.4rem;}
+	
+	.hd-nav{position: fixed;width: 100%;left: 0;top: .7rem;bottom: 0;z-index:100;background-color: #fff;display: block;text-align: left;overflow-y: scroll!important;display: block;}
+	.hd-nav li{display: block;margin: 0;position: relative;border-bottom:1px solid rgba(0,0,0,.05);}
+	.hd-nav li>a{padding:0 .3rem;line-height: 0.7rem;font-size: 0.18rem;color:#333;}
+	.hd-nav li.cur>a, .hd-nav li:hover>a{color:#333;}
+	.hd-nav li:hover .drop::before{display: none;}
+	
+	.hd-nav .arrow{width: 0.7rem;height: 0.7rem;background:url(https://cfms.sdu.edu.cn/images/arrow.png) no-repeat center;background-size:.2rem;position: absolute;right: 0;top: 0;}
+	.hd-nav .drop{position: static;transform: translate(0,0);opacity: 1;visibility: inherit;width: 100%;padding: 0 0 0 .3rem;margin: 0;display: none;border-top:1px solid rgba(0,0,0,.05);}
+	.hd-nav .dropbox{background:none;box-shadow:none;}
+	.hd-nav .dropbox::before{display: none;}
+	.hd-nav .lk{color:#333;border:none;line-height: 0.5rem;text-align: left;font-size: 0.16rem;border-bottom:1px solid rgba(0,0,0,.05);padding-left: 0.1rem;}
+	.hd-nav li:hover .drop{transform: translateX(0) scaleY(1);}
+	.hd-nav li.this .arrow{transform: rotate(180deg);}
+	
+	.hd-sear{margin-right: 0.3rem;margin-left: 0;}
+	.hd-sear .icon{background-size:.2rem;}
+	.sear-pop .form{width: 90%;}
+	.sear-pop .form .ipt-txt{font-size: 0.15rem;}
+	.sear-pop .form .submit{width: 0.5rem;height: 0.5rem;background-size: 0.18rem;}
+	
+	
+	
+	
+	.ft-t .wrap{display: block;}
+	.ft-t .l{max-width: 100%;}
+	.ft-logo .img{height: auto;width: 90%;display: block;margin:0 auto;}
+	.ft-txt{font-size: 0.15rem;line-height: 0.3rem;}
+	.ft-txt .ic::before{width: 0.22rem;height: 0.22rem;}
+	.ft-wx{text-align: center;margin-top: 0.2rem;}
+	.ft-wx .grp{margin:0 .13rem;}
+	.ft-wx .icon{width: 0.46rem;height: 0.46rem;}
+	.ft-wx .drop{width: 0.9rem;}
+	.ft-b .txt{font-size: 0.14rem;line-height: 0.22rem;padding:.18rem 0;}
+	.ft-wx .drop::before {top: unset;bottom: -.1rem;transform: translate(-50%,0) rotate(180deg);}
+	.ft-wx .grp .drop {top: -1.3rem;}
+	
+	
+	/* Ã¥â€ºÂ¾Ã§â€°â€¡Ã¥Ë†â€”Ã¨Â¡Â¨ */
+	.inner-ban{height: 2.6rem;}
+	
+	.main{padding:0 0 .5rem;}
+	.main .wrap{display: block;}
+	.main-l{width: 108%;margin-left: -4%;}
+	.main-r{width: 100%;padding: 0;}
+	
+	.side-bar{}
+	.side-bar .mod{margin-bottom: 0;border-bottom:1px solid #e5e5e5;}
+	.side-bar .mod:last-child{border:0;}
+	.side-bar .bt{display: none;}
+	.side-bar .list{padding: 0;text-align: center;white-space: nowrap;overflow-x: scroll;}
+	.side-bar .list::-webkit-scrollbar{ display: none;} 
+	.side-bar .list li{display: inline-block;vertical-align: middle;}
+	.side-bar .list li>a{padding:0 .2rem!important;line-height: 0.5rem;font-size: 0.16rem;}
+	.side-bar .list li.cur>a{background: #00429b;}
+	
+	.top-bar{line-height: 0.5rem;padding-bottom: 0;border:none;}
+	.top-bar .bt{display: none;}
+	.crumb{font-size: 0.15rem; background-size: 0.14rem;padding-left: 0.2rem;}
+	
+	.pic-list .item{padding: 0;margin-bottom: 0.3rem;}
+	.pic-list .item:last-child{margin-bottom: 0;}
+	.pic-list .box{display: block;}
+	.pic-list .imgbox{width: 100%;margin: 0 0 .2rem;height: auto;max-height: 2.4rem;}
+	.pic-list .info{display: block;}
+	.pic-list .title{font-size: 0.18rem;line-height: 0.24rem;}
+	.pic-list .txt{line-height: 0.24rem;-webkit-line-clamp: 2;font-size: 0.15rem;}
+	.pic-list .x{display: none;}
+	.pic-list .date{display: flex;flex-direction: row-reverse;margin-top: 0.1rem;}
+	.pic-list .fz1{font-size: 0.15rem;color:#9b9b9b;font-weight: normal;display: flex;align-items: center;}
+	.pic-list .fz1::before{content:'-';}
+	.pic-list .fz2{font-size: 0.15rem;}
+	
+	.pagelist{margin-top: 0.4rem;}
+	.pagelist .prev,.pagelist .next,.pagelist .first,.pagelist .last{display: none;}
+	
+	
+	/* Ã¦Â â€¡Ã©Â¢ËœÃ¥Ë†â€”Ã¨Â¡Â¨ */
+	.arc-list{padding-top: 0.2rem;}
+	.arc-list .item{margin-bottom: 0.25rem;}
+	.arc-list .box{height: 1.2rem;padding: 0 0.25rem;}
+	.arc-list .date{font-size: 0.16rem;}
+	.arc-list .date::after{width: 0.6rem;}
+	.arc-list .arrow{display: none;}
+	.arc-list .title{-webkit-line-clamp: 2;font-size: 0.17rem;line-height: 1.5;}
+	
+	
+	/* Ã¥Â®Å¾Ã©ÂªÅ’Ã¦Å â‚¬Ã¦Å“Â¯Ã©ËœÅ¸Ã¤Â¼Â */
+	.dw-list{padding-top: 0.2rem;}
+	.dw-list .item{width: 100%;}
+	.dw-list .imgbox{width: 1.4rem;height: 1.9rem;margin-right: 0.2rem;}
+	.dw-list .name{margin:.08rem 0 .1rem;}
+	.dw-list .txt{font-size: 0.15rem;line-height: 0.26rem;}
+	.dw-list .more{display: none;}
+	
+	
+	/* Ã¥â€ â€¦Ã¥Â®Â¹ */
+	.det-sec{padding:.3rem 0 0;}
+	.det-sec .title{font-size: 0.2rem;line-height: 1.3;}
+	.det-sec .sm span{font-size: 0.14rem;margin:0 .05rem;line-height: 0.34rem;}
+	.det-sec .edit{font-size: 0.16rem;line-height: 1.8;}
+	
+	.pagenav{padding:.13rem 0;}
+	.pagenav .lk{font-size: 0.15rem;line-height: 0.32rem;}
+	
+	
+	/* Ã§Â®â‚¬Ã¤Â»â€¹ */
+	.gk-sec{padding:.3rem 0 0;}
+	.gk-sec .topbox{padding: 0;background:none;margin-bottom: 0.25rem;}
+	.gk-sec .detail{padding:.2rem 0;}
+	.gk-sec .txt{padding:.15rem .2rem;font-size: 0.15rem;line-height: 1.8;}
+	
+	/* Ã¨Â§â€ Ã©Â¢â€˜Ã¨Âµâ€žÃ¦â€“â„¢ */
+	.sp-list{display: block;margin-top: -0.15rem;}
+	.sp-list .item{width: 100%;}
+	.sp-list .imgbox{height: 2.6rem;}
+	.sp-list .playicon{width: 0.56rem;height: 0.56rem;}
+	.sp-list .title{font-size: 0.18rem;line-height: 0.55rem;}
+	
+	
+	/* Ã¦Â Â¡Ã§ÂºÂ§Ã¥Â¹Â³Ã¥ÂÂ° */
+	.idx-tt{margin-bottom: 0.2rem;margin-top: 0.2rem;}
+	.idx-tt .bt{font-size: 0.24rem;}
+	.idx-tt .en{font-size: 0.2rem;margin-top: -0.08rem;}
+	
+	.pt-sec{padding:.5rem 0;}
+	.pt-sec .mod{margin-bottom: 0.5rem;}
+	.pt-sec .detail{padding:.3rem 0 .1rem;}
+	.pt-sec .list .lk{width: 33.3%;}
+	.pt-sec .list .icon{width: 0.7rem;height: 0.7rem;}
+	.pt-sec .list .title{font-size: 0.15rem;}
+	.pt-sec .list .title br{display: none;}
+	
+	
+	
+	/* Ã¦â€¢Â°Ã¦ÂÂ®Ã¦ËœÂ¾Ã§Â¤Âº */
+	.data-main{padding:.1rem 0 .6rem;}
+	
+	.data-top{margin:.2rem 0 0;}
+	.data-top .detail{box-shadow:none;}
+	
+	.data-menu .lk{font-size: 0.16rem;line-height: 0.5rem;}
+	.data-menu .lk.cur{font-size: 0.16rem;}
+	
+	.data-yq{padding:.35rem .15rem .3rem;}
+	.data-yq .item .info{max-width: 100%;}
+	.data-yq .item .title{font-size: 0.16rem;}
+	.data-yq .swiper-pagination{margin-top: 0.25rem;}
+	.data-yq .swiper-pagination-bullet-active{width: 0.2rem;height: 0.2rem;}
+	.data-yq .swiper-pagination-bullet{margin: 0 0.05rem!important;}
+	
+	
+	.data-bot{display: block;}
+	.data-bot .top-tt{background-size: 0.22rem;margin-bottom: 0.1rem;}
+	.data-bot .top-tt .lk{font-size: 0.18rem;white-space: nowrap;margin-right: 0.1rem;line-height: 0.5rem;}
+	.data-bot .top-tt .lk.cur{font-size: 0.18rem;}
+	.data-bot .top-tt::after{height: 0.03rem;}
+	
+	
+	.data-record{width: 100%;margin-bottom: 0.2rem;}
+	.data-record .list .item{padding:.16rem 0;height:auto;display:block;}
+	.data-record .list .date{font-size: 0.14rem;margin-left: 0.3rem;margin-top: 0.05rem;display: block;}
+	
+	
+	.data-rank{width: 100%;}
+	.data-rank .list .item{height: 0.5rem;}
+	.data-rank .list .date{font-size: 0.14rem;}
+	
+	
+	
+	.data-top .chartbox1{flex-wrap: wrap;margin-bottom: 0.35rem;}
+	.data-top .chartbox1 .font{width: 100%;text-align: center;margin-top: 0.4rem;}
+	.data-top .chartbox1 .font em{font-size: 0.2rem;}
+	.data-top .chartbox1 .chart{width: 2.8rem;margin:0 .3rem 0 0;}
+	.data-top .chartbox1 .box{width: 100%;}
+	.data-top .chartbox1 .total{text-align: center;}
+	.data-top .chartbox1 .txt{display: flex;justify-content: space-between;font-size: 0.15rem;width: 100%;flex-wrap: wrap;}
+	.data-top .chartbox1 .txt p{margin-top: 0.15rem;}
+	.data-top .chartbox1 .txt .ic{width: 0.18rem;margin-right: 0.05rem;}
+	.data-top .chartbox1 .txt em{min-width: auto;}
+	
+	.data-top .chart{height: 2.5rem;}
+	
+	
+	/* Ã¤Â»ÂªÃ¥â„¢Â¨Ã¥â€ â€¦Ã¥Â®Â¹ */
+	.side-bar.yq .list li>a{font-size: 0.16rem;}
+	
+	.yq-top{padding: 0.2rem;margin:.35rem 0;display: block;}
+	.yq-top .imgbox{width: 100%;display: block;margin:0 auto .2rem;height: auto;}
+	.yq-top .title{font-size: 0.2rem;}
+	.yq-top .ann{width: 0.8rem;line-height: 0.34rem;margin-left: 0.12rem;}
+	.yq-top .txt{font-size: 0.15rem;}
+	.yq-top .txt span{margin-top: 0.1rem;min-width: 100%;}
+	
+	
+	.data-intro{line-height: 1.7;font-size: 0.15rem;}
+	.data-intro .title{font-size: 0.18rem;margin:.12rem 0 .06rem;line-height: 1.6;}
+	
+	.yq-yy{margin-top: 0.15rem;}
+	.yq-yy .item{height: auto;padding:.15rem .05rem;display: block;}
+	.yq-yy .date{font-size: 0.14rem;display: block;margin-top: 0.08rem;}
+	
+	.yq-table{margin-top: 0.3rem;}
+	.yq-table th{font-size: 0.16rem;}
+	.yq-table td{padding: 0.2rem 0;line-height: 0.22rem;}
+	
+	.yq-table td:nth-child(1){width: 25%;}
+	.yq-table td:nth-child(2){padding-left: 0.1rem;padding-right: 0.1rem;width: 50%;}
+	.yq-table td:nth-child(3){width: 25%;}
+	
+	
+	/* Ã¤Â»ÂªÃ¥â„¢Â¨Ã¥Ë†â€”Ã¨Â¡Â¨ */
+	.yq-ss{padding:.15rem 0 .35rem;display: block;}
+	.yq-ss .box{justify-content: space-between;margin-top: -0.15rem;}
+	.yq-ss .item{width: 48.5%;margin:.15rem 0 0;}
+	.yq-ss .ipt{font-size: 0.15rem;height: 0.4rem;line-height: 0.4rem;border-radius:.06rem;}
+	.yq-ss .submit{margin:.3rem auto 0;width: 1.2rem;height: 0.4rem;font-size: 0.15rem;}
+	.yq-ss .submit::before{width: 0.16rem;height: 0.16rem;margin-right: 0.08rem;}
+	
+	.yq-list{margin-top: 0;}
+	.yq-list .item{width: 100%;padding: .25rem 0;margin-top: 0;border:none;border-bottom:1px solid #efefef;}
+	.yq-list .imgbox{width: 1.7rem;height: 1.75rem;margin-right: 0.2rem;}
+	.yq-list .title{font-size: 0.18rem;line-height: 1.6;}
+	.yq-list .txt{font-size: 0.15rem;}
+	.yq-list .txt p{overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+	.yq-list .btns{margin-top: 0.1rem;}
+	.yq-list .ann{line-height: 0.34rem;width: 0.8rem;}
+	
+	
+	/* Ã§Â»â€œÃ¦Å¾â€žÃ¦Ë†ÂÃ¥Ë†â€ Ã¤Â¸Å½Ã§â€°Â©Ã¦â‚¬Â§Ã¦Âµâ€¹Ã©â€¡ÂÃ¥Â¹Â³Ã¥ÂÂ° */
+	.cf-top{margin-top: 0.2rem;display: block;}
+	.cf-top .slide{width: 100%;max-width: 100%;}
+	.cf-top .slide .item{height: 2.5rem;}
+	.cf-top .swiper-pagination{bottom: 0.2rem!important;}
+	.cf-top .swiper-pagination-bullet{width: 0.12rem;height: 0.12rem;margin: 0 0.05rem!important;}
+	.cf-top .swiper-pagination::before{left: 0.03rem;right: 0.03rem;}
+	
+	
+	.cf-top .info{padding:.2rem .25rem;}
+	.cf-top .title{font-size: 0.18rem;}
+	.cf-top .x{width: 0.4rem;margin:.1rem 0;}
+	.cf-top .txt{line-height: 0.26rem;font-size: 0.15rem;}
+	
+	
+	.cf-menu{margin-top: 0.3rem;flex-wrap: wrap;}
+	.cf-menu .item{width: 50%;padding: 0;}
+	.cf-menu .lk{font-size: 0.2rem;height: .9rem;}
+	.cf-menu .icon{width: 0.3rem;margin-right: 0.06rem;}
+	
+	.cf-dt{margin-top: 0.3rem;}
+	.cf-dt .top{height: 0.4rem;background:none;margin-bottom: 0;}
+	.cf-dt .top .bt{font-size: 0.2rem;line-height: 0.4rem;}
+	.cf-dt .top .more{font-size: 0.16rem; height: 0.4rem;background:none;color: #00419B;width: auto;}
+	.cf-dt .detail{display: block;}
+	.cf-dt .list{width: 100%;margin-bottom: 0;}
+	.cf-dt .list li{border-bottom:1px dashed #D8D8D8!important;}
+	.cf-dt .list:last-child li:last-child{border-bottom:0!important;}
+	.cf-dt .list .box{height: auto;padding:.15rem 0;display: block;}
+	.cf-dt .list .title{max-width: 100%;}
+	.cf-dt .list .date{display: block;margin-top: 0.06rem;margin-left: 0.3rem;}
+	
+	
+	
+	.idx-tt .more::before{width: 0.3rem;height: 0.15rem;margin-right: 0.05rem;}
+	
+	
+	/* index */
+	.idx-ban .item{height: auto;}
+	.idx-ban .swiper-button{display: none;}
+	.idx-ban .swiper-pagination{bottom: 0.16rem!important;}
+	.idx-ban .swiper-pagination-bullet{width: 0.08rem;height: 0.08rem;    margin: 0 0.05rem!important;}
+	
+	.idx-s1{padding:.5rem 0 .3rem;}
+	.idx-s1 .wrap{display: block;}
+	
+	.idx-cg{width: 100%;margin-bottom: 0.5rem;}
+	.idx-cg .list{display: block;}
+	.idx-cg .list .item{width: 100%;margin-bottom: 0.3rem;}
+	.idx-cg .list .imgbox{height: 1.8rem;}
+	.idx-cg .list .info{height: auto;padding:.1rem .15rem;display: block;}
+	.idx-cg .list .title{font-size: 0.16rem;-webkit-line-clamp: 1;line-height: 0.3rem;}
+	
+	.idx-xw{width: 100%;}
+	.idx-xw .hotbox{display: block;}
+	.idx-xw .hotbox .imgbox{width: 100%;margin:0 0 .2rem;height: 2.4rem;padding: 0;}
+	.idx-xw .hotbox .imgbox::before{display: none;}
+	.idx-xw .hotbox .title{font-size: 0.18rem;}
+	.idx-xw .hotbox .x{display: none;}
+	.idx-xw .hotbox .txt{font-size: 0.15rem;margin-top: 0.1rem;}
+	.idx-xw .hotbox .date{font-size: 0.15rem;}
+	.idx-xw .list .title{line-height: 0.5rem;}
+	
+	.idx-lm{margin-bottom: 0.3rem;}
+	.idx-lm .list{background-color: #f5f5f5;padding:.2rem 0;}
+	.idx-lm .list .item{width: 50%;height: auto;display: block;text-align: center;padding:.15rem 0;}
+	.idx-lm .list .item::after{display: none;}
+	.idx-lm .list .ico{width: 0.4rem;margin:0 auto .1rem;}
+	.idx-lm .list .title{font-size: 0.18rem;}
+	
+	
+	.idx-pt{padding:.6rem 0 1px;}
+	.idx-pt .mod{margin-bottom: 0;}
+	.idx-pt .list .lk{width: 33.3%;margin-bottom: 0.3rem;}
+	.idx-pt .list .icon{width: 0.7rem;height: 0.7rem;}
+	.idx-pt .list .title{font-size: 0.15rem;}
+	.idx-pt .list .title br{display: none;}
+	
+	.idx-dt .wrap{display: block;}
+	.idx-dt .col{width: 100%;margin-bottom: 0.2rem;}
+	.idx-dt .idx-tt{margin-bottom: 0;}
+	.idx-dt .list .box{display: block;height: auto;padding:.12rem 0;line-height: 0.3rem;}
+	.idx-dt .list .date{margin-left: 0.2rem;font-size: 0.14rem;display: block;}
+	
+	
+	.ft-link .wrap{display: block;position: relative;}
+	.ft-link .r{display: block;}
+	.ft-link .lks{font-size: 0;margin-left: -0.15rem;}
+	.ft-link a{padding: 0;font-size: 0.15rem;margin:0 0 0 .15rem;}
+	.ft-link .showmore{position: absolute;right: 4%;top: 0;margin-left: 0;}
+	
+	
+	
+	.yy-btn{width: 0.6rem;height: 1.04rem;letter-spacing: .03rem;padding: 0.06rem 0 0 0.2rem;bottom: 20%;}
+	
+	
+	
+}

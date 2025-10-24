@@ -1,0 +1,877 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike,  sub, sup, tt, var,
+ u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit; 
+	vertical-align: baseline;
+}
+img{
+object-fit: cover;
+object-position: center;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+         font-family:"Microsoft YaHei",SimHei,arial;
+          min-width:1250px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	color: #000;
+}
+a:hover {
+	color: #000;
+}
+.showArea {
+	width: 1262px;
+	margin: 0 auto;
+}
+
+
+.showAreatop { width: 1262px;  margin: 0 auto;    }
+.showAreatop .logobox {  width: 420px;  float:left;   }
+.showAreatop span {  width: 300px;  float:left;  margin-top:14px;  margin-left: 60px;  }
+.header1 {  height: 113px;  background: #9c0c13;  overflow: hidden;  padding:24px 0; }
+.header1 ul {  height: 100%;  }
+.header1 ul li {  display: table-cell;  vertical-align: middle;  height: 113px;  }
+.tlt {  margin-left: 18px;    }
+
+.search{ float:right; width:200px; height:32px; background:#c55359;  margin:16px 0;  border-radius:40px;  }
+.write{ float:left; width:160px; height:32px; line-height:32px; padding-left:10px; border:0; outline:none; background:none; font-size: 14px; color:#fff;   }
+.btns{ float:right; width:40px; height:32px; border:0; background:url(https://www.ygb.sdu.edu.cn/img/sear.png) center no-repeat; outline:none; cursor:pointer; }
+
+
+.header2 {
+	height: 56px;
+}
+.header2  > ul {
+	height: 100%;
+}
+.header2 > ul > li {
+	display: table-cell;
+	vertical-align: middle;
+	height: 56px;
+}
+.header2 > ul > li > div {
+	margin-left: 19px;
+	color: #000;
+}
+.header2 ul li:first-child > div {
+	margin-left: 0px;
+}
+.header2 .dropdown > div > a {
+	padding: 5px 14px;
+	border-radius: 20px;
+       font-size: 18px;
+}
+.header2 .dropdown > div > .active {
+	padding: 5px 24px;
+	background: #e38085;
+	border-radius: 20px;
+}
+.header2 .dropdown > div > a:hover {
+	background: #e38085;
+	cursor: pointer;
+}
+
+.curr{ 
+           background: #e38085;
+	cursor: pointer; 
+ }
+
+.dropdown-menu {
+	top: 41px;
+}
+.logo {
+
+}
+.header3 {
+	background: url("https://www.ygb.sdu.edu.cn/img/tp2.png") no-repeat;
+}
+.carouselBox {
+	/* height: 455px; */
+}
+#carouselContent .carousel-indicators li {
+	width: 210px;
+	height: 4px;
+	border-radius: 0;
+	border: none;
+	background: #9c0c13;
+	display: inline-block;
+}
+#carouselContent .carousel-indicators .active {
+	width: 210px;
+	height: 6px;
+	border-radius: 0;
+	border: none;
+	background: #f9ca0c;
+	display: inline-block;
+}
+#carouselContent .carousel-indicators {
+	bottom: -2px;
+}
+.content1 {
+	height: 455px;
+	padding: 40px 0;
+	overflow: hidden;
+	/* background: #999; */
+}
+.content-tlt {
+	color: #9c0c13;
+	font-size: 18px;
+}
+.content-tlt .tlt-icon {
+	display: inline-block;
+	margin-left: 10px;
+	margin-bottom: 3px;
+	width: 30px;
+	height: 2px;
+	background: #9c0c13;
+}
+.content-tlt a {
+	float:right;
+	color: #666;
+	font-size: 16px;
+}
+.zytz {
+	width: 685px;
+	float: left;
+}
+.zytz-list {
+	margin-top: 5px;
+	width:100%;
+}
+.xwjj-right .more {
+	text-align:right;
+	float:right;
+	margin-top:30px;
+}
+
+
+.carousel-inner .biaoti{  position:relative;  width:100%; height:100%;  }
+.carousel-inner .biaoti img{   width:100%;  }
+.carousel-inner .biaoti h1{ position:absolute; bottom:60px; left:50%; font-size:20px; color:#fff;  margin-left:-630px; font-weight:bold;  }
+
+
+
+.xwjj-title .topmore{
+position:absolute;
+top:20px;
+right:0px;
+}
+
+
+
+
+
+
+.xwjj-right .more a {
+	font-size:16px;
+	color:#666;
+}
+.zytz-list li {
+	height:43px;
+	line-height: 43px;
+	font-size: 16px;
+}
+.lby li {
+	height:36px;
+	line-height: 36px;
+	font-size: 16px;
+overflow: hidden;
+}
+
+.zytz-list li div {
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin-bottom: 3px;
+	margin-right: 10px;
+	background: #9c0c13;
+}
+.zytz-list li b {
+	float:right;
+	width: 110px;
+	text-align:right;
+	color:#a9a9a9;
+	font-weight: normal;
+}
+.zytz-list-time {
+	margin-top: 5px;
+	float: right;
+	color: #a9a9a9;
+}
+.xsbg {
+	width: 527px;
+	height: 200px;
+	float: right;
+}
+.xsbg-show {
+	margin-top: 30px;
+           overflow: hidden;
+}
+
+
+.xsbg-show .xspic {
+	float: left;
+width: 120px;
+	height: 145px;
+}
+.xsbg-showContent {
+float: right;
+width:388px;
+	margin-left: 18px;
+	height: 143px;
+}
+.xsbg-showContent .p1 {
+	margin-top: 5px;
+	font-size: 18x;
+	color: #9c0c13;
+}
+.xsbg-showContent .p11 {
+	margin-top: 15px;
+	font-size: 18x;
+	color: #9c0c13;
+}
+.xsbg-showContent .p2 {
+	margin-top: 30px;
+	font-size: 18x;
+	color: #a9a9a9;
+}
+.xsbg-showContent .pTime {
+	margin-top: 15px;
+	font-size: 16px;
+	color: #a9a9a9;
+}
+.xsbg-list li, .xsbg-list-time li {
+	line-height: 16px;
+	font-size: 16px;
+	margin-top: 25px;
+}
+.xsbg-list {
+	width:100%;
+}
+.xsbg-list li b {
+	float: right;
+	width:110px;
+	text-align:right;
+	color: #a9a9a9;
+}
+.content2 {
+	height: 610px;
+	background: #f9f9f9;
+	overflow: hidden;
+}
+.xwjj-title {
+	
+}
+.tlt-box {
+	position: relative;
+	margin: 40px auto 36px auto;
+	width: 200px;
+	height: 50px;
+	border: 2px solid #9c0c13;
+	line-height: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: #9c0c13;
+}
+.tlt-box::before {
+	content: "";
+	position: absolute;
+	top: 24px;
+	left: -140px;
+	width: 150px;
+	height: 2px;
+	background: #9c0c13;
+}
+.tlt-box::after {
+	content: "";
+	position: absolute;
+	top: 24px;
+	right: -140px;
+	width: 150px;
+	height: 2px;
+	background: #9c0c13;
+}
+.xwjj-left {
+	float: left;
+	width: 610px;
+}
+.xwjj-right {
+	float: right;
+	width: 622px;
+}
+.xwjj-carousel {
+	position: relative;
+	margin-left: 20px;
+	width: 550px;
+	height: 365px;
+	background: #999;
+}
+.xwjj-carousel span {
+	position: absolute;
+	display: inline-block;
+}
+.xwjjBoxLt1 {
+	top: -10px;
+	left: -10px;
+	width: 70px;
+	height: 70px;
+	background: transparent;
+	border: solid #ff9f15;
+	border-width: 0;
+	border-top-width: 10px;
+	border-left-width: 10px;
+}
+.xwjjBoxLt2 {
+	top: -20px;
+	left: -20px;
+	width: 50px;
+	height: 50px;
+	background: transparent;
+	border: solid #9c0c13;
+	border-width: 0;
+	border-top-width: 10px;
+	border-left-width: 10px;
+}
+#xwjjCarousel .carousel-inner {
+	width: 600px;
+	height: 431px;
+}
+#xwjjCarousel .carousel-inner .item img {
+	width: 550px;
+	height: 366px;
+}
+.carousel-txt {
+	position: absolute;
+	left: 90px;
+	bottom:-64px;
+	width: 497px;
+	height: 82px;
+	font-size: 20px;
+	line-height: 82px;
+	padding-left: 20px;
+	color: #9c0c13;
+	background: #fff;
+	box-shadow: 0px 0px 5px #999;
+}
+#xwjjCarousel .carousel-indicators {
+	bottom: 0px;
+	left: -10px;
+	margin-left: 0;
+	width: 100px;
+}
+#xwjjCarousel .carousel-indicators li {
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	width: 22px;
+	height: 22px;
+	color: #fff;
+	background: #9c0c13;
+	text-indent: 0;
+	line-height: 22px;
+}
+#xwjjCarousel .carousel-indicators .active{
+	background: #ff9f15;
+}
+.content3 {
+	height: 446px;
+	overflow: hidden;
+}
+.xyfc-tlt {
+	margin-top: 50px;
+	margin-bottom: 25px;
+}
+.xyfc-content {
+	margin-bottom: 60px;
+	height: 296px;
+}
+.xyfc-content li {
+	float: left;
+	margin-left: 40px;
+	width: 284px;
+	height: 100%;
+}
+.xyfc-content li:first-child {
+	margin-left: 0;
+}
+.xyfc-content .bd-btm {
+	border-bottom: 1px solid #aaa;
+}
+.xyfc-content .bd-top {
+	border-top: 1px solid #aaa;
+}
+.xyfc-content .xyfc-txt {
+	padding-top: 22px;
+	height: 96px;
+	line-height:24px;
+}
+.content4 {
+	height: 673px;
+	background: url("https://www.ygb.sdu.edu.cn/img//gd.png") no-repeat;
+	overflow: hidden;
+}
+.other {
+	height: 100%;
+}
+.other-title {
+	width: 900px;
+	margin: 50px auto 44px auto;
+	overflow: hidden;
+}
+.other-title li {
+	float: left;
+	margin-left: 20px;
+}
+.tlt-box1 {
+	position: relative;
+	border: 2px solid #9c0c13;
+	text-align: center;
+	font-size: 20px;
+	color: #9c0c13;
+	width: 155px;
+	height: 44px;
+	line-height: 44px;
+}
+.tlt-box1 a {
+	color: #9c0c13;
+}
+.tlt-box1::before {
+	content: "";
+	position: absolute;
+	top: 21px;
+	left: -20px;
+	width: 30px;
+	height: 2px;
+	background: #9c0c13;
+}
+.tlt-box1:first-child::before {
+	content: "";
+	position: absolute;
+	top: 21px;
+	left: -90px;
+	width: 100px;
+	height: 2px;
+	background: #9c0c13;
+}
+.tlt-box1::after {
+	content: "";
+	position: absolute;
+	top: 21px;
+	right: -20px;
+	width: 30px;
+	height: 2px;
+	background: #9c0c13;
+}
+.tlt-box1:last-child::after {
+	content: "";
+	position: absolute;
+	top: 21px;
+	right: -20px;
+	width: 30px;
+	height: 2px;
+	background: #9c0c13;
+}
+.other-title li {
+  cursor: pointer;
+}
+.active1 {
+	background: #9c0c13;
+	color: #fff;
+}
+.other-title .active a {
+	color: #fff;
+}
+.other-content {
+	position: relative;
+	height: 420px;
+}
+.other-content .showOther {
+	position: absolute;
+	width: 100%;
+	visibility: visible;
+	transition: all 0.5s;
+	-ms-transition: all 0.5;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+}
+.other-content > ul > li {
+	float: left;
+	margin-left: 62px;
+	background: #fff;
+}
+.other-content .showOther .rmt li {
+	float:left;
+	margin-left: 62px;
+	background: #fff;
+           width:378px;
+}
+.other-content .showOther .rmt li span {
+	display:block;
+	width:100%;
+           height:250px; 
+         overflow: hidden;
+}
+.other-content .showOther .rmt li span a {
+	display:block;
+	width:100%;
+}
+.other-content .showOther .rmt li span a img{
+	width:100%;
+}
+.other-content .showOther .rmt li:first-child {
+	margin-left: 0px;
+}
+
+.other-txt {
+	width: 378px;
+	padding: 22px 20px 38px 20px;
+	line-height:24px;
+}
+.other-btn {
+	margin: 40px auto 0 auto;
+	width: 165px;
+	height: 35px;
+	border: 1px solid #999;
+	border-radius: 50px;
+	cursor: pointer;
+             z-index:999999999999999;  
+           position: relative;
+
+
+}
+.other-btn a {
+	display:block;
+	line-height: 35px;
+	text-align: center;
+	cursor: pointer;
+}
+.footer {
+	height: 326px;
+	background: #720b10;
+	overflow: hidden;
+}
+.footer-content {
+	height: 258px;
+	overflow: hidden;
+	color: #ceb9ba;
+	font-size: 16px;
+}
+.bq {
+	height: 68px;
+	line-height: 68px;
+	text-align: center;
+	color: #a47879;
+	border-top: 1px solid #9d5558;
+}
+.footer-logo {
+	margin-top: 43px;
+	margin-bottom: 15px;
+}
+.content-left {
+	float: left;
+}
+.content-left p{
+	margin-top: 15px;
+}
+.content-center {
+	margin-left: 134px;
+	margin-top: 54px;
+	overflow: hidden;
+	float: left;
+}
+.content-center ul li {
+	margin-bottom: 20px;
+}
+.content-center ul li:first-child {
+}
+.center-left {
+	float: left;
+margin-right:35px;
+}
+.center-right {
+	float: right;
+}
+.content-right {
+	float: right;
+	margin-top: 54px;
+	width: 180px;
+	overflow: hidden;
+}
+.content-right img {
+	margin-bottom: 14px;
+}
+.content-right p {
+	text-align: center;
+	font-size: 14px;
+}
+.wx-left {
+	float: left;
+}
+.wx-right {
+	float: right;
+}
+.content5-mark {
+	height: 110px;
+	line-height: 110px;
+	border-bottom: 1px solid #a9a9a9;
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+.mark1 {
+	font-size: 34px;
+	font-weight: bold;
+}
+.mark2 {
+	font-size: 16px;
+	color: #a9a9a9;
+}
+.mark3 {
+	float: right;
+	font-size: 16px;
+	color: #a9a9a9;
+}
+.mark3 a {
+	font-size: 16px;
+	color: #a9a9a9;
+}
+
+.content5 {
+	overflow: hidden;
+        margin-bottom: 30px;
+}
+.content5-left {
+	margin-left: 30px;
+	float: left;
+	width: 205px;
+          min-height:700px;
+	background: url("https://www.ygb.sdu.edu.cn/img/bg3.png") no-repeat;
+	border-right: 1px solid #a9a9a9;
+	overflow: hidden;
+}
+.content5-left .active{
+	color: #9c0c13;
+}
+.content5-left ul li {
+	margin-top: 25px;
+}
+.content5-left ul li:first-child {
+	margin-top: 10px;
+}
+.content5-right {
+	float: right;
+	width: 985px;
+	margin-left: 40px;
+	overflow: hidden;
+}
+.contnt5-list {
+	overflow: hidden;
+}
+.pagenation {
+	width: 350px;
+	height: 25px;
+	margin: 44px auto 59px auto;
+	/* border: 1px solid red; */
+	line-height: 25px;
+	/* color: #a9a9a9; */
+}
+.pagenation input {
+	width: 25px;
+	height: 25px;
+	margin-right: 5px;
+}
+.pagenation span {
+	padding: 0px 5px;
+	border: 1px solid #a9a9a9;
+}
+.pagenation .disabled {
+	color: #a9a9a9;
+}
+.pagenation .active {
+	background: #888888;
+	color: #fff;
+}
+.main-show {
+	line-height: 30px;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    line-height: 30px;
+}
+.main-show p {
+	margin: 14px 0;
+	text-indent:2em;
+}
+.main-show table{
+	    margin: 0 auto;
+}
+
+
+/* article */
+.MsoNormal {
+	text-indent:28.0000pt;
+}
+.MsoNormal span {
+	font-size: 16px;
+}
+.article-tlt {
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+}
+.article-subTlt {
+	text-align: center;
+	color: #999
+}
+/* person */
+.listbox {
+	overflow: hidden;
+}
+.list-sz {
+	overflow: hidden;
+}
+.list-sz li {
+	margin-bottom: 15px;
+	border-bottom: dashed 1px #dedede;
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+.list-sz li a {
+	display: block;
+	font-size: 16px;
+	line-height: 30px;
+	height: 30px;
+}
+.btt {
+	float: left;
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+}
+.btt img {
+	width: 100%;
+	height: auto;
+}
+.wen {
+	float: right;
+	width: 840px;
+}
+.list-sz li .zy {
+	line-height: 24px;
+	color: #777;
+}
+.wen span {
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	color: #999;
+	margin-top: 10px;
+}
+.xuezhe-left {
+	float: left;
+	width:504px;
+}
+.xuezhe-left span {
+	display:block;
+	width:100%;
+	height:326px;
+	overflow:hidden;
+}
+.xuezhe-left span a {
+	display:block;
+}
+.xuezhe-left span a img {
+	width:100%;
+}
+.xuezhe-title {
+	height: 80px;
+	line-height: 80px;
+	background: #fff;
+	padding-left:20px;
+}
+.xuezhe-right {
+	float: right;
+	width: 690px;
+	height: 422px;
+}
+.xuezhe-list {
+	width:100%;
+}
+.xuezhe-list li {
+	line-height: 16px;
+	font-size: 16px;
+	margin-top: 25px;
+	color:#a9a9a9;
+}
+.xuezhe-list li a {
+	/* color:#a9a9a9; */
+}
+.xuezhe-list li b {
+	float:right;
+	width: 100px;
+	text-align:right;
+	color:#a9a9a9;
+}
+.xuezhe-list li:first-child {
+	margin-top: 0px;
+}
+.xuezi-item {
+	float: left;
+	width: 286px;
+	margin-left: 38px;
+}
+.xuezi-item:first-child {
+	margin-left: 0px;
+}
+.xuezi-item .xuezi-pic {
+	width:100%;
+	height:290px;
+	overflow:hidden;
+}
+.xuezi-txt {
+	height: 130px;
+	padding: 0 20px;
+	background: #fff;
+	border-bottom: 3px solid #9c0c13;
+}
+.xuezi-name {
+	padding-top: 20px;
+line-height: 22px;
+}
+.xuezi-dsc {
+	margin-top: 20px;
+	color: #a9a9a9;
+}

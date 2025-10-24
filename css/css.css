@@ -1,0 +1,535 @@
+﻿
+/* CSS Document */
+
+/* CSS Document */
+*{
+	margin:0 auto;
+	padding:0px;
+}
+body{
+	width:100%;
+	font-size:12px;
+	color:#3d4552;
+	font-family:"微软雅黑";
+	background:url(https://www.xxgk.sdu.edu.cn/img/bodyBJ.jpg) repeat;
+           min-width:1092px;;
+          
+
+}
+body,input,p,span,dl,dt,dd,select,textarea,ul,li,dl,h1,h2,h3,h4,font,img,b{
+	margin:0px;
+	padding:0px;
+}
+a,area,textarea{
+	text-decoration:none;
+	blr:expression(this.onFocus=this.blur());
+	outline:none;
+}
+a{
+	color:#3d4552;
+}
+input{
+	outline:none;
+}
+ul,ol,li{
+	list-style-type:none;
+}
+input,textarea,select{
+	font-size:12px !important;
+}
+img{
+	border:none;
+}
+.fl{
+	float:left;
+}
+.fm{
+	margin:0 auto;
+}
+
+.fr{
+	float:right;
+}
+.clearboth{
+	clear:both;
+	border:0px;
+	padding:0px;
+	margin:0px;
+}
+.xxw_top{
+	width:100%;
+	height:30px;
+	background:#000;
+}
+.xxw_topIN{
+	width:1090px;
+	height:30px;
+	line-height:30px;
+	color:#bcbcbc;
+    
+}
+.xxw_topIN_l{
+	width:300px;
+	height:30px;
+	margin:0 0 0 40px;
+	display:inline;
+
+}
+.xxw_topIN_r{
+	width:240px;
+	height:30px;
+}
+.xxw_topIN_r a{
+	color:#bcbcbc;
+	margin:0 10px 0 10px;
+	display:inline;
+}
+.xxw_logol{
+	width:1060px;
+	height:110px;
+}
+.xxw_logo{
+	width:366px;
+	height:68px;
+	margin:20px 0 0 30px;
+	display:inline;
+}
+.xxw_logoRIMG{
+	width:460px;
+	height:110px;
+	background:url(https://www.xxgk.sdu.edu.cn/img/logo_rimg.png) no-repeat;
+}
+.xxw_menu{
+	width:100%;
+	height:40px;
+	background:#9c0c15;
+}
+.xxw_menuIN{
+	width:1060px;
+	line-height:40px;
+	color:#FFF;
+}
+.xxw_menuIN ul li{
+	width:176px;
+	text-align:center;
+	float:left;
+	font-size:16px;
+}
+.xxw_menuIN ul li a{
+	color:#FFF;
+}
+.xxw_midIN{
+	width:1060px;
+	height:auto;
+}
+.xxw_midinLeft{
+	width:752px;
+	height:auto;
+	margin-top:15px;
+	display:inline;
+}
+.xxw_midIN_left{
+	width:740px;
+	height:auto;
+	border-bottom:1px solid #d6d6d6;
+	border-left:1px solid #d6d6d6;
+	border-right:1px solid #d6d6d6;
+	border-top:3px solid #e84c3d;
+	padding:5px 5px 58px 5px;
+	background:#FFF;
+}
+.xxw_midIN_left ul li{
+	width:133px;
+	height:73px;
+	float:left;
+	margin:58px 24px 0 24px;
+	display:inline;
+	font-size:18px;
+	padding:0 0 0 65px;
+}
+.xxw_midIN_left ul li:hover{
+	color:#FFF;
+}
+.xxw_midIN_left ul li:hover a{
+	color:#FFF;
+}
+.lanmu01{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub01.png) no-repeat 22px #f0f0f0; line-height:73px;
+}
+.lanmu01:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub01_h.png) no-repeat 22px #9c0c15;line-height:73px;
+}
+.lanmu02{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub02.png) no-repeat 22px #f0f0f0;line-height:73px;
+}
+.lanmu02:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub02_h.png) no-repeat 22px #9c0c15;line-height:73px;
+}
+.lanmu03{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub03.png) no-repeat 22px #f0f0f0; line-height:24px; height:61px!important; padding:12px 0 0 65px!important;
+}
+.lanmu03:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub03_h.png) no-repeat 22px #9c0c15;line-height:24px;height:61px!important; padding:12px 0 0 65px!important;
+}	
+.lanmu04{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub04.png) no-repeat 22px #f0f0f0;line-height:73px;
+}
+.lanmu04:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub04_h.png) no-repeat 22px #9c0c15;line-height:73px;
+}
+.lanmu05{
+	
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub05.png) no-repeat 22px #f0f0f0;line-height:73px;
+}
+.lanmu05:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub05_h.png) no-repeat 22px #9c0c15;line-height:73px;
+}
+.lanmu06{
+	
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub06.png) no-repeat 22px #f0f0f0;line-height:24px;height:61px!important; padding:12px 0 0 65px!important;
+}
+.lanmu06:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub06_h.png) no-repeat 22px #9c0c15;line-height:24px;height:61px!important; padding:12px 0 0 65px!important;
+}
+.lanmu07{
+	
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub07.png) no-repeat 22px #f0f0f0;line-height:73px;
+}
+.lanmu07:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub07_h.png) no-repeat 22px #9c0c15;line-height:73px;
+}
+.lanmu08{
+	
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub08.png) no-repeat 22px #f0f0f0;line-height:73px;
+}
+.lanmu08:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub08_h.png) no-repeat 22px #9c0c15;line-height:73px;
+}
+.lanmu09{
+	
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub09.png) no-repeat 22px #f0f0f0;line-height:24px;height:61px!important; padding:12px 0 0 65px!important;
+}
+.lanmu09:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub09_h.png) no-repeat 22px #9c0c15;line-height:24px;height:61px!important; padding:12px 0 0 65px!important;
+}
+.lanmu010{
+	
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub010.png) no-repeat 22px #f0f0f0;line-height:73px;
+}
+.lanmu010:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub010_h.png) no-repeat 22px #9c0c15;line-height:73px;
+}
+.lanmu011{
+	
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub011.png) no-repeat 22px #f0f0f0;line-height:73px;
+}
+.lanmu011:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub011_h.png) no-repeat 22px #9c0c15;line-height:73px;
+}
+.lanmu012{
+	
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub012.png) no-repeat 22px #f0f0f0;line-height:24px;height:61px!important; padding:12px 0 0 65px!important;
+}
+.lanmu012:hover{
+	background:url(https://www.xxgk.sdu.edu.cn/img/tub012_h.png) no-repeat 22px #9c0c15;line-height:24px;height:61px!important; padding:12px 0 0 65px!important;
+}.xxw_mid_lbot{
+	width:750px;
+	height:63px;
+	background:#FFF;
+	border:1px solid #d7d7d7;
+	margin-top:15px;
+	display:inline;
+}
+.xxw_mid_lbot ul li{
+	width:auto;
+	float:left;
+	margin:0 15px 0 10px;
+	display:inline;
+	line-height:63px;
+	background:url(https://www.xxgk.sdu.edu.cn/img/wlt.jpg) no-repeat 30px;
+	font-size:18px;
+	padding:0 0 0 60px;
+}
+.xxw_ss{
+	width:200px;
+	height:32px;
+	margin:17px 17px 0 0;
+	display:inline;
+}
+.ss_input{
+	width:165px; 
+	height:32px; 
+	float:left; 
+	line-height:32px;
+	color:#999999;
+	padding:0 5px 0 5px;
+	background:url(https://www.xxgk.sdu.edu.cn/img/ss_1.jpg) no-repeat left;
+	border:0;
+}
+.ss_button{
+	width:24px; 
+	height:32px;
+	background:url(https://www.xxgk.sdu.edu.cn/img/ss_r.jpg) no-repeat right;
+	cursor:pointer; 
+	outline: medium;
+	float:left;
+     border:0;
+}
+.xxw_midinright{
+	width:288px;
+	height:auto;
+	margin-top:15px;
+	display:inline;
+}
+.xxw_xxgksl{
+	width:286px;
+	height:auto;
+	border-bottom:1px solid #d7d7d7;
+	border-left:1px solid #d7d7d7;
+	border-right:1px solid #d7d7d7;
+	border-top:3px solid #ffc602;
+}
+.xxw_xxgksT{
+	width:276px;
+	height:42px;
+	line-height:40px;
+	padding:0 0 0 10px;
+	font-size:16px;
+	color:#e3a000;
+}
+.xxw_xxgksB{
+	width:236px;
+	height:auto;
+	line-height:30px;
+	padding:20px;
+	font-size:14px;
+}
+.xxw_jdts{
+	width:286px;
+	height:auto;
+	margin-top:15px;
+	display:inline;
+	border-bottom:1px solid #d7d7d7;
+	border-left:1px solid #d7d7d7;
+	border-right:1px solid #d7d7d7;
+	border-top:3px solid #1bbc9b;
+}
+.xxw_jdtsT{
+	width:276px;
+	height:44px;
+	line-height:40px;
+	padding:0 0 0 10px;
+	font-size:16px;
+	color:#1bbc9b;
+}
+.xxw_xxgksB{
+	width:236px;
+	height:auto;
+	line-height:30px;
+	padding:20px;
+	font-size:14px;
+}
+.xxw_footer{
+	width:100%;
+	height:64px;
+	background:#9c0c15;
+	margin-top:15px;
+	text-align:center;
+	font-size:14px;
+	line-height:30px;
+	color:#fff;
+}
+.xxw_footer a{
+	color:#FFF;
+}
+.xxw_listLt{
+	width:286px;
+	height:auto;
+	border-bottom:1px solid #d7d7d7;
+	border-left:1px solid #d7d7d7;
+	border-right:1px solid #d7d7d7;
+	background:url(https://www.xxgk.sdu.edu.cn/img/list_dt.jpg) no-repeat right bottom #FFF;
+	
+}
+.xxw_listLt_bt{
+	width:231px;
+	height:40px;
+	background:url(https://www.xxgk.sdu.edu.cn/img/list.jpg) no-repeat 20px #9c0c15;
+	line-height:36px;
+	color:#FFF;
+	font-size:16px;
+	padding-left:55px;
+}
+.xxw_listLt_bb{
+	width:276px;
+	height:auto;
+	padding:5px;
+	padding-bottom:150px;
+	
+	position:relative; 
+	z-index:1000;
+}
+.xxw_listLt_bb ul li{
+	width:221px;
+	height:auto;
+	float:left;
+	border-bottom:1px dashed #d7d7d7;
+	background:url(https://www.xxgk.sdu.edu.cn/img/list_lt.jpg) no-repeat 20px 16px;
+	line-height:40px;
+	padding-left:45px;
+	font-size:14px;
+}
+
+.nav_right{ 
+	width:790px; 
+	height:auto; 
+	max-width:790px;
+	min-height:648px;
+	overflow:hilien; 
+	position:absolute; 
+	left:271px; 
+	top:-40px; 
+
+	background:#fff; 
+	display:none; 
+	border:1px solid #ccc;
+	z-index:1001;
+	background:#f8f8f8;
+
+
+          
+	
+}
+.nav_right img{
+ 
+	max-width:706px;
+           max-height:590px;
+margin-left:auto; margin-right:auto;
+
+
+}
+   
+.nav_right dl{
+	line-height:40px;
+	float:left;
+	width:auto; 
+	height:auto; 
+	max-width:702px;
+	min-width:702px;
+	margin:0px 30px 10px 30px;
+	border-bottom:1px dashed #d7d7d7;
+         padding:0 0 0 10px;
+}
+.xxw_midIN_leftlist{
+	width:740px;
+	height:auto;
+	border-bottom:1px solid #d6d6d6;
+	border-left:1px solid #d6d6d6;
+	border-right:1px solid #d6d6d6;
+	border-top:3px solid #e84c3d;
+	padding:5px 5px 58px 5px;
+	background:#FFF;
+}
+.xxw_listRt{
+	width:700px;
+	height:40px;
+	line-height:40px;
+	font-size:18px;
+	background:url(https://www.xxgk.sdu.edu.cn/img/list_img.jpg) no-repeat 20px;
+	padding-left:50px;
+}
+.xxw_dqwz{
+	margin-right:30px;
+	height:40px;
+	line-height:40px;
+	background:url(https://www.xxgk.sdu.edu.cn/img/ez.jpg) no-repeat 10px;
+	font-size:12px;
+	padding-left:30px;
+}
+.xxw_list_li{
+	width:712px;
+	height:auto;
+	margin-top:20px;
+	display:inline;
+	padding:0 20px 0 20px;
+}
+.xxw_list_li ul li{
+	width:692px;
+	height:40px;
+	float:left;
+	line-height:40px;
+	border-bottom:1px dashed #d7d7d7;
+	padding:0 10px 0 10px;
+	font-size:14px;
+}
+.xxw_list_li ul li span{
+	float:right;
+}
+/*CSS scott style pagination*/
+
+DIV.scott {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; MARGIN: 3px; PADDING-TOP: 3px; TEXT-ALIGN: center;
+}
+DIV.scott A {
+	BORDER-RIGHT: #3d4552 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #3d4552 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #3d4552 1px solid; COLOR: #3d4552; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #3d4552 1px solid; TEXT-DECORATION: none
+}
+DIV.scott A:hover {
+	BORDER-RIGHT: #e36c66 1px solid; BORDER-TOP: #e36c66 1px solid; BORDER-LEFT: #e36c66 1px solid; COLOR: #FFF; BORDER-BOTTOM: #e36c66 1px solid; BACKGROUND-COLOR: #f4a39f
+}
+DIV.scott A:active {
+	BORDER-RIGHT: #e36c66 1px solid; BORDER-TOP: #e36c66 1px solid; BORDER-LEFT: #e36c66 1px solid; COLOR: #FFF; BORDER-BOTTOM: #e36c66 1px solid; BACKGROUND-COLOR: #f4a39f
+}
+DIV.scott SPAN.current {
+	BORDER-RIGHT: #e36c66 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #e36c66 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; BORDER-LEFT: #e36c66 1px solid; COLOR: #fff; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #e36c66 1px solid; BACKGROUND-COLOR: #e36c66
+}
+DIV.scott SPAN.disabled {
+	BORDER-RIGHT: #3d4552 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #3d4552 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #3d4552 1px solid; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #3d4552 1px solid
+}
+
+.xxw_content{
+	width:1048px;
+	height:auto;
+	border-bottom:1px solid #d6d6d6;
+	border-left:1px solid #d6d6d6;
+	border-right:1px solid #d6d6d6;
+	border-top:3px solid #e84c3d;
+	padding:5px 5px 58px 5px;
+	background:#FFF;
+	margin-top:15px;
+	padding:20px;
+}
+.xxw_contentT{
+	width:1048px;
+	height:40px;
+	border-bottom:1px solid #d7d7d7;
+	line-height:40px;
+	text-align:center;
+	font-size:18px;
+}
+.xxw_contentM{
+	width:1048px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	color:#a2a2a2;
+}
+.xxw_contentCONT{
+	width:1048px;
+	height:auto;
+	line-height:36px;
+	font-size:14px;
+}
+.xxw_contentCONT p{
+	text-indent:2em;
+}
+.xxw_contentB{
+	width:1048px;
+	padding:0 0 30px 0;
+}
+.xxw_contentB a{
+	padding:5px 10px 5px 10px;
+	background:#efefef;
+	float:right;
+	border:1px solid #d8d8d8;
+	margin:20px 10px 0 10px; display:inline;
+}

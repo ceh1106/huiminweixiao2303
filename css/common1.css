@@ -1,0 +1,84 @@
+﻿body{
+	min-width:1300px;
+	padding:0; 
+	margin:0;
+	border:0;  
+	font-family:"Microsoft YaHei",SimHei,arial;
+	font-size:14px;
+	color:#444;
+	}
+	
+ul,li{ 
+	list-style:none;
+	padding:0; 
+	margin:0; 
+	border:0; 
+	}
+
+dl,dt,dd,img{
+	padding:0; 
+	margin:0;
+	border:0;
+	}
+	
+a{ text-decoration:none; color:#444; }
+a:hover{  color:#9c0c15; }		
+.clear{ clear:both; }
+.fl{ float:left; }
+.fr{ float:right; }
+
+
+.top{ width:1200px; height:84px; margin:20px auto; overflow:hidden; }
+.top-left{  overflow:hidden; }
+.top-right{ width:230px; text-align:right; }
+.toplink a{ margin:0 10px; }
+
+.search{ float:right; width:225px; height:32px;  margin:15px 0; }
+.write{ float:left; width:170px; height:32px; line-height:32px; padding-left:14px; border:0; outline:none; background:#f0f0f0; }
+.btn{ float:right; width:39px; height:34px; border:0; background:url(https://www.rsrczp.sdu.edu.cn/images/sear.png) center no-repeat #9c0c15; outline:none; cursor:pointer; }
+
+.navbox{ width:100%; background:#9c0c15; height:70px; }
+.nav{ width:1200px; margin:0 auto; }
+.nav li{ float:left; padding:0 18px;   text-align:center; position:relative; }
+.nav li a{ display:block;  line-height:70px; font-size:16px;  color:#fff; }
+.nav li:hover{ background:#70070d; }
+.nav_current{  }
+.subnav{ z-index:999; min-width:166px; cursor:default; position:absolute; left:0; top:70px; overflow:hidden; display:none;  }
+.subnav li { float:none !important;  text-align:center; background:#70070d; border-top:solid 1px #9c0c15; }
+.subnav li a{ display:block; line-height:32px; font-size:14px !important; color:#fff; font-weight:normal; }
+.subnav li:hover{ background:#9c0c15; color:#fff; padding:0 20px; }
+.nav li:hover .subnav{ display:block !important; }
+
+.banner{ width:1200px; margin:20px auto; overflow:hidden; position:relative; }
+.banner .bd{ overflow:hidden;  }
+.banner .bd ul li{ float:left; width:100%; height:350px;  position:relative; }
+.banner .bd ul li img{  width:100%; height:350px;  }
+.banner .hd{ overflow:hidden; position:absolute; right:30px; bottom:35px; }
+.banner .hd ul li{ float:left; width:12px; height:12px; border:solid 1px #fff; border-radius:50%; margin-right:10px; }
+.banner .hd ul li.on{ background:#fff; }
+.banner .prev,.banner .next{ position:absolute; top:50%; margin-top:-50px; left:0px; display:block; width:42px; height:95px; background:url(https://www.rsrczp.sdu.edu.cn/images/prev.png); display:none; }
+.banner .next{ background:url(https://www.rsrczp.sdu.edu.cn/images/next.png); left:auto; right:0px !important; }
+.banner:hover .prev{ display:block; }
+.banner:hover .next{ display:block; }
+
+
+.foot{ width:100%; height:250px; padding-top:40px; background:#353535; margin-top:60px;  }
+.footbox{width:1200px; margin:0 auto;  }
+.link{ width:100%; height:80px; background:#3f3f3f; border-radius:5px; }
+.link-title{ float:left; width:235px;height:80px; background:url(https://www.rsrczp.sdu.edu.cn/images/link.png) center no-repeat; }
+.linkbox{ float:right; width:925px; height:34px; padding:22px 0 22px 40px; background:url(https://www.rsrczp.sdu.edu.cn/images/link-line.jpg) left no-repeat; }
+.link .select{ float:left; width:260px; height:34px; margin-right:25px; border:1px solid #7a7a7a; padding-right:14px; background:url(https://www.rsrczp.sdu.edu.cn/images/xiala.png) 250px center no-repeat; cursor:pointer; position:relative; }
+.link .lastsel{ margin-right:0; }
+.link .select .select_text{ padding:0 20px 0 10px; height:34px; line-height:34px; text-align:center; color:#7a7a7a; }
+.link .select_ul{  position:absolute; width:274px; bottom:34px; left:-1px; border:1px solid #D4D4D4; background:#fff; display:none; }
+.link .select_ul li{ line-height:36px; text-indent:10px; }
+.link .select_ul li a{ display:block; color:#444; }
+.link .select_ul li:hover{ background:#9c0c15; color:#fff; }
+.link .select_ul li a:hover{ color:#fff; }
+.copyright{ overflow:hidden; margin-top:30px;color:#888;   }
+.banquan{ float:left; width:60%; color:#fff; line-height:24px; opacity:0.4;  }
+.ewm{ float:right; width:200px; text-align:center; }
+.ewm span{ display:block; color:#fff; opacity:0.4; font-size:12px; margin-top:6px; }
+
+
+

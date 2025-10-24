@@ -1,0 +1,204 @@
+﻿  
+body{position: relative;box-sizing: border-box;}
+/*.had{height:45px;line-height:45px;background: #555;max-width: 1920px;margin: auto;width: 100%;}
+.head{width:100%;height: 100px;/* border-top:5px solid #9b0d14; */z-index: 1000;/* position: absolute; *//* left: 0; *//* top: 45px; */background: #9b0d14;margin: auto;max-width: 1920px;}
+.head-r{width: 400px;height:35px;/* background: url(../img/search.png) no-repeat right center; */position: relative;z-index: 10000;margin: 7px 0 0;}
+.yy{width:115px;line-height: 30px;text-align: center;border: none;background: url(https://www.ipo.sdu.edu.cn/img/xl.png) no-repeat right center;/* height: 30px; *//* padding-left: 20px; */font-size: 14px;color: #cecece;position: relative;/* left: 0; */float: left;cursor: pointer;z-index: 10000;
+display: none;}
+.en li{font-size:16px;background: #f2f2f2;}
+.en li:hover a{color:#9b0d14;}
+.en{display:none;position: absolute;top: 100%;left: 0;right: 0;z-index: 100000;}
+.en li a{color: #555;}
+.ser{width: 250px;position: relative;/* right: 0; *//* top: 0; */float: right;height: 32px;line-height: 32px;background: url(https://www.ipo.sdu.edu.cn/img/sss.png) no-repeat center;}
+.sea{width:230px;line-height: 32px;background: none;border:1px solid #d5d5d5;font-size: 14px;color:#d5d5d5;padding-left:20px;height: 32px;}
+.btn{position: absolute;top:0;right:0;width: 40px;height: 30px;border:none;background: none;}
+.header{/* max-width: 1640px; *//* width:100%; *//* height: 70px; *//* background: url(../img/bg2.png) no-repeat center; *//* z-index: 100; */padding: 0 5%;/* margin: 0 auto; *//* width: 1200px; */}
+.logo{/* line-height: 110px; */width: 640px;padding-right: 0%;box-sizing: border-box;padding-top:;}
+.logo img{display: inline-block;/* max-width: 100%; *//* width: 100%; *//* height: 55px; */}
+.logo-box{width:100%;background: url(https://www.ipo.sdu.edu.cn/img/bg.png) no-repeat center;height: 100px;position: relative;}*/
+
+
+
+/* head */
+.head{width:100%;height:100px;}
+.logo{padding:10px 0;}
+.head-r{padding: 30px 0;height: 34px;width: 112px;/* font-size: 16px; */}
+.yy{line-height: 34px;margin-right: 15px;float: left;font-size: 14px;color:#777;border: none;width: 100px;background: url(https://www.ipo.sdu.edu.cn/img/xl2.png) no-repeat right center;position: relative;text-align: center;display: none;}
+.en li{font-size:16px;background: #f2f2f2;}
+.en li:hover a{color:#9b0d14;}
+.en{display:none;position: absolute;top: 100%;left: 0;right: 0;z-index: 100000;}
+.en li a{color: #555;}
+.ser{width:285px;line-height: 34px;float: right;position: relative;background: none;}
+.sea{width:230px;line-height: 32px;background: none;border:1px solid #d5d5d5;font-size: 14px;color:#d5d5d5;padding-left:20px;height: 32px;}
+.btn{width:55px;height:34px;background: url(https://www.ipo.sdu.edu.cn/img/ss.png) no-repeat  center #ffffff;position: absolute;top: 0;right: 0;border: none;}
+/* nav */
+.nav-box {position: relative;z-index: 1000;background: #414141;}
+.nav-list li{ float: left; position: relative;}
+.nav-list li a{display: block;font-size: 18px;color: #fff;padding: 0 42px;line-height: 44px;}
+.nav-list .navLi:hover>a{color:#fff;background: #bd161d; }
+.nav-list li.active>a{color:#fff;background: #bd161d;}
+.nav-down{ position: absolute; left: 0; top: 100%; width: 100%; display: none;z-index: 999; }
+.nav-down li{ float: none; width: 100%;background: #fff;}
+.nav-down li a{ line-height: 40px; padding:0 5px;  text-align: center; font-size: 16px; color: #333; }
+.nav-down li a:hover{color: #fff;}
+.nav-down li:hover{background: #bd161d;}
+.slider-img{width:100%;position: relative;z-index: 10;margin: auto;max-width: 1920px;}
+.slider-img li{position: relative;}
+.slider-img  img{width: 100%;display: block;}
+
+
+/* nav */
+/*.nav-box {position: relative;z-index: 100;width: 100%;box-sizing: border-box;background: #555;}
+.nav-list{width:100%;}
+.nav-list li{float: left;position: relative;/* width: 21.7%; */text-align: center;}
+.nav-list li a{display: block;font-size: 18px;color: #fff;padding: 0 38px;line-height: 53px;}
+.nav-list .navLi:hover>a{color:#fff;background: #b8050e;z-index: -1;}
+.nav-list li.active a{color:#fff;background: #b8050e; }
+.nav-down{position: absolute;left: 0;top: 100%;width: 100%;display: none;z-index: 1000;}
+.nav-down li{float: none;width: 100%;background: #fff;background-color: rgba(255,255,255,0.96);filter: alpha(opacity=96);}
+.nav-down li a{line-height: 40px;padding:0 5px;text-align: center;font-size: 15px;color: #555;}
+.nav-down li a:hover{color: #fff;}
+.nav-down li:hover{background: #b8050e;}
+.nav-list li:hover .nav-down{ display: block; }
+.nav-list li{ position: relative; }
+.nav-click{ display: none; }*/
+/*banner*/
+.slider-img{width:100%;position: relative;z-index: 10;margin: auto;max-width: 1920px;}
+.slider-img li{position: relative;}
+.slider-img  img{width: 100%;display: block;}
+.slider2{position: absolute;bottom:5%;right:15%;z-index: 1000;}
+.slider-img-circle{margin-top:60px;}
+.slider-img-circle li {width: 10px;height:10px;cursor: pointer;float: left;margin: 0 5px;background:#fff;font-size:0;}
+.slider-img-circle li.on {position: relative;background:#bd161d;}
+.shad{width:100%;height: 150px;background:url(https://www.ipo.sdu.edu.cn/img/shad.png) no-repeat bottom center;position: absolute;left: 0;bottom: 0;z-index: 100;right: 0;}
+.shad a{display: block;line-height: 180px;font-size: 26px;color:#fff;z-index: 100;width: 1200px;margin: auto;}
+/* new1 */
+.title{padding: 30px 0 10px;line-height: 45px;}
+.title h2{color:#bd161d;font-size: 24px;background:url(https://www.ipo.sdu.edu.cn/img/sign.png) no-repeat left center;padding-left:55px;float: left;}
+.left2 .title h2{color:#bd161d;font-size: 24px;background:url(https://www.ipo.sdu.edu.cn/img/sign5.png) no-repeat left center;padding-left:55px;float: left;}
+.title a{display: block;font-size: 14px;color:#999;float: right;}
+.left1{width:600px;padding-right: 35px;}
+.right1{width:565px;}
+.right1 li{/* padding:16px 0; *//* border-bottom: 1px  dashed  #d5d4d4; *//* transition: 0.5s all; */}
+/*.right1 li .date{width:60px;height:60px;}
+.right1 li .date p{color:#bd161d;width:100%;text-align: center;}
+.right1 li .date .day{font-size: 30px;line-height: 40px;}
+.right1 li .date .year{font-size: 12px;line-height: 20px;}
+.right1 .ring-r{width:calc(100% - 60px);padding-left:25px;box-sizing: border-box;} 
+.right1 .ring-r a{color:#555555;font-size: 16px;line-height: 24px;display: inline-block;}
+.right1 .ring-r p{color:#777;font-size: 14px;line-height: 24px;height: 48px;}
+.right1 li:hover{transform: translateX(-50px);box-shadow: 0 0 5px 5px #a9a9a9;padding: 16px 15px 16px 25px !important;background: #fff;width: 570px;}
+.right1 li:hover .date p{background: #bd161d;color:#fff;}
+.right1 li:hover .ring-r a{color:#bd161d;}*/
+.new1-bot{padding: 20px 0;/* background: url(../img/line.png) no-repeat bottom center; */border-bottom: 5px solid #bd161d;}
+.data_time p{font-size:30px;color:#bd161d;font-weight:bold;padding-top: 8px;}
+.data_time{width: 65px;text-align: center;background: url(https://www.ipo.sdu.edu.cn/img/timebgc.png) no-repeat left top;}
+.text_nr{width: 490px;margin-left: 15px;}
+.fl text_nr{width:500px;}
+.xwlist{padding-top:20px;}
+.xwlist li{width:630px;float: left;position: relative;font-size: 16px;margin-right:60px;box-sizing: border-box;margin-bottom: 36px;}
+.xwlist li a{color: #000;display: inline-block;}
+.xwlist li>span{position: absolute;right: 0;top: 0;font-size: 14px;color:#999;}
+.xwlist li:hover a,.hd li:hover a,.right2 li:hover a{color:#bd161d}
+/* new2 */
+.new2{width:100%;padding:40px 0 20px;}
+.title2{width:59px;height:130px;background: url(https://www.ipo.sdu.edu.cn/img/cx.png) no-repeat left center;padding:15px 20px 0 15px;color:#fff;font-size: 20px;box-sizing: border-box;}
+.new2 ul{float: right;width: 1120px;/* padding-left: 20px; */}
+.new2 ul li{width: 100%;float: left;}
+.new2 ul li img{width:100%;}
+/* new3 */
+.new3{width:100%;/* height:490px; */background: url(https://www.ipo.sdu.edu.cn/img/bg3.png) no-repeat bottom center;padding-bottom: 0px;}
+.right1 .title h2{background:url(https://www.ipo.sdu.edu.cn/img/sign2.png) no-repeat left center;}
+.r_nianbo .title h2{background:url(https://www.ipo.sdu.edu.cn/img/sign3.png) no-repeat left center;}
+.left2{width:100%;padding-right:35px;}
+.hd li{margin-bottom: 20px;}
+.hd li .dates{width:67px;height:77px;border:1px solid #bd161d;text-align: center;}
+.hd li .dates .mouth{width:100%;font-size: 14px;color:#fff;background: url(https://www.ipo.sdu.edu.cn/img/hd.png) no-repeat center;height:34px;line-height: 34px;}
+.hd li .dates .days{width:100%;font-size: 22px;color:#bd161d;height:43px;line-height: 43px;}
+.hd-r{width: 490px;padding-left: 20px;}
+.hd-r a{font-size: 16px;line-height: 26px;color: #000;display: block;}
+.hd-r p{font-size: 14px;color:#777777;line-height: 26px;}
+.hd-r .time{background: url(https://www.ipo.sdu.edu.cn/img/tim.png) no-repeat left center;padding-left:25px;}
+.hd-r .adr{background: url(https://www.ipo.sdu.edu.cn/img/adress.png) no-repeat left center;padding-left:25px;}
+.hwxc li{font-size:18px;border-bottom:1px solid #ddd;height: 90px;padding-top: 20px;}
+.hwxc li a{display:block;padding:0 10px;color:#bd161d;float:left;width:180px;line-height: 60px;border: 1px solid #bd161d;text-align: center;}
+.hwxc li p{float:right;font-size:16px;color:#777;line-height: 35px;}
+/* footer */
+.footer{width:100%;height:220px;background: url(https://www.ipo.sdu.edu.cn/img/fbg.png) no-repeat top center;padding-top:30px;box-sizing: border-box;margin-top: 59px; }
+.left3{width:520px;padding:0 50px 0 20px;box-sizing: border-box;border-right: 1px solid rgba(253,179,182,0.25);}
+.left3 h2,.link h2{font-size: 18px;font-weight: bold;color:#fdb3b6;line-height: 36px;padding-bottom: 10px;}
+.left3 li{text-align: left;width:220px;font-size: 14px;float: left;line-height: 32px;}
+.left3 li a{color:#fdb3b6;}
+.link {width:470px;padding-left:50px;box-sizing: border-box;}
+.link p{color:#fdb3b6;font-size: 14px;line-height: 32px;text-align: left;}
+.ewm{width:75px;text-align: center;padding-top:25px;}
+.ewm p{color:#fdb3b6;font-size: 14px;line-height: 32px;}
+/* foot */
+.foot{margin: auto;width:100%;background: #92090f;height:50px;max-width: 1920px;}
+.foot p{text-align: center;color:#fff;line-height: 50px;}
+.r_nianbo{width: 565px;}
+.li_box{background-color: #f0f0f0;padding: 21px 15px;overflow: hidden;}
+.list-ulli li{border-bottom: 1px dashed #999;padding-bottom: 20px;margin-bottom: 20px;}
+.rtitle{
+    height: 90px;
+    width: 220px;
+    padding: 0 15px;
+    border: 1px solid #bd161d;
+    text-align: center;
+    }
+.rtitle p{
+    font-size: 20px;
+    border-bottom: 2px solid #bd161d;
+    color: #bd161d;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    }
+    .abstract{width: 300px;margin: 0 10px;color: #777777;}
+  .list-ulli  .time{text-align: center;
+    padding: 10px 15px;
+    background: #ddd;}
+    .time p{font-size: 30px;}
+.list-ulli .list_3{border-bottom:none;padding-bottom:0px;}
+.abstract a:hover{color:#bd161d}
+.xnzybox{width:1200px;margin: 0px auto 30px;position: relative;/* background: url(../img/line.png) no-repeat bottom center; *//* padding-bottom: 20px; */}
+.xnzy_list{width:1200px;margin:0 auto}
+.xnzy_list li{width:225px;float:left;text-align: center;color:#fff;height:200px;padding: 50px 0;box-sizing: border-box;}
+.xnzy_list li:hover{background:#fff5f4;}
+.xnzy_list li p{margin-top:23px;font-size:17px;}
+.xnzy1{width:1125px;margin: 10px auto;}
+.prev,.next{width:30px;height:40px;position: absolute;top: 75px;cursor: pointer;}
+.prev{background: url(https://www.ipo.sdu.edu.cn/img/larr.png) no-repeat left center;left:0px;}
+.next{background: url(https://www.ipo.sdu.edu.cn/img/rarr.png) no-repeat left center;right:0px;}
+
+.hzhbbox{width:1200px;margin: 20px auto 30px;position: relative;/* background: url(../img/line.png) no-repeat bottom center; *//* padding-bottom: 20px; */}
+.hzhb_list{width:1200px;margin:0 auto}
+.hzhb_list li{width:225px;float:left;text-align: center;color:#fff;height:200px;padding: 50px 0;box-sizing: border-box;}
+.hzhb_list li p{margin-top:5px;}
+.hzhb1{width:1125px;margin: 10px auto;}
+.prev,.next{width:30px;height:40px;position: absolute;top: 75px;cursor: pointer;}
+.prev{background: url(https://www.ipo.sdu.edu.cn/img/z.png) no-repeat left center;left:0px;}
+.next{background: url(https://www.ipo.sdu.edu.cn/img/y.png) no-repeat left center;right:0px;}
+.bd ul li{width:280px;height:180px;margin-right:30.5px;float:left;}
+.bd ul{width:2400px;}
+.bd ul li img{width:100%;height:100%;}
+.bd ul li p{ width: 100%;height: 70px; position: relative;top: -120px;background:rgba(0,0,0,.4);text-align: center;line-height: 70px;color: #fff;font-size: 20px;font-weight: bold;}
+.slideTxtBox{position: relative;}
+.slideTxtBox .prev{position: absolute;left:1135px; top: -55px; }
+.slideTxtBox .next{position: absolute;right:; top: -55px; }
+
+@media screen and (max-width:1440px) {
+    .nav-down li a{
+       font-size:12px;
+    }
+.nav-list li{width:auto;}
+.nav-list li a{padding: 0 8px;}
+}
+@media (max-width:1441px) {
+.nav-list li{width:auto;}
+.nav-list li a{padding: 0 42px;}
+.logo{width:500px;padding-top: 20px;}
+.logo img{/* height: 43px; */}
+.nav-box{/* width: 56%; */}
+
+}

@@ -1,0 +1,520 @@
+﻿body {
+    color: #fff;
+    font-size: 14px;
+    font-family: "微软雅黑","Arial",Helvetica,"黑体",Arial,Tahoma;
+	margin:0 auto;
+	position:relative;
+	overflow-x: hidden;
+  background: #fff;
+
+
+}
+.newscontent_1{word-wrap: break-word; 
+white-space: pre-wrap; 
+}
+video{
+    width: 30em;
+       display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.bsTop{	width: 208px!important;
+}
+.bsBox{height: 256px!important;
+}
+.box {
+				width: 250px;
+				height: 30px;
+				transform: scale(1.1);
+margin: 0 auto 10px;
+			}
+			.box > div {
+				width: 30px;
+				height: 30px;
+float: left;
+				cursor: pointer;
+				border-radius: 4px;
+				background-size: contain;
+				margin: 0 10px;
+			}
+			#share-qrcode { background-image: url(https://www.media.sdu.edu.cn/images/wechat.png); }
+			#share-douban { background-image: url(https://www.media.sdu.edu.cn/images/db.png); }
+			#share-qzone { background-image: url(https://www.media.sdu.edu.cn/images/qzone.png); }
+			#share-sina { background-image: url(https://www.media.sdu.edu.cn/images/sina.png); }
+			#share-qq { background-image: url(https://www.media.sdu.edu.cn/images/qq.png); }
+
+ul li{  
+list-style-type:none;  
+list-style:none
+}  
+.img-hide{ overflow:hidden; display: block; }
+
+.img-hide img{ transition: 0.5s all; transform: scale(1,1); }
+.img-hide:hover img{ transform: scale(1.05,1.05); }
+.txt-elise{overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;}
+li{ list-style:none;}
+a{ color: #333; }
+
+table{ color: #333; }
+.v_news_content{ color: #333; }
+ul{ padding:0; margin:0;}
+a:hover{ text-decoration:none !important;}
+a:focus{ text-decoration:none !important; outline: none !important;}
+button:focus,button:hover,input:focus{ outline: none!important; }
+.nrbox{color: #333;}
+h3{color: #333;}
+.nav-click{ display: none; }
+.menu-button { display: none; top: 18px; right: 15px; z-index: 1000; cursor: pointer; -webkit-transition: .3s; transition: .3s;}
+.menu-button .bar:nth-of-type(1) { margin-top: 0px;}
+.menu-button .bar:nth-of-type(3) { margin-bottom: 0px;}
+.menu-button .bar1:nth-of-type(1) { margin-top: 0px;}
+.menu-button .bar1:nth-of-type(3) { margin-bottom: 0px;}
+.bar { position: relative; display: block; width: 24px; height: 2px; margin: 5px auto; background-color: #fff; border-radius: 10px; -webkit-transition: .3s; transition: .3s; }
+.bar1 { position: relative; display: block; width: 24px; height: 2px; margin: 5px auto; background-color: #333; border-radius: 10px; -webkit-transition: .3s; transition: .3s; }
+.cross{ margin-top: -8px; }
+.cross .bar{ margin:13px auto; }
+.cross .bar1{ margin:13px auto; }
+.cross .bar:nth-of-type(1) { -webkit-transform: translateY(15px) rotate(-45deg);-ms-transform: translateY(15px) rotate(-45deg); transform: translateY(15px) rotate(-45deg);}
+.cross .bar:nth-of-type(2) {  opacity: 0;}
+.cross .bar:nth-of-type(3) { -webkit-transform: translateY(-15px) rotate(45deg); -ms-transform: translateY(-15px) rotate(45deg); transform: translateY(-15px) rotate(45deg);}
+.cross .bar1:nth-of-type(1) { -webkit-transform: translateY(15px) rotate(-45deg);-ms-transform: translateY(15px) rotate(-45deg); transform: translateY(15px) rotate(-45deg);}
+.cross .bar1:nth-of-type(2) {  opacity: 0;}
+.cross .bar1:nth-of-type(3) { -webkit-transform: translateY(-15px) rotate(45deg); -ms-transform: translateY(-15px) rotate(45deg); transform: translateY(-15px) rotate(45deg);}
+.container{ width: 1390px; }
+
+.header{ padding:0 5%; padding-top: 20px; }
+.header1{  padding:15px 5%; position: relative; height:auto; z-index: 10000;}
+.zhezhao{  position: absolute; left: 0;top: 0;    right: 0;  z-index: 10000; transition: all 0.3s ease-out 0s;
+/* height:120px;*/
+ background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0));  }
+
+.nav-list li{ float: left;padding:3px 20px; margin-left:20px; margin-top: 20px; }
+.nav-list li a{ font-size: 18px; color: #fff;  }
+.nav-list li:hover{     background: #86040b;  border-radius: 40px; }
+.nav-list li:hover a{  color: #fff; }
+.nav-list1 li{ float: left; margin-left: 50px; margin-top: 25px; }
+.nav-list1 li a{ font-size: 18px; color: #333; }
+.nav-list1 li a:hover{ border-bottom: solid 2px #fff; }
+.search-a{ margin-top: 25px; margin-left: 50px; }
+
+
+
+
+
+.banner .slick-next,.banner .slick-prev{font-size: 0;position:absolute;
+	width:70px;height:70px;line-height:70px;top:55%;
+	text-align:center;color:#fff;border:none;outline:0;z-index:8;
+	cursor:pointer;
+	-webkit-transition:.3s;-moz-transition:.3s;-ms-transition:.3s;-o-transition:.3s;
+	transition:.3s;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+        
+}
+.banner .slick-prev{left:0px;top:48%;left:5%;background: url(https://www.media.sdu.edu.cn/images/sp.png) no-repeat;opacity: 0;filter:alpha(opacity=0); }
+.banner .slick-next{right:0px;top:48%;right:5%;background: url(https://www.media.sdu.edu.cn/images/sn.png) no-repeat;opacity: 0;filter:alpha(opacity=0);}
+.banner .slick-prev:hover{opacity: 1;filter:alpha(opacity=100);}
+.banner .slick-next:hover{opacity: 1;filter:alpha(opacity=100);}
+
+.banner .slider.slick-initialized.slick-slider:hover .slick-arrow {
+    opacity: 0.8;filter:alpha(opacity=80);transition:all ease-in .3s;
+}
+.banner .slick-arrow:hover{opacity: 1!important;filter:alpha(opacity=100)!important;}
+
+
+
+
+
+
+.banner{overflow:hidden;position:relative}
+.banner .pic{background-repeat:no-repeat;background-position:center center;-webkit-background-size:cover;background-size:cover}
+.banner .tit{    display: none;font-size:24px;color:#fff;line-height:80px;background:rgba(0, 0, 0, 0.6);position:absolute;right:8.333%;bottom:0;z-index:5;overflow:hidden;-ms-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap;padding:0 37px;max-width:68%}
+.banner .tit a{color:#fff;}
+.banner:hover .tit{     display: block;  }
+.banner .slick-dots{position: absolute;left:8.333%;bottom:33px;text-align:center;z-index:9}
+.banner .slick-dots li{display:inline-block;margin-right:14px}
+.banner .slick-dots li button{display: block;width: 24px;height: 24px;
+    font-size: 0;line-height: 0;border-radius: 50%;
+    border: none;cursor: pointer;
+    font-size:14px;color:#86040b;line-height:24px;text-align:center;border:none;padding:0;cursor:pointer;
+    background:#fff;
+}
+.banner .slick-dots li.slick-active button{background-color: #86040b;color: #fff;}
+.banner .slick-initialized .slick-slide{    position: relative;}
+
+
+
+.bannercon{  min-height: 160px; overflow:hidden; background-repeat: no-repeat;  background-position: center center; background-size: cover;   position: relative;}
+.bannercon img{ }
+.bannercon:after{     
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(https://www.media.sdu.edu.cn/images/bgq1.png) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	}
+.bannercon .txt{ position: absolute; left: 18%; top:37%; z-index: 2; }
+.bannercon .txt h3{  font-size: 32px; color: #fff;line-height: 1.5em; overflow: hidden; font-weight:bold; }
+.bannercon .txt h3 em{ display: block; font-size: 18px; line-height: 1.4em; text-transform: uppercase; overflow: hidden;font-style: normal; font-weight:normal; }
+
+
+.left-width{ width: 285px; }
+.page-one{ margin-top: 45px; }
+.title-more{ margin-top: 85px; }
+.news-list li{ float: left; width: 33.333333%; padding:0 30px; margin-bottom: 25px; }
+.news-list{ margin:0 -30px; }
+.news-list-box{ border-bottom: solid 1px #dee5e7; padding-bottom: 25px; }
+.news-list-tt a{ font-size: 18px; color: #333; }
+.news-list-tt{ text-align: justify; line-height: 30px; height: 60px; overflow:hidden; }
+.right-width{ width: 1075px; }
+.news-list-date{ margin-top: 23px; }
+.news-list-date a{ color: #86040b;font-size: 15px; }
+.news-list-date span{ float: right; font-size: 12px;color: #999; padding-left: 15px;background: url(https://www.media.sdu.edu.cn/images/icon-date.png) left center no-repeat; }
+.news-box{ position: relative; height: 490px; margin-top: 65px; margin-bottom: 75px; }
+.news-left{ position:absolute; right:50%; margin-right: 60px; height: 430px; left: 0; background: url(https://www.media.sdu.edu.cn/images/news-left.png) center no-repeat; border-radius: 0 60px 0 0; background-size: cover; }
+.left-tt{ padding-top: 40px; }
+.news-box .container{ position: relative; z-index: 10; }
+.news-box-right{ width: 1005px; }
+.news-right{ position: absolute; right:0; left: 50%; bottom: 0; height: 440px; background: #86040b; border-radius: 0 0 0 60px; margin-left: -370px; }
+.list-ul li{ line-height: 40px; }
+.list-ul li a{ font-size: 16px; color: #fff; }
+.list-ul{ margin-top: 95px; }
+.list-more a{ font-size: 16px; color: #fff; opacity: 0.6; }
+.list-more{ margin-top: 45px; }
+.news-slick-img a{ display: block; position: relative; }
+.news-slick-img a img{ width: 100%; }
+.news-slick-img a span{ width: 41px; height: 41px; position: absolute; background: url(https://www.media.sdu.edu.cn/images/play.png) center no-repeat; right:40px; bottom: 27px; }
+.news-slick-tt a{ font-size: 18px; color: #fff; font-weight: bold; }
+.news-slick-tt{ margin:35px 100px 0 0; }
+.news-slick .slick-dots{ right:0; bottom: 5px; width: auto; left: auto;     position: absolute; }
+.news-slick .slick-dots li button{ width: 24px; padding:0; height: 24px; font-size: 12px; color: #e79530; background: #fff; text-align: center; line-height: 24px; }
+.news-slick .slick-dots li button:before{ display: none; }
+.news-slick .slick-dots li.slick-active button{ background: #e79530; color: #fff; }
+.news-slick{ margin-top: 10px; }
+.right-sm{ width: 52%; }
+.left-sm{ width: 42%; }
+.lb-left{ width: 285px; }
+.lb-right{ width: 1075px; }
+.lb-slick-box{ border:solid 1px #ddd; margin-top: 30px; height: 312px; margin-right: 50px; position: relative; padding:65px 25px 25px 25px; }
+.lb-slick-tt a{ font-size: 16px;color: #333; }
+.lb-slick-tt{ line-height: 30px; text-align: justify; height: 60px; overflow:hidden; }
+.lb-p{ color: #888; text-align: justify; line-height: 25px; height: 100px; overflow:hidden; margin-top: 20px; }
+.lb-a a{ color: #86040b; display: inline-block; margin-top: 20px; }
+.lb-date{ position: absolute; left: 25px; padding-top: 3px; top: -30px; background: #86040b; color: #fff; width: 78px; height: 74px; }
+.lb-date span{ font-size: 30px; font-weight: bold; }
+.lb-date:before{ display: block; content: ""; left: 100%; position: absolute; bottom: 0; width: 28px; height: 23px; background: url(https://www.media.sdu.edu.cn/images/icon-t.png) center no-repeat; margin-left: 32px; }
+.over-box{ overflow:hidden; }
+.lb-slick{ margin-right: -50px; margin-bottom: 0; }
+
+.lb-slick .slick-prev{ left: -285px; width: 50px; height: 50px; background: url(https://www.media.sdu.edu.cn/images/left.png) left center no-repeat; }
+.slick-prev:before,.lb-slick .slick-next:before{ display: none; }
+.lb-slick .slick-next{ left: -205px; width: 50px; height: 50px; background: url(https://www.media.sdu.edu.cn/images/right.png) left center no-repeat; }
+.bottom{padding:35px 0 35px 0; background: url(https://www.media.sdu.edu.cn/images/bottom.png) center no-repeat; background-size: cover; margin-top: 30px; }
+.footer-p p{ color: #fff; font-size: 15px; }
+.footer-p{ padding-top: 20px; }
+.logo-b{ margin-right: 140px; margin-top: 20px; }
+.ewm-box .pull-left{ margin-left: 10px; color: #fff; }
+.ewm-box .pull-left img{ margin-bottom: 5px; }
+.footer{ line-height: 65px; background: #670a0f; color: #fff; color: rgba(255,255,255,0.43); font-size: 15px; padding:0 15px; }
+.footer p{ margin:0;  }
+.list-ul li{ color: #fff; }
+
+.menu-button { position: absolute; display: none; top: 18px; right: 15px; z-index: 1000; cursor: pointer; -webkit-transition: .3s; transition: .3s;}
+.menu-button .bar:nth-of-type(1) { margin-top: 0px;}
+.menu-button .bar:nth-of-type(3) { margin-bottom: 0px;}
+.menu-button .bar1:nth-of-type(1) { margin-top: 0px;}
+.menu-button .bar1:nth-of-type(3) { margin-bottom: 0px;}
+
+.bar { position: relative; display: block; width: 24px; height: 2px; margin: 5px auto; background-color: #fff; border-radius: 10px; -webkit-transition: .3s; transition: .3s; }
+.bar1 { position: relative; display: block; width: 24px; height: 2px; margin: 5px auto; background-color: #333; border-radius: 10px; -webkit-transition: .3s; transition: .3s; }
+.cross{ margin-top: -8px; }
+.cross .bar{ margin:13px auto; }
+.cross .bar1{ margin:13px auto; }
+.cross .bar:nth-of-type(1) { -webkit-transform: translateY(15px) rotate(-45deg);-ms-transform: translateY(15px) rotate(-45deg); transform: translateY(15px) rotate(-45deg);}
+.cross .bar:nth-of-type(2) {  opacity: 0;}
+.cross .bar:nth-of-type(3) { -webkit-transform: translateY(-15px) rotate(45deg); -ms-transform: translateY(-15px) rotate(45deg); transform: translateY(-15px) rotate(45deg);}
+.cross .bar1:nth-of-type(1) { -webkit-transform: translateY(15px) rotate(-45deg);-ms-transform: translateY(15px) rotate(-45deg); transform: translateY(15px) rotate(-45deg);}
+.cross .bar1:nth-of-type(2) {  opacity: 0;}
+.cross .bar1:nth-of-type(3) { -webkit-transform: translateY(-15px) rotate(45deg); -ms-transform: translateY(-15px) rotate(45deg); transform: translateY(-15px) rotate(45deg);}
+.modal{ z-index: 100000001; }
+.modal-backdrop{z-index: 10000000;}
+.modal-box{ position: fixed; display: none; left: 0; top: 0; right: 0; bottom: 0; z-index: 1000010; }
+.btn-search,.btn-search:hover,.btn-search:focus{ position: absolute; right: 0; background: #86040b; top: 0; width: 115px; height: 54px;border:none; border-radius: 0;padding:0}.modal-back{position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 100000; background: rgba(0,0,0,0.5);}
+.search-box{ position: fixed; left: 50%; top: 50%; width: 800px; height: 54px; background: #fff; padding-right: 115px; margin-left: -400px; z-index: 1000010; }
+.search-box .form-control{ height: 54px; border-radius: 0; font-size: 18px; box-shadow: none; border:none; }
+.news-list-tt a:hover,.lb-slick-tt a:hover{ color: #86040b; }
+.list-ul li a:hover,.list-more a:hover{ color: #e79530; }
+.lb-slick-box:hover{ border-color: #86040b; }
+
+
+.main{ overflow:hidden;margin:0 auto; }
+.curbox{ width:100%; background:#f3f7f9; border-bottom:solid 1px #ddd; }
+.cur{max-width:1200px;margin:0 auto; font-size:14px;color:#828282; height:50px;line-height:50px; overflow:hidden}
+.cur a{color:#828282;-webkit-transition:.3s;-moz-transition:.3s;-ms-transition:.3s;-o-transition:.3s;transition:.3s}
+.cur a:hover{color:#ae3333}
+/***********简介**********/
+.nrbox{max-width:1200px; margin:30px auto 0 auto; }
+.nrbox p{ text-indent:2em; font-size:16px; line-height:2; }
+.nrbox p img{ display: block; max-width:100%; margin: 10px auto;  }
+.nrbox p img.img_vsb_content{ display: block; max-width:100%!important; margin: 10px auto;  }
+/**********内容**********/
+.nrbox h3{ font-size:26px;  text-align:center;  }
+.nrbox .fabudate{ width:80%; margin:20px auto;   text-align:center;  }
+.nrbox .fabudate b{ font-weight:normal; font-size:14px; color:#8a8a8a; margin: 0 10px; padding-left:25px;}
+.nrbox .fabudate .nricon1{  background:url(https://www.media.sdu.edu.cn/images/nr-zz.png) left center no-repeat; }
+.nrbox .fabudate .nricon2{  background:url(https://www.media.sdu.edu.cn/images/nr-date.png) left center no-repeat; }
+.nrbox .fabudate .nricon3{  background:url(https://www.media.sdu.edu.cn/images/nr-djs.png) left center no-repeat; }
+.sytxyt{ margin-top:25px; padding-top:15px; overflow:hidden; border-top:dashed 1px #ddd; text-overflow:ellipsis;white-space: nowrap;}
+.sytxyt span{ margin:0; line-height:2;font-size:16px; display:flex; }
+.sytxyt a{  font-size:16px; text-overflow:ellipsis;white-space: nowrap; display:block;overflow: hidden;}
+.bshare-custom{ margin-bottom:20px; text-align:center;   }
+/**********标题列表**********/
+.btlist{ overflow:hidden; }
+.btlist li{ padding:20px 0; overflow:hidden; border-bottom:dashed 1px #ddd; padding-left:20px; background:url(https://www.media.sdu.edu.cn/images/btdot.png) left center no-repeat;}
+.btlist li span{ float:right; color:#999; text-align:right; font-size:15px; }
+.btlist li a{ float:left; max-width:74%;   font-size:16px; overflow: hidden; text-overflow:ellipsis; white-space: nowrap;  }
+.pages{text-align:center;overflow:hidden; margin-top:20px;}
+.pages img{display:inline-block;vertical-align:middle}
+/***********专题**********/
+.ztlist-ul li{ float: left; width: 33.333333%; padding:0 1%; margin:0 0 20px 0; }
+.ztlist-ul{ margin:0 -15px; }
+.ztlist-ul-tt a{ font-size: 16px; color: #333; }
+.ztlist-ul-date{ font-size: 16px; color: #333; }
+.ztlist-ul-tt{ margin:10px 0; }
+.ztlist-ul-img{ width:100%; height:0; padding-bottom:30%;   } 
+.ztlist-ul-img img{ width: 100%; height: 116px; }
+
+.pinglun{   background:none;  }
+.pinglun table{   background:none;  }
+.pinglun td{   background:none;  }
+/**************标题引体****************/
+.btyt{
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+    font-size: 16px;
+}
+
+
+@media( max-width: 1399px){
+    .container{ width: 1230px; }
+    .news-right{ margin-left: -340px; }
+    .news-box-right{ width: 910px; }
+    .news-left{ margin-right: -50px; width: auto; }
+    .logo-b{ margin-right: 110px; }
+    .lb-right,.right-width{ width: 915px; }
+    .banner .slick-dots{ margin-right: -600px; }
+    .nav-list li,.nav-list1 li,.search-a{ margin-left: 20px; }
+	.bannercon { height: 16.04167vw;}
+}
+@media( max-width: 1279px){
+    .container{ width: 970px; }
+    .header{ padding:15px; }
+    .nav-list li,.nav-list1 li,.search-a{ margin-left: 10px; }
+.lb-right, .right-width {
+    width: 655px;}
+    .news-list li{ padding:0 15px; }
+    .news-list{ margin:0 -15px; }
+    .bottom-right{ width: 100%; }
+    .logo-b{ margin-right: 280px; }
+    .news-box-right{ width: 650px; }
+    .news-right{ margin-left: -220px; }
+    .right-sm{ padding-top: 95px; }
+    .banner .slick-dots{ margin-right: -470px; }
+	.cur,.nrbox{max-width:94%;}
+    }
+@media( max-width: 991px){
+    .search-box{ width: 600px; margin-left: -300px; }
+    .container{ width: 750px; }
+    .left-width{ width: 100%; }
+    .banner .slick-dots{ margin-right: -360px; }
+    .title{ float: left; margin-bottom: 25px; }
+    .title-more{ float: right; margin-top: 5px; }
+    .lb-right, .right-width{ width: 100%; }
+    .news-left{ display: none; }
+    .news-box{ background: #86040b; height: auto; }
+    .news-box-right{ width: 100%; }
+    .news-box-left{ width: 100%; float: none!important; }
+    .list-ul{ margin-top: 25px; }
+    .right-sm{ padding-top: 25px; }
+    .lb-slick-box{ margin:30px 10px 0 10px; }
+    .lb-slick{ margin:25px 15px 0 15px; }
+    .lb-slick .slick-prev{ left: -25px; }
+    .lb-slick .slick-next{ left: auto; right:-25px; }
+    .logo-b{ margin-right: 60px; }
+    .news-box{ margin:30px 0; }
+    .bottom{ margin-top: 30px; }
+    .nav-list,.nav-list1{ position: absolute; display: none; left: 0; top: 100%; width: 100%; text-align: left; border-top: solid 1px #ddd; background: rgba(255,255,255,0.9); }
+    .nav-list li,.nav-list1 li{ float: none!important; width: 100%; margin:0; }
+    .nav-list li a,.nav-list1 li a{ font-size: 14px; line-height: 40px; padding:0 15px;    color: #333;  text-shadow: none;  }
+	.nav-list1{ position:absolute; top:100%; left:0; }
+    .search-a{ margin-right: 60px; }
+    .menu-button{ display: block; color: #fff; top: 44px; }
+	.bannercon .txt h3{ font-size:22px; }
+	.bannercon .txt h3 em{ font-size:14px;}
+	.nrbox h3{ font-size:20px; }
+	.ztlist-ul li{ float: left; width: 50%; padding:0 1%;}
+.banner .slick-list .slick-slide span{      width:40%;}
+}
+@media( max-width: 767px){
+    .container{ width: 100%; }
+    .page-one{ margin-top: 30px; }
+    .title img{ height: 50px; }
+    .title-more img{ height: 30px; }
+    .news-list li{ width: 100%; margin-bottom: 15px; }
+    .news-list-box{ padding-bottom: 10px; }
+    .news-list-date{ margin-top: 10px; }
+    .left-sm{ width: 100%; }
+    .right-sm{ width: 100%; }
+    .list-more{ margin-top: 15px; }
+    .bottom{ padding:20px 0; }
+    .logo-b { width:100%; float: none!important; margin:10px 0 20px 0; }
+    .ewm-box{ width: 100%; }
+    .ewm-box .pull-left{ width: 25%; margin:0; padding:0 5px; }
+    .footer-p{ padding-top: 0; }
+    .news-box-left img,.tt-b img{ height: 50px; }
+    .logo img{ height: 30px; }
+    .search-a{ margin-top: 0; line-height: 30px; margin-right: 40px; }
+    .menu-button{ top: 22px; }
+    .banner .slick-dots{ right:15px; margin-right: 0; bottom: 15px; }
+    .search-box{ width:auto; left: 15px; margin-left: 0px; right:15px; }
+.banner .slick-list .slick-slide span{  display: none; }
+    }
+	
+@media( max-width: 480px){	
+	.ztlist-ul li{ float: left; width: 100%; padding:0 5%;}
+	}
+
+
+.messagestyle1015897{padding-bottom:27px!important;
+}
+
+
+@media( max-width: 1920px){	
+	textarea{ width: 1200px!important;
+ height: 180px;
+ margin: auto;
+ display: block;}
+	}
+@media( max-width: 1024px){	
+	textarea{ width: 1010px!important;
+ height: 180px;
+ margin: auto!important;
+ display: block!important;}
+.news-slick-sj{width: 18rem;
+}
+	}
+
+@media( max-width: 768px){	
+	textarea{ width: 765px!important;
+ height: 180px;
+ margin: auto!important;
+ display: block!important;}
+.news-slick-sj{width: 20rem;
+}
+.messagestyle1015897{padding-bottom:27px!important;}
+	}
+@media( max-width: 540px){	
+	textarea{ width: 520px!important;
+ height: 180px;
+ margin: auto;
+ display: block;}
+.news-slick-sj{width: 20rem;}
+video {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+}
+@media( max-width: 414px){	
+	textarea{ width: 400px!important;
+ height: 180px;
+ margin: auto;
+ display: block;}
+video {
+    width: 100%;
+     display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+	}
+
+@media( max-width: 380px){
+
+video{
+     width: 100%;
+      display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+}
+@media( max-width: 375px){
+
+video{
+     width: 100%;
+     display: block;
+    margin: 0 auto;
+    text-align: center;
+}	
+	textarea{ width: 360px!important;
+ height: 180px;
+ margin: auto;
+ display: block;}
+.news-slick-sj{width: 18rem;
+}
+.footer p{font-size: 0.5rem;
+}
+/*
+.pull-left img{
+width: 75px;
+}*/
+
+
+	}
+
+
+@media( max-width: 360px){	
+	textarea{ width: 340px!important;
+ height: 180px;
+ margin: auto;
+ display: block;}
+.news-slick-sj{width: 18rem;
+}
+
+.footer p{font-size: 0.5rem;
+}
+/*
+.pull-left img{
+width: 70px;
+}*/
+	}
+
+@media( max-width: 411px){	
+video {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+}
+
+@media( max-width: 320px){	
+video {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+}

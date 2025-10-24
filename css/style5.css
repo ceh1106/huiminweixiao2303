@@ -1,0 +1,61 @@
+﻿  
+/*list*/
+/*==列表页==*/
+.in1440{background: url(http://www.fzgh.sdu.edu.cn/img/a_16.png) repeat-x left top #f8f8f8;}
+.lbnr{width:1200px; overflow: hidden; margin: 0 auto;}
+.lbnr_left{float: left; width:250px; float: left; background: #fff;}
+.lbnr_left h2{height: 60px; background: #b00000; line-height: 60px; text-align: center; color: #fff;font-size:20px;}
+.lbhz li{line-height: 55px; font-size: 18px;}
+.lbhz li a{display: block; color: #555555; text-align: center;border-left: 4px solid transparent;}
+.lbhz li a:hover{border-left: 4px solid #febe00;background:url(http://www.fzgh.sdu.edu.cn/img/a_12.png) no-repeat 200px center #f2f2f2;color: #9b0d14;}
+.lbhz .hover3 a{border-left: 4px solid #febe00;background:url(http://www.fzgh.sdu.edu.cn/img/a_12.png) no-repeat 200px center #f2f2f2;color: #9b0d14;}
+
+.lbnr_right{float: left; width:900px; float: right;}
+.dqwz .local{line-height: 60px; font-size: 16px; color: #555555;}
+.dqwz p{line-height: 60px; font-size: 16px; color: #555555;text-align: right;}
+.dqwz .lm{line-height: 60px; font-size: 24px; color: #b00000;font-weight: bold;}
+.dqwz a{color: #555;}
+.dqwz a:hover{color: 3570ba;}
+.xtb2{background: url(http://www.fzgh.sdu.edu.cn/img/a_13.png) no-repeat; width:16px; height: 19px; display: inline-block; *display: inline;vertical-align: middle; margin-right: 12px;}
+.dqlb li{line-height: 53px; font-size: 16px; color: #555555;background: url(http://www.fzgh.sdu.edu.cn/img/dot1.png) no-repeat left center; padding-left: 20px;}
+.dqlb li:hover a{color: #9b0d14;}
+
+.fynr{text-align: center;padding: 10px 0 40px 0;}
+.fynr li{display: inline-block; *display: inline; padding: 0 3px;}
+.fynr li a{display: inline-block; *display: inline; padding: 0 12px; font-size: 14px; color: #888888;border: 1px solid #dbdbdb; line-height: 34px;}
+.fynr li span{display: inline-block; *display: inline; padding: 0 12px; font-size: 14px; color: #888888;border: 1px solid #dbdbdb;line-height: 34px;}
+.fynr .hover2 a{background: #b00000;border: 1px solid #b00000; color: #fff;}
+.fynr a:hover{background: #b00000;border: 1px solid #b00000; color: #fff;}
+
+/*==领导列表页1==*/
+.ldlb{padding: 20px 0px 0px 0px;}
+.ldlbxq{overflow: hidden;}
+.ldlbxq li{width:33.33%; float: left; padding: 0 25px 50px 25px;box-sizing: border-box;}
+
+.ldlbbox{border: 1px solid #ededed;}
+.tao2{background: #ededed;height: 1px; overflow: hidden;}
+.ld_tp{width:200px; margin: 0 auto;}
+.ld_tp img{width:200px;height:240px;}
+.ld_tp p{font-size: 18px; color: #555555; line-height: 54px;}
+.ld_text{width:240px; margin: 0 auto; padding: 12px 0 20px 0; position: relative;}
+.ld_text p{font-size: 14px; line-height: 30px;color: #777777;}
+.ld_text span{background: url(http://www.fzgh.sdu.edu.cn/img/a_17.png); width:42px; height: 42px; bottom: -21px; position: absolute;left:50%;  transform:translateX(-50%);}
+.ldlb a:hover .ldlbbox{border: 1px solid #b00000;}
+.ldlb a:hover span{background: url(http://www.fzgh.sdu.edu.cn/img/a_10.png); background-size: 100%;}
+/*==内容页==*/
+.xqnr_tit{text-align: center; padding: 25px 0 20px 0; border-bottom: 1px solid #ededed; margin: 0 40px;}
+.xqnr_tit1{text-align: center; border-bottom: 1px solid #ededed;}
+.xqnr_tit h2,.xqnr_tit1 h2{font-size: 24px; color: #333; padding: 15px 0;}
+.xqnr_tit p{font-size: 14px; color: #999999; }
+.xqnr_tit span{padding: 0 15px;}
+.xtb3 {background: url(http://www.fzgh.sdu.edu.cn/img/a_18.png); width:14px;height: 14px; display: inline-block; *display: inline;vertical-align: middle; margin-right: 7px;}
+.xtb4{ width:14px; height: 15px;display: inline-block; *display: inline;vertical-align: middle; margin-right: 7px;}
+/* .xtb5 { width:14px;height: 14px; display: inline-block; *display: inline;vertical-align: middle; margin-right: 7px;} */
+.xqnr_nr{padding: 30px;}
+.xqnr_nr p{font-size: 16px;color: #666666;line-height: 36px;/* padding-bottom: 40px; */}
+.sxfy{padding: 0 40px;}
+.sxfy ul{overflow: hidden; padding: 40px 0 80px 0; border-top: 1px solid #ededed;}
+.sxfy li{/* float: left; *//* width:50%; */font-size: 16px;color: #999;line-height: 30px;}
+.sxfy ul li:nth-child(2){/* text-align: right; */}
+.sxfy a{color: #999;}
+.sxfy a:hover{color: #9b0d14;}

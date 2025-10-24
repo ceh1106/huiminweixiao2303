@@ -1,0 +1,214 @@
+﻿
+.banner{position:relative;}
+.banner:after{content: '';width: 6.3rem;bottom: 0;background: #06175a;position: absolute;right: 0;bottom: 0;height: 1rem;z-index: 2;pointer-events: none;display: none}
+.banner .swiper-slide{overflow: hidden;}
+.banner .swiper-slide a{display:block;position:relative}
+.banner .swiper-slide a:before{content:'';position:absolute;left:0;top:0;right:0;height:2rem;background:url(https://www.yz.sdu.edu.cn/images/22s.png) repeat-x top center;background-size:auto 100%;z-index:2;opacity: .35;pointer-events: none}
+.banner .swiper-slide a:after{content:'';position:absolute;left:0;bottom:-1px;right:0;height:30%;background:url(https://www.yz.sdu.edu.cn/images/blackms.png) no-repeat top center;background-size:100% 100%;z-index:2;opacity: .55;pointer-events: none}
+.banner .item  .slideImg{padding-bottom:0;min-height: 6rem;height: 100vh; background-position: center;background-size: cover;background-repeat: no-repeat}
+.banner .swiDots{text-align: center;display: flex;align-items: center;justify-content: center }
+.banner .swiDots span{width: .1rem;height: .1rem; opacity: .6;border-radius: 50%;margin: 0 .12rem;background: #fff;  position: relative;}
+.banner .swiDots span.active{opacity: 1;width: .41rem;height: .29rem;background: url(https://www.yz.sdu.edu.cn/images/doton.png) no-repeat center;background-size: 100% 100%}
+ 
+ 
+.banner .swiTool{position: absolute;right:0;bottom: .65rem;z-index: 8;color: #fff;left: 0}
+ 
+.banner .slideImg video{width: 100%;height: 100%;object-fit: cover;}
+.isIpadPro .banner .item .slideImg,.isIpadAir .banner .item .slideImg{height: 52vw}
+ .banner .swiBtn{display: none}
+.banner .swiBtn a{display: block;width: .7rem;height: .7rem;border: 1px solid rgba(255,255,255,.2);text-align: center;line-height: .68;color: #fff;z-index: 8;position: absolute;top: 50%;margin-top: -.35rem;border-radius: 50%;line-height: .68rem;background: rgba(0,0,0,.2);font-size: .22rem}
+.banner .swiBtn a.prev{left: .4rem}
+.banner .swiBtn a.next{right: .4rem}
+.banner .scTip{width: .76rem;height: .76rem;position: absolute;bottom: .3rem;left: 50%;margin-left: -.38rem;z-index: 6;display: flex;align-items: center;justify-content: center;padding-top: .05rem;cursor: pointer;}
+.banner .scTip img{width: .17rem;display: block;animation: up 1.5s infinite;user-select: none;}
+.banner .scTip:after{content: '';position: absolute;top: 0;left: 0;bottom: 0;right: 0;background: url(https://www.yz.sdu.edu.cn/images/basc.png) no-repeat center;background-size: 100% 100%;pointer-events: none;animation: roted 20s linear infinite}
+
+.banner .swiTool .link{width: 100%;}
+.banner .swiTool .link li{background: rgba(255,255,255,.3);width: calc(25% - .06rem)}
+.banner .swiTool .link li a{color: #fff;display: flex;align-items: center;padding: .06rem 0;justify-content: center;}
+.banner .swiTool .link li a img{height: .3rem;margin-right: .05rem}
+.banner .swiTool .dots .more{border-left: 1px solid rgba(255,255,255,.3);padding-left: .2rem;line-height: 1em;margin-left: .2rem}
+.banner .swiTool .dots .more a{color: #fff}
+.banner .arrd{position: absolute;left: 50%;margin-left: -.17rem;width: .34rem;bottom: .25rem;z-index: 8;cursor: pointer;animation: up 2s infinite}
+.banner .arrd img{width: 100%}
+
+@media (min-width:1024px){
+.banner .swiper-slide .sc{-webkit-transition:8s 1s linear;-webkit-transform:scale(1)}
+.banner .swiper-slide-active .sc{-webkit-transform:scale(1.1)}
+}
+@media (max-width:1024px){
+.banner .swiper-slide a:before{height: 35%}
+.banner .item .slideImg {padding-bottom:0;height:52vw;min-height:inherit}
+.banner{padding-left: 0}
+.banner .link{display: none}
+.banner .swiTool .link,.banner .arrd{display: none}
+.banner .swiTool .wp{justify-content: center;}
+}
+@media (max-width:992px){
+.banner .item .slideImg {height:56vw;}
+.banner .swiTool{bottom: .2rem}
+.banner .swiBtn a.prev{left: .2rem}
+.banner .swiBtn a.next{right: .2rem}
+}
+.iconfont{font-size: inherit;}
+ 
+.content{width: 100%;overflow: hidden}
+ 
+.udots{display:flex;margin-top:.4rem;padding-bottom:5px;justify-content:center}
+.udots.swiper-pagination-lock{display:none}
+.udots span{width:.1rem;height:.1rem;background:#0c4d9d;position:relative;margin:0 .1rem;opacity:.7}
+.udots span.active{opacity: 1;}
+.udots span.active:before{content:"";position:absolute;top:-5px;left:-5px;bottom:-5px;right:-5px;border-radius:50%;border:1px dashed #0c4d9d;opacity: 1;animation: roted 8s linear infinite}
+.udots.w span{background:#fff;}
+.udots.w span.active:before{border:1px dashed #fff; }
+
+ .intit{margin-bottom: .3rem}
+.intit .h3 .cn{font-size: .42rem;font-weight: bold;}
+.intit .h3 .en{font-size: .15rem;color: #808080;text-transform: uppercase;position: relative;padding-left: .4rem}
+.intit .h3 .en:before{content: '';width: .3rem;height: 2px;background: #9B0D14;position: absolute;left: 0;top: 50%;margin-top: -1px;}
+.intit .more a{color: #9B0D14;border-bottom: 1px solid #9B0D14;padding-bottom: .05rem}
+.homea{background: url(https://www.yz.sdu.edu.cn/images/bg1.jpg) no-repeat bottom center;background-size: cover;padding: .7rem 0 .8rem}
+.homea .left{width: 11.1rem}
+.homea .right{width: 4.55rem}
+
+.homea .left .list li{width: calc(50% - .15rem);margin-bottom: .2rem}
+.homea .left .list li a{height: 1.4rem;display: flex;align-items: center;background: #fff;padding: .25rem;border-radius: 5px;transition: .3s;position: relative;}
+.homea .left .list li .time{width: 1rem;height: .9rem;background:#f7f3f0;color: #483a31;text-align: center; display: flex;flex-direction: column;justify-content: center;border-radius: 5px;transition: .3s}
+.homea .left .list li .time span{display: block;font-size: .38rem;font-weight: bold;line-height: 1em}
+.homea .left .list li h4{flex:1;overflow: hidden;margin-left: .2rem;font-size: .18rem;line-height: 1.5em;max-height: .54rem\0;}
+.homea .left .list li a:after{content: '';position: absolute;left: 0;right: 0;bottom: 0;border-bottom: 3px solid #9B0D14;border-radius: 5px;top: 0;pointer-events: none;opacity: 0;visibility: hidden;transition: .3s}
+
+
+.homea .right .item{background: #fff;padding: .3rem;border-radius: 5px}
+.homea .right .item a{ display: block;position: relative;}
+.homea .right .item .img{width: 1.4rem;height: .9rem}
+.homea .right .item h4{position: absolute;top: .15rem;left: 1.6rem;right: 0;line-height: 1.5em;font-size: .18rem;max-height: .54rem\0;}
+.homea .right .item p{margin: .2rem 0;line-height: 1.6em;color: #666}
+.homea .right .item time{display: flex;align-items: center;color: #666}
+.homea .right .item time span{font-size: .38rem;color: #9B0D14;position: relative;margin-right: .2rem;line-height: 1em}
+.homea .right .item time span:after{content: '';width: 1px;height: .2rem;background: #9E9E9E;position: absolute;right: -.1rem;transform: rotate(20deg);top: 50%;margin-top: -.1rem}
+
+.homea .right .list{background: #fff;padding:.15rem .2rem;margin-top: .28rem;border-radius: 5px}
+.homea .right .list li{padding: .23rem 0}
+.homea .right .list li+li{border-top: 1px dashed #ddd}
+.homea .right .list li h4{font-size: .18rem;line-height: 1.4em;margin-bottom: .1rem}
+.homea .right .list li time{color: #9B0D14 }
+
+
+.homeb{padding: .7rem 0 0}
+.homeb .intit{margin-bottom: .3rem}
+.homeb:before{content: '';position: absolute;left: 0;bottom: 0;height: 5rem;width: 68.8%;background: url(https://www.yz.sdu.edu.cn/images/bg2l.png) no-repeat center;background-size: cover}
+.homeb:after{content: '';position: absolute;right: 0;bottom: 0;height: 5rem;width: 31.2%;background: url(https://www.yz.sdu.edu.cn/images/bg2r.png) no-repeat center;background-size: cover}
+.homeb .lists{padding-top: .6rem}
+.homeb .left{width: 7.8rem}
+.homeb .right{width: 7.4rem}
+.homeb .left .lists{height: 5rem}
+.homeb .right .list li{width: calc(50% - .15rem);margin-bottom: .3rem;position: relative;background: #fff;border-radius: 5px;transition: .3s}
+.homeb .right .list li:after{content: '';position: absolute;left: 0;top: 0;right: 0;bottom: 0;background: url(https://www.yz.sdu.edu.cn/images/792.png) no-repeat bottom center;background-size: cover;z-index: 0;pointer-events: none;border-radius: 5px;opacity: 0;visibility: hidden;transition: .3s}
+.homeb .right .list li a{display: block;height: 1.6rem;padding:.3rem .25rem;position: relative;z-index:2;}
+.homeb .right .list li h4{font-size: .18rem;line-height: 1.5em;height: .54rem}
+.homeb .right .list li time{color:#9B0D14;display: block;margin-top: .2rem }
+.homeb .right .list li time i{margin-right: .05rem}
+
+.homeb .left .item a{display: flex;align-items: center;}
+.homeb .left .item .time{width: .9rem;height: .9rem;background:#9B0D14;color: #fff;text-align: center; display: flex;flex-direction: column;justify-content: center;border-radius: 5px}
+.homeb .left .item .time span{display: block;font-size: .38rem;font-weight: bold;line-height: 1em}
+.homeb .left .item .txt{flex:1;overflow: hidden;margin-left: .2rem}
+.homeb .left .item .txt h4{font-size: .2rem;}
+.homeb .left .item .txt p{font-size: .14rem;color: #666;margin-top: .1rem;line-height: 1.6em;height: .44rem\0}
+.homeb .left .list{margin-top: .35rem}
+.homeb .left .list li{padding: .24rem 0;border-top: 1px dashed #ddd;font-size: .18rem}
+.homeb .left .list li a{display: flex;align-items: center;justify-content: space-between;}
+.homeb .left .list li h4{background: url(https://www.yz.sdu.edu.cn/images/time.png) no-repeat left center;background-size: .3rem .3rem;padding-left: .4rem;line-height: .3rem;flex:1;}
+.homeb .left .list li i{color: #9B0D14;font-size: .2rem;margin-left: .2rem}
+
+.homec{background: url(https://www.yz.sdu.edu.cn/images/bg3s.jpg) no-repeat bottom center;background-size: cover;padding: .7rem 0 .8rem}
+.homec .box{align-items: flex-end;}
+.homec .box .slide-c{width: 9.3rem; margin-bottom: .2rem}
+.homec .box .slide-c a{display: block;position: relative;}
+.homec .box .slide-c .swiper-slide a:before{content: '';position: absolute;width: .91rem;height: .91rem;background: url(https://www.yz.sdu.edu.cn/images/play.png) no-repeat center;background-size: 100% 100%;top: 50%;left: 50%;margin-top: -.45rem;margin-left: -.45rem;z-index: 2}
+.homec .box .slide-c .img{height: 5.35rem}
+.homec .box .slide-c .swiBtn{position: absolute;right: .2rem;bottom: .2rem;display: flex;align-items: center;z-index: 5}
+.homec .box .slide-c .swiBtn a{color: #fff;font-size: .3rem}
+.homec .box .slide-c .swiBtn a.next{margin-left: .2rem}
+.homec .box .slide-c .txt{font-size: .18rem;padding-right: 1.2rem}
+.homec .box .item{position: relative;width: 5.2rem;margin-bottom: .2rem}
+.homec .box .item .img{height: 3rem}
+.homec .box .txt{position: absolute;left: 0;bottom: 0;right: 0;padding: .2rem;color: #fff;z-index: 4}
+
+
+
+@media (min-width: 993px){
+.homeb .right .list li:hover{box-shadow: 0 5px 15px rgba(155,13,20,.1)}
+.homeb .right .list li:hover h4{color: #fff}
+.homeb .right .list li:hover time{color: #FFD183}
+.homeb .right .list li:hover:after{opacity: 1;visibility: visible;}
+.homea .left .list li:hover a:after{opacity: 1;visibility: visible;}
+.homea .left .list li:hover a{box-shadow: 0 5px 15px rgba(155,13,20,.1)}
+.homea .left .list li:hover .time{background:#9B0D14;color: #fff;}
+.homec .box .item:nth-child(2){margin-bottom: 1.1rem}
+.homec .box .item:last-child{top: -.9rem}
+.homec .box .slide-c{margin-left: 1.3rem}
+}
+
+@media (max-width: 992px){
+.homea .left{width: 100%;margin-bottom: .5rem}
+.homea .right{width: 100%}	
+.homea .left .list li{width: 100%}
+.homea .left .list li a{height: auto}
+.homea .left .list li h4{font-size: .26rem}
+.homea .left .list li .time{width: 1.2rem;height: .9rem;font-size: .22rem}
+.homea .left .list li .time span{font-size: .42rem; }
+
+.homea .right .list li h4{font-size: .26rem;}
+.homea .right .item h4{font-size: .26rem;left: 2.4rem}
+.homea .right .item .img{width: 2.1rem;height: 1.4rem}
+.homea .right .item time span{font-size: .42rem}
+
+.homeb:after,.homeb:before{display: none}
+.homeb .left .lists{padding:.4rem 0;position: relative;}
+.homeb .right .lists{padding:.4rem 0 .5rem;position: relative;}
+.homeb .left .lists:after{content: '';position: absolute;left: -.4rem;right: -.4rem;top: 0;bottom: 0;z-index: 0;pointer-events: none;background: url(https://www.yz.sdu.edu.cn/images/bg2l.png) no-repeat center;background-size: cover}
+.homeb .right .lists:after{content: '';position: absolute;left: -.4rem;right: -.4rem;top: 0;bottom: 0;z-index: 0;pointer-events: none;background: url(https://www.yz.sdu.edu.cn/images/bg2r.png) no-repeat center;background-size: cover}
+.homeb .left .lists .item,.homeb .left .lists .list{position: relative;z-index: 4}
+.homeb .right .lists .list{position: relative;z-index: 4}
+.homeb .left{width: 100%;margin-bottom: .5rem}
+.homeb .right{width: 100%}
+.homeb .right .list li{width: 100%}
+.homeb .right .list li h4{font-size: .26rem;height: auto}
+.homeb .right .list li a{height: auto}
+.homeb .right .list li time{margin-top: .1rem}
+.homeb .left .list li h4{font-size: .24rem;height: auto;background-size: .4rem .4rem;line-height: .4rem;padding-left: .55rem}
+.homeb .left .item .txt h4{font-size: .26rem}
+.homeb .left .item .txt p{font-size: .2rem}
+.homeb .left .item .time{width: 1.2rem;height: 1rem}
+.homeb .left .item .time span{font-size: .42rem}
+.homeb .left .list li i{font-size: .3rem}
+
+
+.homec .box .slide-c{width: 100%; margin-bottom: .2rem}
+ 
+.homec .box .slide-c .swiper-slide a:before{content: '';position: absolute;width: .91rem;height: .91rem;background: url(https://www.yz.sdu.edu.cn/images/play.png) no-repeat center;background-size: 100% 100%;top: 50%;left: 50%;margin-top: -.45rem;margin-left: -.45rem;z-index: 2}
+.homec .box .slide-c .img{height: 55vw}
+.homec .box .slide-c .swiBtn{position: absolute;right: .25rem;bottom: .25rem;display: flex;align-items: center;z-index: 5}
+.homec .box .slide-c .swiBtn a{color: #fff;font-size: .3rem}
+.homec .box .slide-c .swiBtn a.next{margin-left: .3rem}
+.homec .box .slide-c .txt{font-size: .26rem;padding-right: 1.2rem}
+.homec .box .item{position: relative;width: calc(50% - .1rem);margin-bottom: .2rem}
+.homec .box .item .img{height: 28vw}
+}
+
+@media (max-width: 597px){
+.homea .left .list li h4,.homea .right .list li h4,.homea .right .item h4{font-size: .28rem}
+.homea .right .item time span{font-size: .48rem}
+.homeb .left .item .txt h4{font-size: .28rem}
+.homeb .left .item .txt p{font-size: .22rem}
+.homeb .left .list li h4{font-size: .26rem}
+.homeb .right .list li h4{font-size: .28rem}
+.homeb .left .lists:after{left: -5vw;right: -5vw;}
+.homeb .right .lists:after{left: -5vw;right: -5vw;}
+.homeb .left .item .time{height: 1.1rem}
+.intit .h3 .cn{font-size: .46rem}
+.intit .h3 .en{font-size: .22rem}
+.intit .more a{font-size: .26rem}
+}

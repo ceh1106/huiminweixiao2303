@@ -1,0 +1,57 @@
+﻿.box{ width:1200px; margin:40px auto; overflow:hidden; }
+.box-left,.box-right{ width:575px; }
+
+.title{ height:26px; line-height:26px; background:url(https://www.rsrczp.sdu.edu.cn/images/title-line.png) 100px center no-repeat; margin-bottom:15px; }
+.title span{ float:left; font-size:20px; font-weight:bold; }
+.title span b{ color:#9c0c15; }
+.title a{ float:right; }
+.newlist{ overflow:hidden; }
+.newlist li{ height:36px; line-height:36px; padding-left:20px; background:url(https://www.rsrczp.sdu.edu.cn/images/dot.png) left center no-repeat; }
+.newlist li a{ float:left; width:450px; font-size:16px; }
+.newlist li span{ float:right; width:90px; text-align:right; color:#888; font-size:15px; }
+
+.box2{  width:1200px; margin:0px auto; overflow:hidden;  }
+.box2 ul li{ float:left; width:276px; margin-right:32px; }
+.box2 ul li.lastli{ margin-right:0; }
+.box2 ul li span{ float:left; width:124px; height:120px; overflow:hidden; }
+.box2 ul li b{ float:right; width:151px; height:118px; border:solid 1px #ccc; border-left:0;  }
+.box2 ul li b.b1{ background:url(https://www.rsrczp.sdu.edu.cn/images/p1-1.jpg) center no-repeat; }
+.box2 ul li b.b2{ background:url(https://www.rsrczp.sdu.edu.cn/images/p2-1.jpg) center no-repeat; }
+.box2 ul li b.b3{ background:url(https://www.rsrczp.sdu.edu.cn/images/p3-1.jpg) center no-repeat; }
+.box2 ul li b.b4{ background:url(https://www.rsrczp.sdu.edu.cn/images/p4-1.jpg) center no-repeat; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

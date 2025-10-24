@@ -1,0 +1,147 @@
+﻿
+html{
+    width:100vw;
+    height: 100vh;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.body_home .banner .child {
+    background-size: 100% 100%;
+    color: #fff;
+    background-position: center center;
+    height: 100%;
+    position: relative;
+}
+.banner, .frame {
+    height: 66.65vh;
+    position: relative;
+}
+.body_home .banner .slick-list {
+    height: 100%;
+}
+.banner .slick-track {
+    height: 100%;
+}
+.body_home .banner .slick-slide>div {
+    height: 100%;
+}
+.banner .navg{    position: absolute;
+    bottom: 2%;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    left: 50%;
+    transform: translateX(-50%);}
+.banner .navg li{margin:0 10px;font-family:Arial;cursor: pointer;vertical-align: middle;display:inline-block;}
+.banner .navg li.slick-active{font-size:22px;}
+.banner .navg li.slick-active:after{width:60px;}
+.home{
+    width: 100vw;
+    height: 100vh;
+    background: url("https://culture.sdu.edu.cn/images/bg1.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+.home_bg {
+    width: 100%;
+    height: 100%;
+}
+.home_bg img, .home-logo img{
+    width: 100%;
+    height: 100%;
+}
+.home-logo {
+    position: absolute;
+    z-index: 2;
+    width: 9.375%;
+    /*height: 37.41%;*/
+    left: 7.81%;
+    top: 10px;
+}
+.home .nav{
+    position: absolute;
+    z-index: 2;
+    width: 52.08%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20%;
+    bottom: 10.09%;
+}
+.nav-list{
+    height: 100%;
+}
+.home .nav .nav-list>li{
+    float: left;
+    background: url(https://culture.sdu.edu.cn/images/text-border.png) no-repeat;
+    background-size: 100% 100%;
+    width: 7.2%;
+    height: 100%;
+    margin-right: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.home .nav .nav-list>li:last-child{
+    margin-right: 0;
+}
+.home .nav .nav-list>li div h3{
+    color: #ffffff;
+}
+.home .nav .nav-list>li:hover{
+    cursor: pointer;
+}
+.home .nav .nav-list>li div{
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-transition:1s all ease;
+    transition:1s all ease;
+}
+.home .nav .nav-list>li:hover div{
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%);
+    -webkit-transition:1s all ease;
+    transition:1s all ease;
+}
+.home-icon{
+    position: absolute;
+    right: 5.2%;
+    top: 5.09%;
+    z-index: 2;
+}
+.home-icon li {
+    float: left;
+    margin-left:15px;
+}
+.slide-icon1 {
+    display: none;
+}
+.slick-active .slide-icon{
+    display: none;
+}
+.slick-active .slide-icon1{
+    display: block;
+}
+.header{
+    position: absolute;
+    z-index: 1;
+}
+.top-left, .top-right , .top-center{
+    float: left;
+}
+.top-left, .top-right {
+    width: 3.75%;
+}
+.top-center{
+    width:92.5%;
+    line-height: 0px;
+}
+.banquan{
+    position: absolute;
+    z-index: 1;
+    left: 151px;
+    bottom: 22px;
+    font-size: 14px;
+    color: #cc9999;
+}

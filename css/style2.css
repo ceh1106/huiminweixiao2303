@@ -1,0 +1,165 @@
+﻿
+body{font-size:14px;color:#212121;position:relative;min-width:1200px}
+.fl{float:left}
+.fr{float:right}
+.clearfix::after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfix{*zoom:1}
+a:hover{cursor:pointer}
+.content{width:1200px;margin:0 auto}
+.banner img{width:100%}
+.nav{background:url(https://www.grad.sdu.edu.cn/img/nav.jpg) no-repeat center;background-size:100% 100px;height:100px;position:relative;z-index:100000}
+.nav .navlog{height:100px;color:#555555;position:relative;z-index:1000000}
+.nav_r a{color:#555555;text-decoration:none}
+.ddhn>li:first-child a{color: #9b0d14 !important;}
+/*.ddhn>li:last-child a{color:#9b0d14 !important;}*/
+.nav .nav_r{width:65%;height:99px}
+.logo{width:34%}
+.logo img{margin-right:25px}
+.daohang{background:#f8f8f8}
+.daohang .er{display:none}
+.daohang .rig li{float:left;font-size:16px;margin:0 20px}
+.nav_r .top{height:36px;text-align:right;margin:0 -15px}
+.top a{margin:0 10px;line-height:45px;display:inline-block}
+.content_t{line-height:90px;font-size:24px}
+.content_b{line-height:90px;font-size:24px}
+.content_b a{color:#333;text-decoration:none}
+.content_t span{color:#9b0d14}
+.content .tent{border-bottom:1px solid #dbdbdb;margin-bottom:16px}
+.wenz li{line-height:45px;font-size:16px}
+.wenz li a:hover{color:#9b0d14}
+.wenz li a:hover:before{background:#9b0d14}
+.wenz li a{color:#555555;text-decoration:none}
+.lix{color:#555555;width:51%}
+.wenz li span{text-align:right}
+.con_top .shu{width:45%}
+.tuwen .tu_r img{width:180px;height:135px}
+.tuwen .tu_r a{display:block;width:100%;height:100%}
+.tuwen .tu_f{width:340px;padding-left:20px;font-size:16px;color:#555555}
+.tu_f .biao{line-height:37px}
+.tu_f .biao:hover{color:#9b0d14}
+.guojie_li .ri{background:#dbdbdb;color:#9b0d14;height:30px;line-height:30px}
+.guojie_li .qi{height:30px;border:1px solid #dbdbdb;line-height:30px}
+.guojie_li .rq{width:70px;text-align:center;font-size:16px}
+.guojie_li .biao{width:280px}
+.guojie_li{margin-top: 20px;}
+.guojie_li .biao:hover{color:#9b0d14}
+.ship img{width:370px;height:260px}
+.shipzi{margin-top:40px;text-align:center}
+.tszs img{width:370px;height:170px}
+.tswz li::before{content:"";display:block;height:0;clear:both;visibility:hidden}
+.tuwen li{line-height:40px}
+.footer{background:url(https://www.grad.sdu.edu.cn/img/bg_foot.png) center no-repeat;background-size:100% 380px;height:380px;color:#fff}
+.footer .foot_l{background:rgba(94,18,19,0.6);width:50%;height:100%}
+.footer .dibu{padding:61px 0 35px 36%}
+.zczj{margin-bottom:15px}
+.foot_l .di img{width:20px;height:20px;margin-right:16px}
+.foot_l .di{margin:36px 0}
+.dibu_rigth_li li{float:left;font-size:16px;margin:12px 25px}
+.dibu_rigth .you{font-size:22px;margin:0 0 25px 25px}
+.dibu_rigth_li li a{color:#fff;text-decoration:none}
+.dibu_rigth .ico img{width:50px;height:50px;margin-left:10px}
+.dibu_rigth .ico{margin:40px 0 0 25px}
+.slider-img{width:100%;position:relative;z-index:10}
+.slider-img img{width:100%;display:block;max-width:1920px;margin:auto}
+.slider2{position:absolute;bottom:5%;left:90%}
+.slider-img-circle li{width:13px;height:13px;background:url(https://www.grad.sdu.edu.cn/img/cir1.png) no-repeat center;color:transparent;cursor:pointer;float:left;padding:0 5px}
+.slider-img-circle li.on{background:url(https://www.grad.sdu.edu.cn/img/cir2.png) no-repeat center;width:13px}
+.two_bar{margin-left:80px;display:none}
+li{list-style:none}
+.two_bar li,.one_bar{display:block;text-align:center;font-size:16px;background-color:#55339e;color:#ffffff;border-bottom:1px solid #ffffff;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;line-height:38px;overflow:hidden;height:38px;width:258px}
+.top_bar{margin:0 59px}
+.top_bar .ddhn{position:relative;z-index:9999}
+.top_bar li{float:left;line-height:63px;padding:0 17.88888px;text-align:center;font-size:18px;position:relative}
+.top_bar ul li a:hover{color:#9b0d14}
+.top_bar li:hover .subset{display:block}
+.subset{position:absolute;left:-10px;top:64px;display:none;z-index:9;width:140px}
+.subset li{float:none;background:#e2e2e2;line-height:45px}
+.subset li a:hover{color:#9b0d14}
+.search{width:55%;height:36px;margin-left:423px;margin-top:17px}
+.search .bord{width:85%;border:1px solid #b4b4b4;height:36px;background:#fff}
+.search .bord .fl{border:none;outline:none;width:80%;height:100%;margin:0 10px}
+.search .bord .fr{width:25px;height:25px;margin:-28px 8px}
+.searchs img{width:25px;height:25px}
+.lix{color:#555555;width:51%}
+.wenz li a::before{content:"";display:inline-block;width:5px;height:5px;background-color:#555555;border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;line-height:15px;margin-right:10px;vertical-align:middle}
+.con_top .shu{width:45%}
+.tuwen .tu_r img{width:180px;height:135px;vertical-align:middle}
+.tu_f .qi{line-height:27px;margin-bottom:11px}
+.tu_f .zy{line-height:25px}
+.tuwen .tulis{margin-top:20px}
+.xin{background:url(https://www.grad.sdu.edu.cn/img/zhong.jpg) center no-repeat;background-size:100% 605px;height:605px}
+.xintwo{background:url(https://www.grad.sdu.edu.cn/img/wen2.jpg);height:605px}
+.xintwo .xin_top{margin-top:21px;width:420px;margin:0 auto}
+.xintwo .xin_top li{float:left;font-size:26px;width:207px;margin:40px 0;padding:0 31px;text-align:center}
+.xintwo .xin_top li a{color:#464747;text-decoration:none}
+.xin_top .bor{border-right:2px solid #b4b4b4}
+.xintwo .xin_top li a:hover{color:#9b0d14}
+._bottom{font-size:16px;color:#777777;width:370px}
+._bottom .botimg{position:relative}
+._bottom .botimg img{width:370px;height:230px}
+._bottom ._bottop:hover{color:#9b0d14}
+._bottom ._bottop{line-height:55px;font-size:16px}
+._bottom .last{line-height:30px}
+.bottom ._bottom{float:left;margin-right:30px}
+._bottom .xie{width:200px;height:45px;background:url(https://www.grad.sdu.edu.cn/img/xie.png) no-repeat;position:absolute;bottom:-3px;left:0}
+._bottom .xie span{line-height:55px;color:#fff;margin:0 10px}
+.mar{margin-right:0}
+.xinul{height:432px;position:relative;overflow:hidden}
+._bottom .more:hover{background:url(https://www.grad.sdu.edu.cn/img/prev95.png) center no-repeat}
+.xinul li{position:absolute}
+.box{margin:0 auto;margin-top:20px}
+.zhong{margin-left:20px}
+.box2{margin:0 auto;position:relative;overflow:hidden}
+.bon{width:1000%}
+.bon ul li{float:left;padding-top:14px}
+.bon ul li ul li:first-child{padding-top:5px}
+.xintwo .cha{height:63px;width:100%;background-color:#fff;text-align:center;vertical-align:bottom;padding-top:30px;margin-top:6px;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;-ms-border-radius:25px;-o-border-radius:3px 3px 0 0}
+.xintwo .cha a{color:#555555;font-size:16px}
+.zc{width:30%;color:#555555;margin-right:40px}
+.guoji li{float:left;width:95px;height:34px;border:1px solid #e2e2e2;text-align:center;line-height:34px;border-radius:25px;-webkit-border-radius:25px;-moz-border-radius:25px;-ms-border-radius:25px;-o-border-radius:25px;margin:0 5px}
+.guoji li:hover{color:#fff;background-color:#9b0d14}
+.guojie_li .biao:hover{color:#9b0d14}
+.tszs img{width:370px;height:170px}
+.tswz li::before{content:"";display:block;height:0;clear:both;visibility:hidden}
+.tuwen li{line-height:40px}
+.foot_l .di img{width:20px;height:20px;margin-right:16px}
+.foot_l .di{margin:36px 0}
+.dibu_rigth_li li{float:left;font-size:16px;margin:12px 25px}
+.dibu_rigth{margin:60px 0 0 10%;width:40%}
+.dibu_rigth .you{font-size:22px;margin:0 0 25px 25px}
+.dibu_rigth_li li a{color:#fff;text-decoration:none}
+.dibu_rigth .ico img{width:50px;height:50px;margin-left:10px}
+.dibu_rigth .ico{margin:40px 0 0 25px}
+.two_bar{margin-left:80px;display:none}
+.two_bar li,.one_bar{display:block;text-align:center;font-size:16px;background-color:#55339e;color:#ffffff;border-bottom:1px solid #ffffff;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;line-height:38px;overflow:hidden;height:38px;width:258px}
+.list{overflow:hidden}
+.list .erl{position:absolute}
+._bottom .more{display:block;margin:22px 0;background:url(https://www.grad.sdu.edu.cn/img/prev95.png) center no-repeat;background-size:95px 24px;width:95px;height:24px}
+._bottom .more:hover{background:url(https://www.grad.sdu.edu.cn/img/prev96.png) center no-repeat}
+.erdao h3{width:250px;background:#9b0d14;text-align:center;color:#fff;line-height:60px;font-size:24px}
+.erdao li{width:250px;line-height:50px;text-align:center;cursor:pointer;font-size:21px;padding-left:4px}
+.erdao ul li ul{display:none}
+.erdao li:hover{background:#f2f2f2;color:#9b0d14;border-left:4px solid #f6a415;padding-left:0}
+.dz{background:#f2f2f2;color:#9b0d14;border-left:4px solid #f6a415;padding-left:0!important}
+.lists{margin-top:15px;min-height:450px}
+.lists .list_b{margin-left:3%;width:70%}
+.list_b h3{font-size:22px;line-height:60px;text-align:center;color:#9b0d14}
+.list_b .page li{float:left}
+.list_b .page li a{padding:7px 15px;border:1px solid #dbdbdb;margin:0 10px}
+.list_b .page li a:hover{color:#ffffff;background:#9b0d14}
+.list_b .page{text-align:center;font-size:16px;margin:30px 0}
+.list_b .wei{line-height:60px}
+.list_b .zh img{width:20px;height:20px;margin:20px 8px 0 0}
+.xqnr_tit{text-align:center;padding:25px 0 20px 0;border-bottom:1px solid #ededed;margin:0 40px}
+.xqnr_tit1{text-align:center;border-bottom:1px solid #ededed}
+.xqnr_tit h2,.xqnr_tit1 h2{font-size:24px;color:#333;padding:15px 0;line-height:35px}
+.xqnr_tit p{font-size:14px;color:#999999}
+.xqnr_tit span{padding:0 15px}
+.xtb3{width:14px;height:14px;display:inline-block;*display:inline;vertical-align:middle;margin-right:7px}
+.xtb4{width:14px;height:15px;display:inline-block;*display:inline;vertical-align:middle;margin-right:7px}
+.xqnr_nr{padding:40px 40px 40px 40px}
+.xqnr_nr p{font-size:16px;color: #333;line-height:36px;text-indent:2em;}
+.copyright{height:50px;text-align:center;background:#9b0d14;color:#fff;font-size:16px;line-height:50px}
+.dibu_rigth .ico i{width:98px;display:none;height:103px;background:url(https://www.grad.sdu.edu.cn/images/ewm-b.png) center no-repeat;padding-top:3px;position:absolute;margin-left:-20px;bottom:7%;margin-bottom:65px}
+.dibu_rigth .ico i img{width:92px;height:92px}
+.dibu_rigth .ico span:hover i{display:block}
